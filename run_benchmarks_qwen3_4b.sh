@@ -8,8 +8,9 @@ GGUF_MODEL_PATH="/home/UFAD/bohanzhang1/.cache/huggingface/hub/models--Qwen--Qwe
 SEED=123
 LIMIT_PPL=20
 LIMIT_QA=100
-GPU_UTIL=0.9
+GPU_UTIL=0.95
 CMMLU_SUBSET="agronomy"
+MAX_GPU_MEM="4GiB"
 
 # Output Directories
 BASE_DIR="qwen3-4b"
@@ -43,16 +44,16 @@ echo "--- Perplexity Benchmarks ---"
 
 # --- HuggingFace Backend ---
 echo "[1/60] PPL | HF | FP16 | TF32: Off"
-$CONDA_CMD --backend hf --model $MODEL --dataset wikitext --task perplexity --limit $LIMIT_PPL --seed $SEED --dtype float16 --output "$PPL_DIR/hf_fp16_notf32.jsonl"
+$CONDA_CMD --backend hf --max_gpu_memory $MAX_GPU_MEM --model $MODEL --dataset wikitext --task perplexity --limit $LIMIT_PPL --seed $SEED --dtype float16 --max_gpu_memory $MAX_GPU_MEM --output "$PPL_DIR/hf_fp16_notf32.jsonl"
 
 echo "[2/60] PPL | HF | FP16 | TF32: On"
-$CONDA_CMD --backend hf --model $MODEL --dataset wikitext --task perplexity --limit $LIMIT_PPL --seed $SEED --dtype float16 --tf32 --output "$PPL_DIR/hf_fp16_tf32.jsonl"
+$CONDA_CMD --backend hf --max_gpu_memory $MAX_GPU_MEM --model $MODEL --dataset wikitext --task perplexity --limit $LIMIT_PPL --seed $SEED --dtype float16 --tf32 --output "$PPL_DIR/hf_fp16_tf32.jsonl"
 
 echo "[3/60] PPL | HF | FP32 | TF32: Off (May OOM)"
-$CONDA_CMD --backend hf --model $MODEL --dataset wikitext --task perplexity --limit $LIMIT_PPL --seed $SEED --dtype float32 --output "$PPL_DIR/hf_fp32_notf32.jsonl" || echo "Failed (OOM?)"
+$CONDA_CMD --backend hf --max_gpu_memory $MAX_GPU_MEM --model $MODEL --dataset wikitext --task perplexity --limit $LIMIT_PPL --seed $SEED --dtype float32 --output "$PPL_DIR/hf_fp32_notf32.jsonl" || echo "Failed (OOM?)"
 
 echo "[4/60] PPL | HF | FP32 | TF32: On (May OOM)"
-$CONDA_CMD --backend hf --model $MODEL --dataset wikitext --task perplexity --limit $LIMIT_PPL --seed $SEED --dtype float32 --tf32 --output "$PPL_DIR/hf_fp32_tf32.jsonl" || echo "Failed (OOM?)"
+$CONDA_CMD --backend hf --max_gpu_memory $MAX_GPU_MEM --model $MODEL --dataset wikitext --task perplexity --limit $LIMIT_PPL --seed $SEED --dtype float32 --tf32 --output "$PPL_DIR/hf_fp32_tf32.jsonl" || echo "Failed (OOM?)"
 
 # --- vLLM Backend ---
 echo "[5/60] PPL | vLLM | FP16 | TF32: Off"
@@ -93,16 +94,16 @@ echo "--- CommonsenseQA Benchmarks ---"
 
 # --- HuggingFace Backend ---
 echo "[13/60] QA | HF | FP16 | TF32: Off"
-$CONDA_CMD --backend hf --model $MODEL --dataset commonsense_qa --task qa --limit $LIMIT_QA --seed $SEED --dtype float16 --output "$QA_DIR/hf_fp16_notf32.jsonl"
+$CONDA_CMD --backend hf --max_gpu_memory $MAX_GPU_MEM --model $MODEL --dataset commonsense_qa --task qa --limit $LIMIT_QA --seed $SEED --dtype float16 --output "$QA_DIR/hf_fp16_notf32.jsonl"
 
 echo "[14/60] QA | HF | FP16 | TF32: On"
-$CONDA_CMD --backend hf --model $MODEL --dataset commonsense_qa --task qa --limit $LIMIT_QA --seed $SEED --dtype float16 --tf32 --output "$QA_DIR/hf_fp16_tf32.jsonl"
+$CONDA_CMD --backend hf --max_gpu_memory $MAX_GPU_MEM --model $MODEL --dataset commonsense_qa --task qa --limit $LIMIT_QA --seed $SEED --dtype float16 --tf32 --output "$QA_DIR/hf_fp16_tf32.jsonl"
 
 echo "[15/60] QA | HF | FP32 | TF32: Off (May OOM)"
-$CONDA_CMD --backend hf --model $MODEL --dataset commonsense_qa --task qa --limit $LIMIT_QA --seed $SEED --dtype float32 --output "$QA_DIR/hf_fp32_notf32.jsonl" || echo "Failed (OOM?)"
+$CONDA_CMD --backend hf --max_gpu_memory $MAX_GPU_MEM --model $MODEL --dataset commonsense_qa --task qa --limit $LIMIT_QA --seed $SEED --dtype float32 --output "$QA_DIR/hf_fp32_notf32.jsonl" || echo "Failed (OOM?)"
 
 echo "[16/60] QA | HF | FP32 | TF32: On (May OOM)"
-$CONDA_CMD --backend hf --model $MODEL --dataset commonsense_qa --task qa --limit $LIMIT_QA --seed $SEED --dtype float32 --tf32 --output "$QA_DIR/hf_fp32_tf32.jsonl" || echo "Failed (OOM?)"
+$CONDA_CMD --backend hf --max_gpu_memory $MAX_GPU_MEM --model $MODEL --dataset commonsense_qa --task qa --limit $LIMIT_QA --seed $SEED --dtype float32 --tf32 --output "$QA_DIR/hf_fp32_tf32.jsonl" || echo "Failed (OOM?)"
 
 # --- vLLM Backend ---
 echo "[17/60] QA | vLLM | FP16 | TF32: Off"
@@ -143,16 +144,16 @@ echo "--- CMMLU Benchmarks ($CMMLU_SUBSET) ---"
 
 # --- HuggingFace Backend ---
 echo "[25/60] CMMLU | HF | FP16 | TF32: Off"
-$CONDA_CMD --backend hf --model $MODEL --dataset cmmlu --dataset_subset $CMMLU_SUBSET --task qa --limit $LIMIT_QA --seed $SEED --dtype float16 --output "$CMMLU_DIR/hf_fp16_notf32.jsonl"
+$CONDA_CMD --backend hf --max_gpu_memory $MAX_GPU_MEM --model $MODEL --dataset cmmlu --dataset_subset $CMMLU_SUBSET --task qa --limit $LIMIT_QA --seed $SEED --dtype float16 --output "$CMMLU_DIR/hf_fp16_notf32.jsonl"
 
 echo "[26/60] CMMLU | HF | FP16 | TF32: On"
-$CONDA_CMD --backend hf --model $MODEL --dataset cmmlu --dataset_subset $CMMLU_SUBSET --task qa --limit $LIMIT_QA --seed $SEED --dtype float16 --tf32 --output "$CMMLU_DIR/hf_fp16_tf32.jsonl"
+$CONDA_CMD --backend hf --max_gpu_memory $MAX_GPU_MEM --model $MODEL --dataset cmmlu --dataset_subset $CMMLU_SUBSET --task qa --limit $LIMIT_QA --seed $SEED --dtype float16 --tf32 --output "$CMMLU_DIR/hf_fp16_tf32.jsonl"
 
 echo "[27/60] CMMLU | HF | FP32 | TF32: Off (May OOM)"
-$CONDA_CMD --backend hf --model $MODEL --dataset cmmlu --dataset_subset $CMMLU_SUBSET --task qa --limit $LIMIT_QA --seed $SEED --dtype float32 --output "$CMMLU_DIR/hf_fp32_notf32.jsonl" || echo "Failed (OOM?)"
+$CONDA_CMD --backend hf --max_gpu_memory $MAX_GPU_MEM --model $MODEL --dataset cmmlu --dataset_subset $CMMLU_SUBSET --task qa --limit $LIMIT_QA --seed $SEED --dtype float32 --output "$CMMLU_DIR/hf_fp32_notf32.jsonl" || echo "Failed (OOM?)"
 
 echo "[28/60] CMMLU | HF | FP32 | TF32: On (May OOM)"
-$CONDA_CMD --backend hf --model $MODEL --dataset cmmlu --dataset_subset $CMMLU_SUBSET --task qa --limit $LIMIT_QA --seed $SEED --dtype float32 --tf32 --output "$CMMLU_DIR/hf_fp32_tf32.jsonl" || echo "Failed (OOM?)"
+$CONDA_CMD --backend hf --max_gpu_memory $MAX_GPU_MEM --model $MODEL --dataset cmmlu --dataset_subset $CMMLU_SUBSET --task qa --limit $LIMIT_QA --seed $SEED --dtype float32 --tf32 --output "$CMMLU_DIR/hf_fp32_tf32.jsonl" || echo "Failed (OOM?)"
 
 # --- vLLM Backend ---
 echo "[29/60] CMMLU | vLLM | FP16 | TF32: Off"
@@ -193,16 +194,16 @@ echo "--- GSM8K Benchmarks (Perplexity) ---"
 
 # --- HuggingFace Backend ---
 echo "[37/60] GSM8K | HF | FP16 | TF32: Off"
-$CONDA_CMD --backend hf --model $MODEL --dataset gsm8k --task perplexity --limit $LIMIT_PPL --seed $SEED --dtype float16 --output "$GSM8K_DIR/hf_fp16_notf32.jsonl"
+$CONDA_CMD --backend hf --max_gpu_memory $MAX_GPU_MEM --model $MODEL --dataset gsm8k --task perplexity --limit $LIMIT_PPL --seed $SEED --dtype float16 --output "$GSM8K_DIR/hf_fp16_notf32.jsonl"
 
 echo "[38/60] GSM8K | HF | FP16 | TF32: On"
-$CONDA_CMD --backend hf --model $MODEL --dataset gsm8k --task perplexity --limit $LIMIT_PPL --seed $SEED --dtype float16 --tf32 --output "$GSM8K_DIR/hf_fp16_tf32.jsonl"
+$CONDA_CMD --backend hf --max_gpu_memory $MAX_GPU_MEM --model $MODEL --dataset gsm8k --task perplexity --limit $LIMIT_PPL --seed $SEED --dtype float16 --tf32 --output "$GSM8K_DIR/hf_fp16_tf32.jsonl"
 
 echo "[39/60] GSM8K | HF | FP32 | TF32: Off (May OOM)"
-$CONDA_CMD --backend hf --model $MODEL --dataset gsm8k --task perplexity --limit $LIMIT_PPL --seed $SEED --dtype float32 --output "$GSM8K_DIR/hf_fp32_notf32.jsonl" || echo "Failed (OOM?)"
+$CONDA_CMD --backend hf --max_gpu_memory $MAX_GPU_MEM --model $MODEL --dataset gsm8k --task perplexity --limit $LIMIT_PPL --seed $SEED --dtype float32 --output "$GSM8K_DIR/hf_fp32_notf32.jsonl" || echo "Failed (OOM?)"
 
 echo "[40/60] GSM8K | HF | FP32 | TF32: On (May OOM)"
-$CONDA_CMD --backend hf --model $MODEL --dataset gsm8k --task perplexity --limit $LIMIT_PPL --seed $SEED --dtype float32 --tf32 --output "$GSM8K_DIR/hf_fp32_tf32.jsonl" || echo "Failed (OOM?)"
+$CONDA_CMD --backend hf --max_gpu_memory $MAX_GPU_MEM --model $MODEL --dataset gsm8k --task perplexity --limit $LIMIT_PPL --seed $SEED --dtype float32 --tf32 --output "$GSM8K_DIR/hf_fp32_tf32.jsonl" || echo "Failed (OOM?)"
 
 # --- vLLM Backend ---
 echo "[41/60] GSM8K | vLLM | FP16 | TF32: Off"
@@ -243,16 +244,16 @@ echo "--- PIQA Benchmarks (QA) ---"
 
 # --- HuggingFace Backend ---
 echo "[49/60] PIQA | HF | FP16 | TF32: Off"
-$CONDA_CMD --backend hf --model $MODEL --dataset piqa --task qa --limit $LIMIT_QA --seed $SEED --dtype float16 --output "$PIQA_DIR/hf_fp16_notf32.jsonl"
+$CONDA_CMD --backend hf --max_gpu_memory $MAX_GPU_MEM --model $MODEL --dataset piqa --task qa --limit $LIMIT_QA --seed $SEED --dtype float16 --output "$PIQA_DIR/hf_fp16_notf32.jsonl"
 
 echo "[50/60] PIQA | HF | FP16 | TF32: On"
-$CONDA_CMD --backend hf --model $MODEL --dataset piqa --task qa --limit $LIMIT_QA --seed $SEED --dtype float16 --tf32 --output "$PIQA_DIR/hf_fp16_tf32.jsonl"
+$CONDA_CMD --backend hf --max_gpu_memory $MAX_GPU_MEM --model $MODEL --dataset piqa --task qa --limit $LIMIT_QA --seed $SEED --dtype float16 --tf32 --output "$PIQA_DIR/hf_fp16_tf32.jsonl"
 
 echo "[51/60] PIQA | HF | FP32 | TF32: Off (May OOM)"
-$CONDA_CMD --backend hf --model $MODEL --dataset piqa --task qa --limit $LIMIT_QA --seed $SEED --dtype float32 --output "$PIQA_DIR/hf_fp32_notf32.jsonl" || echo "Failed (OOM?)"
+$CONDA_CMD --backend hf --max_gpu_memory $MAX_GPU_MEM --model $MODEL --dataset piqa --task qa --limit $LIMIT_QA --seed $SEED --dtype float32 --output "$PIQA_DIR/hf_fp32_notf32.jsonl" || echo "Failed (OOM?)"
 
 echo "[52/60] PIQA | HF | FP32 | TF32: On (May OOM)"
-$CONDA_CMD --backend hf --model $MODEL --dataset piqa --task qa --limit $LIMIT_QA --seed $SEED --dtype float32 --tf32 --output "$PIQA_DIR/hf_fp32_tf32.jsonl" || echo "Failed (OOM?)"
+$CONDA_CMD --backend hf --max_gpu_memory $MAX_GPU_MEM --model $MODEL --dataset piqa --task qa --limit $LIMIT_QA --seed $SEED --dtype float32 --tf32 --output "$PIQA_DIR/hf_fp32_tf32.jsonl" || echo "Failed (OOM?)"
 
 # --- vLLM Backend ---
 echo "[53/60] PIQA | vLLM | FP16 | TF32: Off"

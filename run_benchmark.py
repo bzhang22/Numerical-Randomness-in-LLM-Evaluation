@@ -40,7 +40,7 @@ class Backend(ABC):
         raise NotImplementedError("Perplexity not implemented for this backend.")
 
 class HFBackend(Backend):
-    def __init__(self, model_name: str, device: str = "cuda", dtype=torch.float16):
+    def __init__(self, model_name: str, device: str = "cuda", dtype=torch.float16, max_memory: Dict[int, str] = None):
         from transformers import AutoTokenizer, AutoModelForCausalLM
         print(f"[HF] Loading {model_name} on {device} ({dtype})...")
         self.tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
@@ -49,7 +49,8 @@ class HFBackend(Backend):
             model_name, 
             torch_dtype=dtype, 
             trust_remote_code=True,
-            device_map="auto"
+            device_map="auto",
+            max_memory=max_memory
         )
         self.model.eval()
         self.device = self.model.device
@@ -143,7 +144,7 @@ class VLLMBackend(Backend):
             trust_remote_code=True,
             gpu_memory_utilization=gpu_memory_utilization,
             enforce_eager=True, # Sometimes helps with small batch stability
-            max_model_len=4096 # Limit context length to save memory
+            max_model_len=1024 # Limit context length to save memory
 
         )
         self.SamplingParams = SamplingParams
@@ -516,7 +517,13 @@ def main():
     parser.add_argument("--n_gpu_layers", type=int, default=-1)
     parser.add_argument("--seed", type=int, default=123, help="Random seed")
     parser.add_argument("--tf32", action="store_true", help="Enable TF32")
+    parser.add_argument("--max_gpu_memory", type=str, default=None, help="Max GPU memory for HF (e.g. '6GiB')")
     args = parser.parse_args()
+
+    # Explicit Cleanup at Start
+    import gc
+    gc.collect()
+    torch.cuda.empty_cache()
 
     # Set Seed
     set_seed(args.seed)
@@ -535,7 +542,8 @@ def main():
     # Init Backend
     if args.backend == "hf":
         dt = getattr(torch, args.dtype) if hasattr(torch, args.dtype) else torch.float16
-        backend = HFBackend(args.model, device=args.device, dtype=dt)
+        max_mem = {0: args.max_gpu_memory} if args.max_gpu_memory else None
+        backend = HFBackend(args.model, device=args.device, dtype=dt, max_memory=max_mem)
     elif args.backend == "vllm":
         backend = VLLMBackend(args.model, dtype=args.dtype, gpu_memory_utilization=args.gpu_memory_utilization)
     elif args.backend == "llama_cpp":

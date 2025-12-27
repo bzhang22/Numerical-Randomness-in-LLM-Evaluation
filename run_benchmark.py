@@ -144,7 +144,7 @@ class VLLMBackend(Backend):
             trust_remote_code=True,
             gpu_memory_utilization=gpu_memory_utilization,
             enforce_eager=True, # Sometimes helps with small batch stability
-            max_model_len=1024 # Limit context length to save memory
+            max_model_len=4096 # Limit context length to save memory
 
         )
         self.SamplingParams = SamplingParams

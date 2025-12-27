@@ -2,15 +2,15 @@
 # set -e (Disabled to allow continuation after OOM)
 
 # Define variables
-CONDA_CMD="$HOME/miniconda/bin/conda run -n llm_randomness python run_benchmark.py"
+CONDA_CMD="./venv/bin/python run_benchmark.py"
 MODEL="Qwen/Qwen3-4B"
-GGUF_MODEL_PATH="/home/UFAD/bohanzhang1/.cache/huggingface/hub/models--Qwen--Qwen3-4B-GGUF/snapshots/bc640142c66e1fdd12af0bd68f40445458f3869b/Qwen3-4B-Q4_K_M.gguf"
+GGUF_MODEL_PATH="./models/Qwen3-4B.fp16.gguf"
 SEED=123
 LIMIT_PPL=20
 LIMIT_QA=100
 GPU_UTIL=0.95
 CMMLU_SUBSET="agronomy"
-MAX_GPU_MEM="4GiB"
+MAX_GPU_MEM="16GiB"
 
 # Output Directories
 BASE_DIR="qwen3-4b"

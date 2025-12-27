@@ -2,13 +2,14 @@
 # set -e (Disabled to allow continuation after OOM)
 
 # Define variables
-CONDA_CMD="$HOME/miniconda/bin/conda run -n llm_randomness python run_benchmark.py"
-MODEL="Meta-Llama-3-8B"
-GGUF_MODEL_PATH="/home/UFAD/bohanzhang1/.cache/huggingface/hub/models--QuantFactory--Meta-Llama-3-8B-GGUF/snapshots/1ca85c857dce892b673b988ad0aa83f2cb1bbd19/Meta-Llama-3-8B.Q4_K_M.gguf"
+CONDA_CMD="./venv/bin/python run_benchmark.py"
+MODEL="NousResearch/Meta-Llama-3-8B"
+GGUF_MODEL_PATH="./models/Meta-Llama-3-8B.Q4_K_M.gguf"
 SEED=123
 LIMIT_PPL=20
 LIMIT_QA=100
 GPU_UTIL=0.6
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 CMMLU_SUBSET="agronomy"
 
 # Output Directories

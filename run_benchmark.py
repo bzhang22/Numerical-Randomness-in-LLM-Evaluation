@@ -77,7 +77,7 @@ class HFBackend(Backend):
         
         return dict(zip(valid_choices, probs))
 
-        return dict(zip(valid_choices, probs))
+
 
     @torch.inference_mode()
     def compute_perplexity(self, text_list: List[str]) -> Dict[str, float]:
@@ -144,8 +144,8 @@ class VLLMBackend(Backend):
             trust_remote_code=True,
             gpu_memory_utilization=gpu_memory_utilization,
             enforce_eager=True, # Sometimes helps with small batch stability
-            max_model_len=4096 # Limit context length to save memory
-
+            max_model_len=4096, # Limit context length to save memory
+            max_logprobs=1000 # Allow requesting up to 1000 logprobs
         )
         self.SamplingParams = SamplingParams
 
@@ -162,7 +162,7 @@ class VLLMBackend(Backend):
         
         # Let's request high number of logprobs to catch choices.
         # vLLM default max_logprobs is usually 20.
-        params = self.SamplingParams(max_tokens=1, logprobs=20, temperature=0.0)
+        params = self.SamplingParams(max_tokens=1, logprobs=1000, temperature=0.0)
         outputs = self.llm.generate([prompt], params, use_tqdm=False)
         
         # Extract logprobs from the first generated position
@@ -245,7 +245,7 @@ class VLLMBackend(Backend):
             # prompt_logprobs=0 means no, 1 means ??? 
             # In vLLM: prompt_logprobs (int, optional) – If defined, return the log probabilities of the prompt tokens.
             
-            params = self.SamplingParams(max_tokens=1, prompt_logprobs=1, temperature=0.0)
+            params = self.SamplingParams(max_tokens=1, prompt_logprobs=1000, temperature=0.0)
             
             # Generating from token IDs
             # vLLM API: Pass list of dicts for token IDs

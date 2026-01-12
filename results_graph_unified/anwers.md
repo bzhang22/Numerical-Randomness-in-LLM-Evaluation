@@ -18,7 +18,7 @@ The following are two typical cases where "numerical noise" causes the result to
 **Conclusion**: The model's preference for A vs B is extremely close.
 *   HF considers B slightly better (+0.28% advantage).
 *   vLLM considers A slightly better (+0.49% advantage).
-*   This sway of <1% is caused by hardware floating-point calculation differences.
+
 
 ---
 
@@ -36,4 +36,4 @@ The following are two typical cases where "numerical noise" causes the result to
 **Conclusion**: The competition is even tighter.
 *   HF prefers B, with an advantage of only 0.22%.
 *   vLLM prefers A, with an advantage of only 0.23%.
-*   This is a standard "Flip at the Margin" phenomenon.
+

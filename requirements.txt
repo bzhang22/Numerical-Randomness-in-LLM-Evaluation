@@ -6,4 +6,3 @@ lm_eval
 datasets
 tqdm
 pandas
-llama-cpp-python

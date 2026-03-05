@@ -21,6 +21,9 @@ def parse_logs(filepaths):
                     hdr_match = re.search(r'--- Evaluating (.*?) on (.*?) with \[(.*?)\]', line)
                     if hdr_match:
                         current_model = hdr_match.group(1).split('/')[-1]
+                        if current_model == "Qwen2.5-3B":
+                            current_model = None
+                            continue
                         current_ds = hdr_match.group(2)
                         current_dtype = hdr_match.group(3)
                         

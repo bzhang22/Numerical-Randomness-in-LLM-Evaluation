@@ -21,6 +21,7 @@ def parse_layer_log(filepaths):
                     hdr_match = re.search(r'--- Evaluating (.*?) on (.*?) with \[(.*?)\] ---', line)
                     if hdr_match:
                         model = hdr_match.group(1).split('/')[-1] 
+                        if model == "Qwen2.5-3B": continue
                         dataset = hdr_match.group(2)
                         dtype = hdr_match.group(3)
                         current_dataset = dataset

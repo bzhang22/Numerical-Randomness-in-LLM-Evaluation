@@ -1,0 +1,14 @@
+=== Job Started ===
+Node: c0901a-s15.ufhpc
+MODEL: meta-llama/Llama-3.2-3B
+MODE: precision
+--------------------------------------------------------
+Running Precision Sweep: Model=meta-llama/Llama-3.2-3B, Dtype=float32
+Completed Dtype=float32
+--------------------------------------------------------
+Running Precision Sweep: Model=meta-llama/Llama-3.2-3B, Dtype=float16
+Completed Dtype=float16
+--------------------------------------------------------
+Running Precision Sweep: Model=meta-llama/Llama-3.2-3B, Dtype=bfloat16
+Completed Dtype=bfloat16
+=== Job Completed ===

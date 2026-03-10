@@ -1,0 +1,20 @@
+=== Job Started ===
+Node: c0910a-s5.ufhpc
+MODEL: mistralai/Mistral-7B-v0.3
+MODE: batch
+--------------------------------------------------------
+Running Batch Sweep: Model=mistralai/Mistral-7B-v0.3, BS=1, Dtype=bfloat16
+Completed BS=1
+--------------------------------------------------------
+Running Batch Sweep: Model=mistralai/Mistral-7B-v0.3, BS=2, Dtype=bfloat16
+Completed BS=2
+--------------------------------------------------------
+Running Batch Sweep: Model=mistralai/Mistral-7B-v0.3, BS=4, Dtype=bfloat16
+Completed BS=4
+--------------------------------------------------------
+Running Batch Sweep: Model=mistralai/Mistral-7B-v0.3, BS=8, Dtype=bfloat16
+Completed BS=8
+--------------------------------------------------------
+Running Batch Sweep: Model=mistralai/Mistral-7B-v0.3, BS=16, Dtype=bfloat16
+Completed BS=16
+=== Job Completed ===

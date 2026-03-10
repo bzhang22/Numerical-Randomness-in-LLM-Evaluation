@@ -1,0 +1,14 @@
+=== Job Started ===
+Node: c0906a-s5.ufhpc
+MODEL: mistralai/Mistral-7B-v0.3
+MODE: precision
+--------------------------------------------------------
+Running Precision Sweep: Model=mistralai/Mistral-7B-v0.3, Dtype=float32
+Completed Dtype=float32
+--------------------------------------------------------
+Running Precision Sweep: Model=mistralai/Mistral-7B-v0.3, Dtype=float16
+Completed Dtype=float16
+--------------------------------------------------------
+Running Precision Sweep: Model=mistralai/Mistral-7B-v0.3, Dtype=bfloat16
+Completed Dtype=bfloat16
+=== Job Completed ===

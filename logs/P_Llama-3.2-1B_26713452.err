@@ -1,0 +1,138 @@
+2026-03-08:22:51:59 INFO     [_cli.run:376] Selected Tasks: ['piqa', 'cmmlu', 'gsm8k', 'humaneval']
+2026-03-08:22:51:59 INFO     [evaluator:211] Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
+2026-03-08:22:51:59 WARNING  [evaluator:223] generation_kwargs: {'temperature': 0, 'do_sample': False} specified through cli, these settings will update set parameters in yaml tasks. Ensure 'do_sample=True' for non-greedy decoding!
+2026-03-08:22:51:59 INFO     [evaluator:236] Initializing hf model, with arguments: {'pretrained': 'meta-llama/Llama-3.2-1B', 'dtype': 'float32', 'trust_remote_code': True}
+/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+2026-03-08:22:52:11 INFO     [models.huggingface:161] Using device 'cuda:0'
+2026-03-08:22:52:12 INFO     [models.huggingface:423] Model parallel was set to False, max memory was not set, and device map was set to {'': 'cuda:0'}
+Traceback (most recent call last):
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/bin/lm-eval", line 6, in <module>
+    sys.exit(cli_evaluate())
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/__main__.py", line 10, in cli_evaluate
+    parser.execute(args)
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/_cli/harness.py", line 60, in execute
+    args.func(args)
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/_cli/run.py", line 379, in _execute
+    results = simple_evaluate(
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/utils.py", line 498, in _wrapper
+    return fn(*args, **kwargs)
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/evaluator.py", line 292, in simple_evaluate
+    task_dict = get_task_dict(
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 646, in get_task_dict
+    task_name_from_string_dict = task_manager.load_task_or_group(
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 428, in load_task_or_group
+    collections.ChainMap(
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 430, in <lambda>
+    lambda task: self._load_individual_task_or_group(task),
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 412, in _load_individual_task_or_group
+    group_name: dict(collections.ChainMap(*map(fn, reversed(subtask_list))))
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 328, in _load_individual_task_or_group
+    return _load_task(task_config, task=name_or_config)
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 288, in _load_task
+    task_object = ConfigurableTask(config=config)
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/api/task.py", line 748, in __init__
+    self.download(self.config.dataset_kwargs)
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/api/task.py", line 864, in download
+    self.dataset = datasets.load_dataset(
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/datasets/load.py", line 1488, in load_dataset
+    builder_instance = load_dataset_builder(
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/datasets/load.py", line 1133, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/datasets/load.py", line 1032, in dataset_module_factory
+    raise e1 from None
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/datasets/load.py", line 992, in dataset_module_factory
+    raise RuntimeError(f"Dataset scripts are no longer supported, but found {filename}")
+RuntimeError: Dataset scripts are no longer supported, but found cmmlu.py
+2026-03-08:22:52:41 INFO     [_cli.run:376] Selected Tasks: ['piqa', 'cmmlu', 'gsm8k', 'humaneval']
+2026-03-08:22:52:41 INFO     [evaluator:211] Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
+2026-03-08:22:52:41 WARNING  [evaluator:223] generation_kwargs: {'temperature': 0, 'do_sample': False} specified through cli, these settings will update set parameters in yaml tasks. Ensure 'do_sample=True' for non-greedy decoding!
+2026-03-08:22:52:41 INFO     [evaluator:236] Initializing hf model, with arguments: {'pretrained': 'meta-llama/Llama-3.2-1B', 'dtype': 'float16', 'trust_remote_code': True}
+/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+2026-03-08:22:52:48 INFO     [models.huggingface:161] Using device 'cuda:0'
+2026-03-08:22:52:49 INFO     [models.huggingface:423] Model parallel was set to False, max memory was not set, and device map was set to {'': 'cuda:0'}
+Traceback (most recent call last):
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/bin/lm-eval", line 6, in <module>
+    sys.exit(cli_evaluate())
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/__main__.py", line 10, in cli_evaluate
+    parser.execute(args)
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/_cli/harness.py", line 60, in execute
+    args.func(args)
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/_cli/run.py", line 379, in _execute
+    results = simple_evaluate(
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/utils.py", line 498, in _wrapper
+    return fn(*args, **kwargs)
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/evaluator.py", line 292, in simple_evaluate
+    task_dict = get_task_dict(
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 646, in get_task_dict
+    task_name_from_string_dict = task_manager.load_task_or_group(
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 428, in load_task_or_group
+    collections.ChainMap(
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 430, in <lambda>
+    lambda task: self._load_individual_task_or_group(task),
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 412, in _load_individual_task_or_group
+    group_name: dict(collections.ChainMap(*map(fn, reversed(subtask_list))))
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 328, in _load_individual_task_or_group
+    return _load_task(task_config, task=name_or_config)
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 288, in _load_task
+    task_object = ConfigurableTask(config=config)
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/api/task.py", line 748, in __init__
+    self.download(self.config.dataset_kwargs)
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/api/task.py", line 864, in download
+    self.dataset = datasets.load_dataset(
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/datasets/load.py", line 1488, in load_dataset
+    builder_instance = load_dataset_builder(
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/datasets/load.py", line 1133, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/datasets/load.py", line 1032, in dataset_module_factory
+    raise e1 from None
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/datasets/load.py", line 992, in dataset_module_factory
+    raise RuntimeError(f"Dataset scripts are no longer supported, but found {filename}")
+RuntimeError: Dataset scripts are no longer supported, but found cmmlu.py
+2026-03-08:22:53:11 INFO     [_cli.run:376] Selected Tasks: ['piqa', 'cmmlu', 'gsm8k', 'humaneval']
+2026-03-08:22:53:11 INFO     [evaluator:211] Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
+2026-03-08:22:53:11 WARNING  [evaluator:223] generation_kwargs: {'temperature': 0, 'do_sample': False} specified through cli, these settings will update set parameters in yaml tasks. Ensure 'do_sample=True' for non-greedy decoding!
+2026-03-08:22:53:11 INFO     [evaluator:236] Initializing hf model, with arguments: {'pretrained': 'meta-llama/Llama-3.2-1B', 'dtype': 'bfloat16', 'trust_remote_code': True}
+/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+2026-03-08:22:53:20 INFO     [models.huggingface:161] Using device 'cuda:0'
+2026-03-08:22:53:20 INFO     [models.huggingface:423] Model parallel was set to False, max memory was not set, and device map was set to {'': 'cuda:0'}
+Traceback (most recent call last):
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/bin/lm-eval", line 6, in <module>
+    sys.exit(cli_evaluate())
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/__main__.py", line 10, in cli_evaluate
+    parser.execute(args)
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/_cli/harness.py", line 60, in execute
+    args.func(args)
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/_cli/run.py", line 379, in _execute
+    results = simple_evaluate(
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/utils.py", line 498, in _wrapper
+    return fn(*args, **kwargs)
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/evaluator.py", line 292, in simple_evaluate
+    task_dict = get_task_dict(
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 646, in get_task_dict
+    task_name_from_string_dict = task_manager.load_task_or_group(
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 428, in load_task_or_group
+    collections.ChainMap(
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 430, in <lambda>
+    lambda task: self._load_individual_task_or_group(task),
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 412, in _load_individual_task_or_group
+    group_name: dict(collections.ChainMap(*map(fn, reversed(subtask_list))))
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 328, in _load_individual_task_or_group
+    return _load_task(task_config, task=name_or_config)
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 288, in _load_task
+    task_object = ConfigurableTask(config=config)
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/api/task.py", line 748, in __init__
+    self.download(self.config.dataset_kwargs)
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/api/task.py", line 864, in download
+    self.dataset = datasets.load_dataset(
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/datasets/load.py", line 1488, in load_dataset
+    builder_instance = load_dataset_builder(
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/datasets/load.py", line 1133, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/datasets/load.py", line 1032, in dataset_module_factory
+    raise e1 from None
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/datasets/load.py", line 992, in dataset_module_factory
+    raise RuntimeError(f"Dataset scripts are no longer supported, but found {filename}")
+RuntimeError: Dataset scripts are no longer supported, but found cmmlu.py

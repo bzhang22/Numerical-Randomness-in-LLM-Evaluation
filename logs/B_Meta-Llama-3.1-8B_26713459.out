@@ -1,0 +1,20 @@
+=== Job Started ===
+Node: c1103a-s5.ufhpc
+MODEL: meta-llama/Meta-Llama-3.1-8B
+MODE: batch
+--------------------------------------------------------
+Running Batch Sweep: Model=meta-llama/Meta-Llama-3.1-8B, BS=1, Dtype=bfloat16
+Completed BS=1
+--------------------------------------------------------
+Running Batch Sweep: Model=meta-llama/Meta-Llama-3.1-8B, BS=2, Dtype=bfloat16
+Completed BS=2
+--------------------------------------------------------
+Running Batch Sweep: Model=meta-llama/Meta-Llama-3.1-8B, BS=4, Dtype=bfloat16
+Completed BS=4
+--------------------------------------------------------
+Running Batch Sweep: Model=meta-llama/Meta-Llama-3.1-8B, BS=8, Dtype=bfloat16
+Completed BS=8
+--------------------------------------------------------
+Running Batch Sweep: Model=meta-llama/Meta-Llama-3.1-8B, BS=16, Dtype=bfloat16
+Completed BS=16
+=== Job Completed ===

@@ -1,0 +1,99 @@
+2026-03-09:12:45:47 INFO     [_cli.run:376] Selected Tasks: ['piqa', 'cmmlu', 'gsm8k', 'humaneval']
+2026-03-09:12:45:49 INFO     [evaluator:211] Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
+2026-03-09:12:45:49 WARNING  [evaluator:223] generation_kwargs: {'temperature': 0, 'do_sample': False} specified through cli, these settings will update set parameters in yaml tasks. Ensure 'do_sample=True' for non-greedy decoding!
+2026-03-09:12:45:49 INFO     [evaluator:236] Initializing hf model, with arguments: {'pretrained': 'meta-llama/Llama-3.2-3B', 'dtype': 'bfloat16', 'trust_remote_code': True}
+/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+2026-03-09:12:45:55 INFO     [models.huggingface:161] Using device 'cuda:0'
+2026-03-09:12:45:55 INFO     [models.huggingface:423] Model parallel was set to False, max memory was not set, and device map was set to {'': 'cuda:0'}
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.19s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.31s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.44s/it]
+/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/datasets/load.py:1491: FutureWarning: The repository for haonan-li/cmmlu contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/haonan-li/cmmlu
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/bin/lm-eval", line 6, in <module>
+    sys.exit(cli_evaluate())
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/__main__.py", line 10, in cli_evaluate
+    parser.execute(args)
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/_cli/harness.py", line 60, in execute
+    args.func(args)
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/_cli/run.py", line 379, in _execute
+    results = simple_evaluate(
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/utils.py", line 498, in _wrapper
+    return fn(*args, **kwargs)
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/evaluator.py", line 292, in simple_evaluate
+    task_dict = get_task_dict(
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 646, in get_task_dict
+    task_name_from_string_dict = task_manager.load_task_or_group(
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 428, in load_task_or_group
+    collections.ChainMap(
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 430, in <lambda>
+    lambda task: self._load_individual_task_or_group(task),
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 327, in _load_individual_task_or_group
+    task_config = self._get_config(name_or_config)
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/tasks/__init__.py", line 235, in _get_config
+    return utils.load_yaml_config(yaml_path, mode="full")
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/utils.py", line 543, in load_yaml_config
+    yaml_config = yaml.load(file, Loader=loader)
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/yaml/__init__.py", line 81, in load
+    return loader.get_single_data()
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/yaml/constructor.py", line 51, in get_single_data
+    return self.construct_document(node)
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/yaml/constructor.py", line 60, in construct_document
+    for dummy in generator:
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/yaml/constructor.py", line 413, in construct_yaml_map
+    value = self.construct_mapping(node)
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/yaml/constructor.py", line 218, in construct_mapping
+    return super().construct_mapping(node, deep=deep)
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/yaml/constructor.py", line 143, in construct_mapping
+    value = self.construct_object(value_node, deep=deep)
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/yaml/constructor.py", line 100, in construct_object
+    data = constructor(self, node)
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/utils.py", line 523, in import_function
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/tasks/humaneval/utils.py", line 10, in <module>
+    raise e
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/lm_eval/tasks/humaneval/utils.py", line 8, in <module>
+    results = compute_.compute(references=test_cases, predictions=candidates, k=[1])
+  File "/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/evaluate/module.py", line 467, in compute
+    output = self._compute(**inputs, **compute_kwargs)
+  File "/blue/liguanpeng/bohanzhang1/hf_home/modules/evaluate_modules/metrics/evaluate-metric--code_eval/78d307ea938083398db7d9815f03ed661e9c15f60d77880ce007a8a02648f176/code_eval.py", line 159, in _compute
+    raise ValueError(_WARNING)
+ValueError: 
+################################################################################
+                                  !!!WARNING!!!
+################################################################################
+The "code_eval" metric executes untrusted model-generated code in Python.
+Although it is highly unlikely that model-generated code will do something
+overtly malicious in response to this test suite, model-generated code may act
+destructively due to a lack of model capability or alignment.
+Users are strongly encouraged to sandbox this evaluation suite so that it
+does not perform destructive actions on their host or network. For more
+information on how OpenAI sandboxes its code, see the paper "Evaluating Large
+Language Models Trained on Code" (https://arxiv.org/abs/2107.03374).
+
+Once you have read this disclaimer and taken appropriate precautions,
+set the environment variable HF_ALLOW_CODE_EVAL="1". Within Python you can to this
+with:
+
+>>> import os
+>>> os.environ["HF_ALLOW_CODE_EVAL"] = "1"
+
+################################################################################
+2026-03-09:12:47:41 INFO     [_cli.run:376] Selected Tasks: ['piqa', 'cmmlu', 'gsm8k', 'humaneval']
+2026-03-09:12:47:45 INFO     [evaluator:211] Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
+2026-03-09:12:47:45 WARNING  [evaluator:223] generation_kwargs: {'temperature': 0, 'do_sample': False} specified through cli, these settings will update set parameters in yaml tasks. Ensure 'do_sample=True' for non-greedy decoding!
+2026-03-09:12:47:45 INFO     [evaluator:236] Initializing hf model, with arguments: {'pretrained': 'meta-llama/Llama-3.2-3B', 'dtype': 'bfloat16', 'trust_remote_code': True}
+/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+2026-03-09:12:47:51 INFO     [models.huggingface:161] Using device 'cuda:0'
+2026-03-09:12:47:52 INFO     [models.huggingface:423] Model parallel was set to False, max memory was not set, and device map was set to {'': 'cuda:0'}
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.77s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.07s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.18s/it]
+/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/lib/python3.10/site-packages/datasets/load.py:1491: FutureWarning: The repository for haonan-li/cmmlu contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/haonan-li/cmmlu
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+[2026-03-09T12:48:28.793] error: *** JOB 26766308 ON c0900a-s5 CANCELLED AT 2026-03-09T12:48:28 DUE to SIGNAL Terminated ***

@@ -174,6 +174,22 @@ def main():
                         df = compare_configs(model, benchmark, "bs1", path_a, conf_b, path_b)
                         if not df.empty:
                             all_records.append(df)
+                            
+        # 3. Compare Attention Sweep
+        attention_dir = os.path.join(model_dir, "attention")
+        if os.path.exists(attention_dir):
+            pairs = [("eager", "sdpa"), ("eager", "flash_attention_2"), ("sdpa", "flash_attention_2")]
+            
+            for benchmark in benchmarks:
+                for conf_a, conf_b in pairs:
+                    path_a = os.path.join(attention_dir, conf_a)
+                    path_b = os.path.join(attention_dir, conf_b)
+                    
+                    if os.path.exists(path_a) and os.path.exists(path_b):
+                        print(f"Comparing Attention: {model} - {benchmark} - {conf_a} vs {conf_b}")
+                        df = compare_configs(model, benchmark, conf_a, path_a, conf_b, path_b)
+                        if not df.empty:
+                            all_records.append(df)
 
     if all_records:
         final_df = pd.concat(all_records, ignore_index=True)

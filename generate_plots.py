@@ -75,6 +75,30 @@ def plot_first_divergence_dist(df: pd.DataFrame, output_dir: str):
     plt.savefig(os.path.join(output_dir, 'first_divergence_distribution.png'))
     plt.close()
 
+def plot_attention_divergence(df: pd.DataFrame, output_dir: str):
+    """Generates a bar plot of exact match rates for attention algorithm comparisons."""
+    attention_pairs = [("eager", "sdpa"), ("eager", "flash_attention_2"), ("sdpa", "flash_attention_2")]
+    
+    attention_df = df[df.apply(lambda row: (row['config_A'], row['config_B']) in attention_pairs or (row['config_B'], row['config_A']) in attention_pairs, axis=1)]
+    
+    if attention_df.empty:
+        print("No attention data found for plotting.")
+        return
+        
+    summary = attention_df.groupby(['model', 'config_A', 'config_B'])['exact_match'].mean().reset_index()
+    summary['match_rate'] = summary['exact_match'] * 100
+    summary['comparison_label'] = summary['config_A'] + ' vs ' + summary['config_B']
+    
+    plt.figure(figsize=(12, 6))
+    sns.barplot(data=summary, x='model', y='match_rate', hue='comparison_label')
+    plt.title('Attention Implementation Consistency\n(Exact Match %)')
+    plt.ylabel('Exact Match Rate (%)')
+    plt.xticks(rotation=45)
+    plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+    plt.tight_layout()
+    plt.savefig(os.path.join(output_dir, 'attention_consistency_bar.png'))
+    plt.close()
+
 def main():
     parser = argparse.ArgumentParser(description="Generate diagnostic plots for LLM numerical randomness")
     parser.add_argument("--input_csv", type=str, default="pairwise_compare.csv")
@@ -90,6 +114,7 @@ def main():
         plot_precision_heatmap(df, args.output_dir)
         plot_mismatch_rate_vs_batch(df, args.output_dir)
         plot_first_divergence_dist(df, args.output_dir)
+        plot_attention_divergence(df, args.output_dir)
         
         print(f"Plots saved to {args.output_dir}/")
         

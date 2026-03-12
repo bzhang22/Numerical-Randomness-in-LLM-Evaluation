@@ -1,0 +1,84 @@
+=== DATA INTEGRITY REPORT ===
+
+--- Model Benchmark Coverage ---
+benchmark          cmmlu  gsm8k  humaneval   piqa
+model                                            
+Llama-3.2-1B        1115  10552       1312  14704
+Llama-3.2-3B         950  10552       1312  14704
+Meta-Llama-3.1-8B   1219  10552       1312  14704
+Mistral-7B-v0.3     1150  10552       1312  14704
+Yi-34B              1156   9233       1148  12866
+gemma-2-27b         1237   9233       1148  12866
+gemma-2-2b          1195  10552       1312  14704
+
+--- Missing Attention Comparisons ---
+model              config_A  config_B
+Llama-3.2-1B       eager     sdpa        3481
+Llama-3.2-3B       eager     sdpa        3493
+Meta-Llama-3.1-8B  eager     sdpa        3493
+Mistral-7B-v0.3    eager     sdpa        3460
+gemma-2-2b         eager     sdpa        3481
+
+--- Exact Match Rates (Warning if 0%) ---
+CRITICAL: Found comparisons with <1% exact match rate!
+model              benchmark  config_A  config_B
+Llama-3.2-1B       cmmlu      bs1       bs2         0.740741
+                                        bs8         0.000000
+                              float16   bfloat16    0.000000
+                              float32   bfloat16    0.000000
+                                        float16     0.000000
+                   piqa       float32   bfloat16    0.000000
+                                        float16     0.000000
+Llama-3.2-3B       cmmlu      bs1       bs16        0.909091
+                                        bs2         0.909091
+                                        bs4         0.909091
+                                        bs8         0.000000
+                              eager     sdpa        0.581395
+                              float16   bfloat16    0.000000
+                              float32   bfloat16    0.000000
+                                        float16     0.000000
+                   piqa       float32   bfloat16    0.000000
+                                        float16     0.000000
+Meta-Llama-3.1-8B  cmmlu      bs1       bs16        0.719424
+                                        bs2         0.000000
+                                        bs4         0.719424
+                                        bs8         0.000000
+                              eager     sdpa        0.581395
+                              float16   bfloat16    0.571429
+                              float32   bfloat16    0.000000
+                                        float16     0.000000
+                   piqa       float32   bfloat16    0.000000
+                                        float16     0.000000
+Mistral-7B-v0.3    cmmlu      bs1       bs16        0.943396
+                                        bs4         0.609756
+                              float16   bfloat16    0.000000
+                              float32   bfloat16    0.000000
+                                        float16     0.000000
+                   piqa       float32   bfloat16    0.000000
+                                        float16     0.000000
+Yi-34B             cmmlu      bs1       bs4         0.000000
+                              float16   bfloat16    0.000000
+                              float32   bfloat16    0.000000
+                                        float16     0.000000
+                   piqa       float32   bfloat16    0.000000
+                                        float16     0.000000
+gemma-2-27b        cmmlu      bs1       bs16        0.000000
+                                        bs2         0.574713
+                                        bs8         0.000000
+                              float16   bfloat16    0.000000
+                              float32   bfloat16    0.000000
+                                        float16     0.000000
+                   gsm8k      float16   bfloat16    0.000000
+                              float32   float16     0.000000
+                   humaneval  float16   bfloat16    0.000000
+                              float32   float16     0.000000
+                   piqa       float16   bfloat16    0.000000
+                              float32   bfloat16    0.000000
+                                        float16     0.000000
+gemma-2-2b         cmmlu      bs1       bs16        0.000000
+                                        bs4         0.000000
+                              float16   bfloat16    0.000000
+                              float32   bfloat16    0.000000
+                                        float16     0.000000
+                   piqa       float32   bfloat16    0.000000
+                                        float16     0.000000

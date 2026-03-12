@@ -3,7 +3,7 @@ source ~/.bashrc
 export HF_HOME=/blue/liguanpeng/bohanzhang1/hf_home
 export PIP_CACHE_DIR=/blue/liguanpeng/bohanzhang1/pip_cache
 export VLLM_WORKER_MULTIPROCESS_METHOD=spawn
-export HF_TOKEN="<REDACTED>"
+# export HF_TOKEN="<REDACTED>"
 export HF_DATASETS_TRUST_REMOTE_CODE=1
 export HF_ALLOW_CODE_EVAL=1
 
@@ -35,7 +35,7 @@ if [ "$MODE" = "precision" ]; then
         mkdir -p $out_dir
         
         $CMD --model hf \
-            --model_args pretrained=${MODEL},dtype=${dtype},trust_remote_code=True \
+            --model_args pretrained=${MODEL},dtype=${dtype},trust_remote_code=True,parallelize=True \
             --tasks ${TASKS} \
             --trust_remote_code \
             --confirm_run_unsafe_code \
@@ -56,7 +56,7 @@ elif [ "$MODE" = "batch" ]; then
         mkdir -p $out_dir
         
         $CMD --model hf \
-            --model_args pretrained=${MODEL},dtype=${DTYPE},trust_remote_code=True \
+            --model_args pretrained=${MODEL},dtype=${DTYPE},trust_remote_code=True,parallelize=True \
             --tasks ${TASKS} \
             --trust_remote_code \
             --confirm_run_unsafe_code \

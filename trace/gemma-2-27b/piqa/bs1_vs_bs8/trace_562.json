@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "model": "gemma-2-27b",
+    "benchmark": "piqa",
+    "prompt_id": 562,
+    "config_A": "bs1",
+    "config_B": "bs8",
+    "first_divergence_pos": 5,
+    "correctness_flip": false
+  },
+  "per_step_logits": [],
+  "top1_top2_margin": [],
+  "selected_hidden_states": []
+}

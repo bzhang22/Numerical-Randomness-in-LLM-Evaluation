@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "model": "gemma-2-27b",
+    "benchmark": "cmmlu",
+    "prompt_id": 48,
+    "config_A": "bs1",
+    "config_B": "bs16",
+    "first_divergence_pos": 3,
+    "correctness_flip": true
+  },
+  "per_step_logits": [],
+  "top1_top2_margin": [],
+  "selected_hidden_states": []
+}

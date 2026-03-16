@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "model": "gemma-2-2b",
+    "benchmark": "gsm8k",
+    "prompt_id": 313,
+    "config_A": "float16",
+    "config_B": "bfloat16",
+    "first_divergence_pos": 32,
+    "correctness_flip": false
+  },
+  "per_step_logits": [],
+  "top1_top2_margin": [],
+  "selected_hidden_states": []
+}

@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "model": "Llama-3.2-1B",
+    "benchmark": "cmmlu",
+    "prompt_id": 24,
+    "config_A": "float32",
+    "config_B": "float16",
+    "first_divergence_pos": 5,
+    "correctness_flip": true
+  },
+  "per_step_logits": [],
+  "top1_top2_margin": [],
+  "selected_hidden_states": []
+}

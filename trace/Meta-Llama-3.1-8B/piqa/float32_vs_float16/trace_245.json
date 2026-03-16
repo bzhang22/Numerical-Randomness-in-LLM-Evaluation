@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "model": "Meta-Llama-3.1-8B",
+    "benchmark": "piqa",
+    "prompt_id": 245,
+    "config_A": "float32",
+    "config_B": "float16",
+    "first_divergence_pos": 7,
+    "correctness_flip": false
+  },
+  "per_step_logits": [],
+  "top1_top2_margin": [],
+  "selected_hidden_states": []
+}

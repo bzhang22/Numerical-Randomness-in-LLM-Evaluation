@@ -46,7 +46,7 @@ def calculate_token_mismatch_rate(str1: str, str2: str) -> float:
 
 def extract_prediction(item: dict) -> str:
     resps = item.get('resps', [])
-    if not resps: return ""
+    filtered_resps = item.get('filtered_resps', [])
     
     try:
         # Multiple-choice logical check: resps is [[["-6.98", "False"]], [["-7.49", "False"]]]
@@ -57,7 +57,17 @@ def extract_prediction(item: dict) -> str:
     except Exception:
         pass
         
-    # Standard generative sequence fallback
+    # Generative Sequence Check: Prioritize the 'filtered_resps' which holds the final isolated target (e.g. GSM8K math answer)
+    try:
+        if filtered_resps and isinstance(filtered_resps, list):
+            val = filtered_resps[0]
+            if isinstance(val, list): 
+                return str(val[0])
+            return str(val)
+    except Exception:
+        pass
+        
+    # Standard generative sequence absolute fallback
     try:
         if isinstance(resps[0], list):
             return str(resps[0][0])

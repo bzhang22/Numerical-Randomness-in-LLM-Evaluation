@@ -130,6 +130,16 @@ def compare_configs(model_name: str, benchmark: str, config_a_name: str, config_
         acc_b = item_b.get('acc', None)
         
         exact_match = (resp_a == resp_b)
+        
+        if not exact_match:
+            try:
+                import math
+                float_a = float(resp_a)
+                float_b = float(resp_b)
+                exact_match = math.isclose(float_a, float_b, rel_tol=1e-4)
+            except ValueError:
+                pass
+                
         first_div_pos = -1 if exact_match else find_first_divergence(resp_a, resp_b)
         
         edit_dist = 0 if exact_match else Levenshtein.distance(resp_a, resp_b)

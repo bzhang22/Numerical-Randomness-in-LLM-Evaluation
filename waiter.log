@@ -1,0 +1,15 @@
+nohup: ignoring input
+[Sun Mar 15 12:03:58 PM EDT 2026] Waiting for FlashAttn_Build to drop from the SLURM queue...
+[Sun Mar 15 01:46:04 PM EDT 2026] Compiler job completed or exited. Triggering Phase 6 evaluation arrays...
+Submitted batch job 27304559
+Submitted Attention Sweep jobs for Llama-3.2-1B
+Submitted batch job 27304560
+Submitted Attention Sweep jobs for Llama-3.2-3B
+Submitted batch job 27304561
+Submitted Attention Sweep jobs for Mistral-7B-v0.3
+Submitted batch job 27304562
+Submitted Attention Sweep jobs for Meta-Llama-3.1-8B
+Submitted batch job 27304563
+Submitted Attention Sweep jobs for gemma-2-2b
+All Attention jobs submitted successfully!
+[Sun Mar 15 01:46:04 PM EDT 2026] Sequence complete!

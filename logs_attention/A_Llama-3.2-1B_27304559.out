@@ -1,0 +1,313 @@
+=== Attention Sweep Job Started ===
+Node: c0903a-s25.ufhpc
+MODEL: meta-llama/Llama-3.2-1B
+--------------------------------------------------------
+Running Attention Sweep: Model=meta-llama/Llama-3.2-1B, Attn=eager, Dtype=bfloat16
+hf ({'pretrained': 'meta-llama/Llama-3.2-1B', 'dtype': 'bfloat16', 'parallelize': True, 'attn_implementation': 'eager'}), gen_kwargs: ({'temperature': 0, 'do_sample': False}), limit: None, num_fewshot: None, batch_size: 1
+|                    Tasks                     |Version|     Filter     |n-shot|  Metric   |   |Value |   |Stderr|
+|----------------------------------------------|------:|----------------|-----:|-----------|---|-----:|---|-----:|
+|cmmlu                                         |      1|none            |      |acc        |↑  |0.2998|±  |0.0042|
+|                                              |       |none            |      |acc_norm   |↑  |0.2998|±  |0.0042|
+| - cmmlu_agronomy                             |      1|none            |     0|acc        |↑  |0.2899|±  |0.0350|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2899|±  |0.0350|
+| - cmmlu_anatomy                              |      1|none            |     0|acc        |↑  |0.2568|±  |0.0360|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2568|±  |0.0360|
+| - cmmlu_ancient_chinese                      |      1|none            |     0|acc        |↑  |0.2744|±  |0.0349|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2744|±  |0.0349|
+| - cmmlu_arts                                 |      1|none            |     0|acc        |↑  |0.2750|±  |0.0354|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2750|±  |0.0354|
+| - cmmlu_astronomy                            |      1|none            |     0|acc        |↑  |0.2182|±  |0.0323|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2182|±  |0.0323|
+| - cmmlu_business_ethics                      |      1|none            |     0|acc        |↑  |0.2967|±  |0.0317|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2967|±  |0.0317|
+| - cmmlu_chinese_civil_service_exam           |      1|none            |     0|acc        |↑  |0.2313|±  |0.0334|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2313|±  |0.0334|
+| - cmmlu_chinese_driving_rule                 |      1|none            |     0|acc        |↑  |0.3511|±  |0.0419|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3511|±  |0.0419|
+| - cmmlu_chinese_food_culture                 |      1|none            |     0|acc        |↑  |0.2574|±  |0.0376|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2574|±  |0.0376|
+| - cmmlu_chinese_foreign_policy               |      1|none            |     0|acc        |↑  |0.3364|±  |0.0459|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3364|±  |0.0459|
+| - cmmlu_chinese_history                      |      1|none            |     0|acc        |↑  |0.2755|±  |0.0249|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2755|±  |0.0249|
+| - cmmlu_chinese_literature                   |      1|none            |     0|acc        |↑  |0.2745|±  |0.0313|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2745|±  |0.0313|
+| - cmmlu_chinese_teacher_qualification        |      1|none            |     0|acc        |↑  |0.2626|±  |0.0330|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2626|±  |0.0330|
+| - cmmlu_clinical_knowledge                   |      1|none            |     0|acc        |↑  |0.3376|±  |0.0308|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3376|±  |0.0308|
+| - cmmlu_college_actuarial_science            |      1|none            |     0|acc        |↑  |0.2830|±  |0.0440|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2830|±  |0.0440|
+| - cmmlu_college_education                    |      1|none            |     0|acc        |↑  |0.3832|±  |0.0472|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3832|±  |0.0472|
+| - cmmlu_college_engineering_hydrology        |      1|none            |     0|acc        |↑  |0.2547|±  |0.0425|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2547|±  |0.0425|
+| - cmmlu_college_law                          |      1|none            |     0|acc        |↑  |0.2593|±  |0.0424|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2593|±  |0.0424|
+| - cmmlu_college_mathematics                  |      1|none            |     0|acc        |↑  |0.2476|±  |0.0423|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2476|±  |0.0423|
+| - cmmlu_college_medical_statistics           |      1|none            |     0|acc        |↑  |0.3302|±  |0.0459|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3302|±  |0.0459|
+| - cmmlu_college_medicine                     |      1|none            |     0|acc        |↑  |0.3077|±  |0.0280|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3077|±  |0.0280|
+| - cmmlu_computer_science                     |      1|none            |     0|acc        |↑  |0.3284|±  |0.0330|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3284|±  |0.0330|
+| - cmmlu_computer_security                    |      1|none            |     0|acc        |↑  |0.3041|±  |0.0353|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3041|±  |0.0353|
+| - cmmlu_conceptual_physics                   |      1|none            |     0|acc        |↑  |0.2925|±  |0.0376|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2925|±  |0.0376|
+| - cmmlu_construction_project_management      |      1|none            |     0|acc        |↑  |0.3022|±  |0.0391|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3022|±  |0.0391|
+| - cmmlu_economics                            |      1|none            |     0|acc        |↑  |0.3774|±  |0.0386|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3774|±  |0.0386|
+| - cmmlu_education                            |      1|none            |     0|acc        |↑  |0.3313|±  |0.0370|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3313|±  |0.0370|
+| - cmmlu_electrical_engineering               |      1|none            |     0|acc        |↑  |0.3256|±  |0.0358|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3256|±  |0.0358|
+| - cmmlu_elementary_chinese                   |      1|none            |     0|acc        |↑  |0.2302|±  |0.0266|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2302|±  |0.0266|
+| - cmmlu_elementary_commonsense               |      1|none            |     0|acc        |↑  |0.2828|±  |0.0321|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2828|±  |0.0321|
+| - cmmlu_elementary_information_and_technology|      1|none            |     0|acc        |↑  |0.2731|±  |0.0289|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2731|±  |0.0289|
+| - cmmlu_elementary_mathematics               |      1|none            |     0|acc        |↑  |0.2609|±  |0.0290|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2609|±  |0.0290|
+| - cmmlu_ethnology                            |      1|none            |     0|acc        |↑  |0.2889|±  |0.0392|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2889|±  |0.0392|
+| - cmmlu_food_science                         |      1|none            |     0|acc        |↑  |0.3846|±  |0.0408|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3846|±  |0.0408|
+| - cmmlu_genetics                             |      1|none            |     0|acc        |↑  |0.3125|±  |0.0350|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3125|±  |0.0350|
+| - cmmlu_global_facts                         |      1|none            |     0|acc        |↑  |0.2752|±  |0.0367|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2752|±  |0.0367|
+| - cmmlu_high_school_biology                  |      1|none            |     0|acc        |↑  |0.2485|±  |0.0333|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2485|±  |0.0333|
+| - cmmlu_high_school_chemistry                |      1|none            |     0|acc        |↑  |0.2348|±  |0.0370|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2348|±  |0.0370|
+| - cmmlu_high_school_geography                |      1|none            |     0|acc        |↑  |0.2288|±  |0.0388|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2288|±  |0.0388|
+| - cmmlu_high_school_mathematics              |      1|none            |     0|acc        |↑  |0.2073|±  |0.0318|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2073|±  |0.0318|
+| - cmmlu_high_school_physics                  |      1|none            |     0|acc        |↑  |0.3091|±  |0.0443|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3091|±  |0.0443|
+| - cmmlu_high_school_politics                 |      1|none            |     0|acc        |↑  |0.3077|±  |0.0387|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3077|±  |0.0387|
+| - cmmlu_human_sexuality                      |      1|none            |     0|acc        |↑  |0.3016|±  |0.0410|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3016|±  |0.0410|
+| - cmmlu_international_law                    |      1|none            |     0|acc        |↑  |0.3459|±  |0.0351|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3459|±  |0.0351|
+| - cmmlu_journalism                           |      1|none            |     0|acc        |↑  |0.3372|±  |0.0362|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3372|±  |0.0362|
+| - cmmlu_jurisprudence                        |      1|none            |     0|acc        |↑  |0.3090|±  |0.0228|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3090|±  |0.0228|
+| - cmmlu_legal_and_moral_basis                |      1|none            |     0|acc        |↑  |0.4579|±  |0.0341|
+|                                              |       |none            |     0|acc_norm   |↑  |0.4579|±  |0.0341|
+| - cmmlu_logical                              |      1|none            |     0|acc        |↑  |0.2602|±  |0.0397|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2602|±  |0.0397|
+| - cmmlu_machine_learning                     |      1|none            |     0|acc        |↑  |0.3115|±  |0.0421|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3115|±  |0.0421|
+| - cmmlu_management                           |      1|none            |     0|acc        |↑  |0.3190|±  |0.0322|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3190|±  |0.0322|
+| - cmmlu_marketing                            |      1|none            |     0|acc        |↑  |0.3500|±  |0.0357|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3500|±  |0.0357|
+| - cmmlu_marxist_theory                       |      1|none            |     0|acc        |↑  |0.3545|±  |0.0349|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3545|±  |0.0349|
+| - cmmlu_modern_chinese                       |      1|none            |     0|acc        |↑  |0.2759|±  |0.0417|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2759|±  |0.0417|
+| - cmmlu_nutrition                            |      1|none            |     0|acc        |↑  |0.3448|±  |0.0396|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3448|±  |0.0396|
+| - cmmlu_philosophy                           |      1|none            |     0|acc        |↑  |0.3333|±  |0.0462|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3333|±  |0.0462|
+| - cmmlu_professional_accounting              |      1|none            |     0|acc        |↑  |0.2914|±  |0.0344|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2914|±  |0.0344|
+| - cmmlu_professional_law                     |      1|none            |     0|acc        |↑  |0.2796|±  |0.0310|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2796|±  |0.0310|
+| - cmmlu_professional_medicine                |      1|none            |     0|acc        |↑  |0.2926|±  |0.0235|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2926|±  |0.0235|
+| - cmmlu_professional_psychology              |      1|none            |     0|acc        |↑  |0.2974|±  |0.0301|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2974|±  |0.0301|
+| - cmmlu_public_relations                     |      1|none            |     0|acc        |↑  |0.3218|±  |0.0355|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3218|±  |0.0355|
+| - cmmlu_security_study                       |      1|none            |     0|acc        |↑  |0.3556|±  |0.0414|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3556|±  |0.0414|
+| - cmmlu_sociology                            |      1|none            |     0|acc        |↑  |0.3319|±  |0.0314|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3319|±  |0.0314|
+| - cmmlu_sports_science                       |      1|none            |     0|acc        |↑  |0.3091|±  |0.0361|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3091|±  |0.0361|
+| - cmmlu_traditional_chinese_medicine         |      1|none            |     0|acc        |↑  |0.2595|±  |0.0323|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2595|±  |0.0323|
+| - cmmlu_virology                             |      1|none            |     0|acc        |↑  |0.3491|±  |0.0368|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3491|±  |0.0368|
+| - cmmlu_world_history                        |      1|none            |     0|acc        |↑  |0.2671|±  |0.0350|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2671|±  |0.0350|
+| - cmmlu_world_religions                      |      1|none            |     0|acc        |↑  |0.3000|±  |0.0363|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3000|±  |0.0363|
+|gsm8k                                         |      3|flexible-extract|     5|exact_match|↑  |0.0591|±  |0.0065|
+|                                              |       |strict-match    |     5|exact_match|↑  |0.0569|±  |0.0064|
+|humaneval                                     |      1|create_test     |     0|pass@1     |   |0.1890|±  |0.0307|
+|piqa                                          |      1|none            |     0|acc        |↑  |0.7519|±  |0.0101|
+|                                              |       |none            |     0|acc_norm   |↑  |0.7470|±  |0.0101|
+
+|Groups|Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|------|------:|------|------|--------|---|-----:|---|-----:|
+|cmmlu |      1|none  |      |acc     |↑  |0.2998|±  |0.0042|
+|      |       |none  |      |acc_norm|↑  |0.2998|±  |0.0042|
+
+Completed Attn=eager
+--------------------------------------------------------
+Running Attention Sweep: Model=meta-llama/Llama-3.2-1B, Attn=sdpa, Dtype=bfloat16
+hf ({'pretrained': 'meta-llama/Llama-3.2-1B', 'dtype': 'bfloat16', 'parallelize': True, 'attn_implementation': 'sdpa'}), gen_kwargs: ({'temperature': 0, 'do_sample': False}), limit: None, num_fewshot: None, batch_size: 1
+|                    Tasks                     |Version|     Filter     |n-shot|  Metric   |   |Value |   |Stderr|
+|----------------------------------------------|------:|----------------|-----:|-----------|---|-----:|---|-----:|
+|cmmlu                                         |      1|none            |      |acc        |↑  |0.3006|±  |0.0043|
+|                                              |       |none            |      |acc_norm   |↑  |0.3006|±  |0.0043|
+| - cmmlu_agronomy                             |      1|none            |     0|acc        |↑  |0.2899|±  |0.0350|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2899|±  |0.0350|
+| - cmmlu_anatomy                              |      1|none            |     0|acc        |↑  |0.2568|±  |0.0360|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2568|±  |0.0360|
+| - cmmlu_ancient_chinese                      |      1|none            |     0|acc        |↑  |0.2622|±  |0.0345|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2622|±  |0.0345|
+| - cmmlu_arts                                 |      1|none            |     0|acc        |↑  |0.2687|±  |0.0352|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2687|±  |0.0352|
+| - cmmlu_astronomy                            |      1|none            |     0|acc        |↑  |0.2182|±  |0.0323|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2182|±  |0.0323|
+| - cmmlu_business_ethics                      |      1|none            |     0|acc        |↑  |0.3062|±  |0.0320|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3062|±  |0.0320|
+| - cmmlu_chinese_civil_service_exam           |      1|none            |     0|acc        |↑  |0.2313|±  |0.0334|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2313|±  |0.0334|
+| - cmmlu_chinese_driving_rule                 |      1|none            |     0|acc        |↑  |0.3588|±  |0.0421|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3588|±  |0.0421|
+| - cmmlu_chinese_food_culture                 |      1|none            |     0|acc        |↑  |0.2500|±  |0.0373|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2500|±  |0.0373|
+| - cmmlu_chinese_foreign_policy               |      1|none            |     0|acc        |↑  |0.3364|±  |0.0459|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3364|±  |0.0459|
+| - cmmlu_chinese_history                      |      1|none            |     0|acc        |↑  |0.2786|±  |0.0250|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2786|±  |0.0250|
+| - cmmlu_chinese_literature                   |      1|none            |     0|acc        |↑  |0.2843|±  |0.0317|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2843|±  |0.0317|
+| - cmmlu_chinese_teacher_qualification        |      1|none            |     0|acc        |↑  |0.2793|±  |0.0336|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2793|±  |0.0336|
+| - cmmlu_clinical_knowledge                   |      1|none            |     0|acc        |↑  |0.3376|±  |0.0308|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3376|±  |0.0308|
+| - cmmlu_college_actuarial_science            |      1|none            |     0|acc        |↑  |0.2736|±  |0.0435|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2736|±  |0.0435|
+| - cmmlu_college_education                    |      1|none            |     0|acc        |↑  |0.3738|±  |0.0470|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3738|±  |0.0470|
+| - cmmlu_college_engineering_hydrology        |      1|none            |     0|acc        |↑  |0.2547|±  |0.0425|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2547|±  |0.0425|
+| - cmmlu_college_law                          |      1|none            |     0|acc        |↑  |0.2500|±  |0.0419|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2500|±  |0.0419|
+| - cmmlu_college_mathematics                  |      1|none            |     0|acc        |↑  |0.2571|±  |0.0429|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2571|±  |0.0429|
+| - cmmlu_college_medical_statistics           |      1|none            |     0|acc        |↑  |0.3491|±  |0.0465|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3491|±  |0.0465|
+| - cmmlu_college_medicine                     |      1|none            |     0|acc        |↑  |0.2967|±  |0.0277|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2967|±  |0.0277|
+| - cmmlu_computer_science                     |      1|none            |     0|acc        |↑  |0.3137|±  |0.0326|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3137|±  |0.0326|
+| - cmmlu_computer_security                    |      1|none            |     0|acc        |↑  |0.3099|±  |0.0355|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3099|±  |0.0355|
+| - cmmlu_conceptual_physics                   |      1|none            |     0|acc        |↑  |0.2993|±  |0.0379|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2993|±  |0.0379|
+| - cmmlu_construction_project_management      |      1|none            |     0|acc        |↑  |0.3022|±  |0.0391|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3022|±  |0.0391|
+| - cmmlu_economics                            |      1|none            |     0|acc        |↑  |0.3711|±  |0.0384|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3711|±  |0.0384|
+| - cmmlu_education                            |      1|none            |     0|acc        |↑  |0.3313|±  |0.0370|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3313|±  |0.0370|
+| - cmmlu_electrical_engineering               |      1|none            |     0|acc        |↑  |0.3256|±  |0.0358|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3256|±  |0.0358|
+| - cmmlu_elementary_chinese                   |      1|none            |     0|acc        |↑  |0.2381|±  |0.0269|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2381|±  |0.0269|
+| - cmmlu_elementary_commonsense               |      1|none            |     0|acc        |↑  |0.2929|±  |0.0324|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2929|±  |0.0324|
+| - cmmlu_elementary_information_and_technology|      1|none            |     0|acc        |↑  |0.2899|±  |0.0295|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2899|±  |0.0295|
+| - cmmlu_elementary_mathematics               |      1|none            |     0|acc        |↑  |0.2652|±  |0.0292|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2652|±  |0.0292|
+| - cmmlu_ethnology                            |      1|none            |     0|acc        |↑  |0.2963|±  |0.0394|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2963|±  |0.0394|
+| - cmmlu_food_science                         |      1|none            |     0|acc        |↑  |0.4196|±  |0.0414|
+|                                              |       |none            |     0|acc_norm   |↑  |0.4196|±  |0.0414|
+| - cmmlu_genetics                             |      1|none            |     0|acc        |↑  |0.3068|±  |0.0349|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3068|±  |0.0349|
+| - cmmlu_global_facts                         |      1|none            |     0|acc        |↑  |0.2819|±  |0.0370|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2819|±  |0.0370|
+| - cmmlu_high_school_biology                  |      1|none            |     0|acc        |↑  |0.2604|±  |0.0339|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2604|±  |0.0339|
+| - cmmlu_high_school_chemistry                |      1|none            |     0|acc        |↑  |0.2576|±  |0.0382|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2576|±  |0.0382|
+| - cmmlu_high_school_geography                |      1|none            |     0|acc        |↑  |0.2203|±  |0.0383|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2203|±  |0.0383|
+| - cmmlu_high_school_mathematics              |      1|none            |     0|acc        |↑  |0.2134|±  |0.0321|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2134|±  |0.0321|
+| - cmmlu_high_school_physics                  |      1|none            |     0|acc        |↑  |0.3091|±  |0.0443|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3091|±  |0.0443|
+| - cmmlu_high_school_politics                 |      1|none            |     0|acc        |↑  |0.3077|±  |0.0387|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3077|±  |0.0387|
+| - cmmlu_human_sexuality                      |      1|none            |     0|acc        |↑  |0.3175|±  |0.0416|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3175|±  |0.0416|
+| - cmmlu_international_law                    |      1|none            |     0|acc        |↑  |0.3459|±  |0.0351|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3459|±  |0.0351|
+| - cmmlu_journalism                           |      1|none            |     0|acc        |↑  |0.3488|±  |0.0364|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3488|±  |0.0364|
+| - cmmlu_jurisprudence                        |      1|none            |     0|acc        |↑  |0.3017|±  |0.0227|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3017|±  |0.0227|
+| - cmmlu_legal_and_moral_basis                |      1|none            |     0|acc        |↑  |0.4533|±  |0.0341|
+|                                              |       |none            |     0|acc_norm   |↑  |0.4533|±  |0.0341|
+| - cmmlu_logical                              |      1|none            |     0|acc        |↑  |0.2602|±  |0.0397|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2602|±  |0.0397|
+| - cmmlu_machine_learning                     |      1|none            |     0|acc        |↑  |0.3115|±  |0.0421|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3115|±  |0.0421|
+| - cmmlu_management                           |      1|none            |     0|acc        |↑  |0.3000|±  |0.0317|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3000|±  |0.0317|
+| - cmmlu_marketing                            |      1|none            |     0|acc        |↑  |0.3389|±  |0.0354|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3389|±  |0.0354|
+| - cmmlu_marxist_theory                       |      1|none            |     0|acc        |↑  |0.3492|±  |0.0348|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3492|±  |0.0348|
+| - cmmlu_modern_chinese                       |      1|none            |     0|acc        |↑  |0.2759|±  |0.0417|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2759|±  |0.0417|
+| - cmmlu_nutrition                            |      1|none            |     0|acc        |↑  |0.3379|±  |0.0394|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3379|±  |0.0394|
+| - cmmlu_philosophy                           |      1|none            |     0|acc        |↑  |0.3333|±  |0.0462|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3333|±  |0.0462|
+| - cmmlu_professional_accounting              |      1|none            |     0|acc        |↑  |0.2971|±  |0.0346|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2971|±  |0.0346|
+| - cmmlu_professional_law                     |      1|none            |     0|acc        |↑  |0.2701|±  |0.0306|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2701|±  |0.0306|
+| - cmmlu_professional_medicine                |      1|none            |     0|acc        |↑  |0.2926|±  |0.0235|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2926|±  |0.0235|
+| - cmmlu_professional_psychology              |      1|none            |     0|acc        |↑  |0.3017|±  |0.0302|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3017|±  |0.0302|
+| - cmmlu_public_relations                     |      1|none            |     0|acc        |↑  |0.3218|±  |0.0355|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3218|±  |0.0355|
+| - cmmlu_security_study                       |      1|none            |     0|acc        |↑  |0.3556|±  |0.0414|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3556|±  |0.0414|
+| - cmmlu_sociology                            |      1|none            |     0|acc        |↑  |0.3274|±  |0.0313|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3274|±  |0.0313|
+| - cmmlu_sports_science                       |      1|none            |     0|acc        |↑  |0.3152|±  |0.0363|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3152|±  |0.0363|
+| - cmmlu_traditional_chinese_medicine         |      1|none            |     0|acc        |↑  |0.2486|±  |0.0319|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2486|±  |0.0319|
+| - cmmlu_virology                             |      1|none            |     0|acc        |↑  |0.3609|±  |0.0371|
+|                                              |       |none            |     0|acc_norm   |↑  |0.3609|±  |0.0371|
+| - cmmlu_world_history                        |      1|none            |     0|acc        |↑  |0.2671|±  |0.0350|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2671|±  |0.0350|
+| - cmmlu_world_religions                      |      1|none            |     0|acc        |↑  |0.2875|±  |0.0359|
+|                                              |       |none            |     0|acc_norm   |↑  |0.2875|±  |0.0359|
+|gsm8k                                         |      3|flexible-extract|     5|exact_match|↑  |0.0637|±  |0.0067|
+|                                              |       |strict-match    |     5|exact_match|↑  |0.0591|±  |0.0065|
+|humaneval                                     |      1|create_test     |     0|pass@1     |   |0.1951|±  |0.0310|
+|piqa                                          |      1|none            |     0|acc        |↑  |0.7541|±  |0.0100|
+|                                              |       |none            |     0|acc_norm   |↑  |0.7481|±  |0.0101|
+
+|Groups|Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|------|------:|------|------|--------|---|-----:|---|-----:|
+|cmmlu |      1|none  |      |acc     |↑  |0.3006|±  |0.0043|
+|      |       |none  |      |acc_norm|↑  |0.3006|±  |0.0043|
+
+Completed Attn=sdpa
+--------------------------------------------------------
+Running Attention Sweep: Model=meta-llama/Llama-3.2-1B, Attn=flash_attention_2, Dtype=bfloat16
+Completed Attn=flash_attention_2
+=== Attention Sweep Job Completed ===

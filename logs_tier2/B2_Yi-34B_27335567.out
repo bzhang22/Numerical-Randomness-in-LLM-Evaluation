@@ -1,0 +1,70 @@
+=== Job Started ===
+Node: c1000a-s25.ufhpc
+MODEL: 01-ai/Yi-34B
+MODE: batch
+--------------------------------------------------------
+Running Batch Sweep: Model=01-ai/Yi-34B, BS=1, Dtype=bfloat16
+bootstrapping for stddev: perplexity
+hf ({'pretrained': '01-ai/Yi-34B', 'dtype': 'bfloat16', 'parallelize': True}), gen_kwargs: ({'temperature': 0, 'do_sample': False}), limit: None, num_fewshot: None, batch_size: 1
+|    Tasks     |Version|Filter|n-shot|    Metric     |   |Value |   |Stderr|
+|--------------|------:|------|-----:|---------------|---|-----:|---|------|
+|lambada_openai|      1|none  |     0|acc            |↑  |0.7330|±  |0.0062|
+|              |       |none  |     0|perplexity     |↓  |3.0291|±  |0.0544|
+|wikitext      |      2|none  |     0|bits_per_byte  |↓  |0.5392|±  |   N/A|
+|              |       |none  |     0|byte_perplexity|↓  |1.4531|±  |   N/A|
+|              |       |none  |     0|word_perplexity|↓  |7.3779|±  |   N/A|
+
+Completed BS=1
+--------------------------------------------------------
+Running Batch Sweep: Model=01-ai/Yi-34B, BS=2, Dtype=bfloat16
+bootstrapping for stddev: perplexity
+hf ({'pretrained': '01-ai/Yi-34B', 'dtype': 'bfloat16', 'parallelize': True}), gen_kwargs: ({'temperature': 0, 'do_sample': False}), limit: None, num_fewshot: None, batch_size: 2
+|    Tasks     |Version|Filter|n-shot|    Metric     |   |Value |   |Stderr|
+|--------------|------:|------|-----:|---------------|---|-----:|---|------|
+|lambada_openai|      1|none  |     0|acc            |↑  |0.7328|±  |0.0062|
+|              |       |none  |     0|perplexity     |↓  |3.0290|±  |0.0544|
+|wikitext      |      2|none  |     0|bits_per_byte  |↓  |0.5392|±  |   N/A|
+|              |       |none  |     0|byte_perplexity|↓  |1.4531|±  |   N/A|
+|              |       |none  |     0|word_perplexity|↓  |7.3779|±  |   N/A|
+
+Completed BS=2
+--------------------------------------------------------
+Running Batch Sweep: Model=01-ai/Yi-34B, BS=4, Dtype=bfloat16
+bootstrapping for stddev: perplexity
+hf ({'pretrained': '01-ai/Yi-34B', 'dtype': 'bfloat16', 'parallelize': True}), gen_kwargs: ({'temperature': 0, 'do_sample': False}), limit: None, num_fewshot: None, batch_size: 4
+|    Tasks     |Version|Filter|n-shot|    Metric     |   |Value |   |Stderr|
+|--------------|------:|------|-----:|---------------|---|-----:|---|------|
+|lambada_openai|      1|none  |     0|acc            |↑  |0.7328|±  |0.0062|
+|              |       |none  |     0|perplexity     |↓  |3.0290|±  |0.0544|
+|wikitext      |      2|none  |     0|bits_per_byte  |↓  |0.5392|±  |   N/A|
+|              |       |none  |     0|byte_perplexity|↓  |1.4531|±  |   N/A|
+|              |       |none  |     0|word_perplexity|↓  |7.3779|±  |   N/A|
+
+Completed BS=4
+--------------------------------------------------------
+Running Batch Sweep: Model=01-ai/Yi-34B, BS=8, Dtype=bfloat16
+bootstrapping for stddev: perplexity
+hf ({'pretrained': '01-ai/Yi-34B', 'dtype': 'bfloat16', 'parallelize': True}), gen_kwargs: ({'temperature': 0, 'do_sample': False}), limit: None, num_fewshot: None, batch_size: 8
+|    Tasks     |Version|Filter|n-shot|    Metric     |   |Value |   |Stderr|
+|--------------|------:|------|-----:|---------------|---|-----:|---|------|
+|lambada_openai|      1|none  |     0|acc            |↑  |0.7328|±  |0.0062|
+|              |       |none  |     0|perplexity     |↓  |3.0290|±  |0.0544|
+|wikitext      |      2|none  |     0|bits_per_byte  |↓  |0.5392|±  |   N/A|
+|              |       |none  |     0|byte_perplexity|↓  |1.4531|±  |   N/A|
+|              |       |none  |     0|word_perplexity|↓  |7.3779|±  |   N/A|
+
+Completed BS=8
+--------------------------------------------------------
+Running Batch Sweep: Model=01-ai/Yi-34B, BS=16, Dtype=bfloat16
+bootstrapping for stddev: perplexity
+hf ({'pretrained': '01-ai/Yi-34B', 'dtype': 'bfloat16', 'parallelize': True}), gen_kwargs: ({'temperature': 0, 'do_sample': False}), limit: None, num_fewshot: None, batch_size: 16
+|    Tasks     |Version|Filter|n-shot|    Metric     |   |Value |   |Stderr|
+|--------------|------:|------|-----:|---------------|---|-----:|---|------|
+|lambada_openai|      1|none  |     0|acc            |↑  |0.7328|±  |0.0062|
+|              |       |none  |     0|perplexity     |↓  |3.0290|±  |0.0544|
+|wikitext      |      2|none  |     0|bits_per_byte  |↓  |0.5392|±  |   N/A|
+|              |       |none  |     0|byte_perplexity|↓  |1.4531|±  |   N/A|
+|              |       |none  |     0|word_perplexity|↓  |7.3779|±  |   N/A|
+
+Completed BS=16
+=== Job Completed ===

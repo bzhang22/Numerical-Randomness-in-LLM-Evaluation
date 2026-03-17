@@ -1,0 +1,40 @@
+=== Job Started ===
+Node: c0900a-s5.ufhpc
+MODEL: google/gemma-2-27b
+MODE: batch
+--------------------------------------------------------
+Running Batch Sweep: Model=google/gemma-2-27b, BS=1, Dtype=bfloat16
+bootstrapping for stddev: perplexity
+hf ({'pretrained': 'google/gemma-2-27b', 'dtype': 'bfloat16', 'parallelize': True}), gen_kwargs: ({'temperature': 0, 'do_sample': False}), limit: None, num_fewshot: None, batch_size: 1
+|    Tasks     |Version|Filter|n-shot|    Metric     |   |Value |   |Stderr|
+|--------------|------:|------|-----:|---------------|---|-----:|---|------|
+|lambada_openai|      1|none  |     0|acc            |↑  |0.7574|±  |0.0060|
+|              |       |none  |     0|perplexity     |↓  |2.9281|±  |0.0512|
+|wikitext      |      2|none  |     0|bits_per_byte  |↓  |0.5378|±  |   N/A|
+|              |       |none  |     0|byte_perplexity|↓  |1.4517|±  |   N/A|
+|              |       |none  |     0|word_perplexity|↓  |7.3402|±  |   N/A|
+
+Completed BS=1
+--------------------------------------------------------
+Running Batch Sweep: Model=google/gemma-2-27b, BS=2, Dtype=bfloat16
+bootstrapping for stddev: perplexity
+hf ({'pretrained': 'google/gemma-2-27b', 'dtype': 'bfloat16', 'parallelize': True}), gen_kwargs: ({'temperature': 0, 'do_sample': False}), limit: None, num_fewshot: None, batch_size: 2
+|    Tasks     |Version|Filter|n-shot|    Metric     |   |Value |   |Stderr|
+|--------------|------:|------|-----:|---------------|---|-----:|---|------|
+|lambada_openai|      1|none  |     0|acc            |↑  |0.7590|±  |0.0060|
+|              |       |none  |     0|perplexity     |↓  |2.9253|±  |0.0511|
+|wikitext      |      2|none  |     0|bits_per_byte  |↓  |0.5378|±  |   N/A|
+|              |       |none  |     0|byte_perplexity|↓  |1.4518|±  |   N/A|
+|              |       |none  |     0|word_perplexity|↓  |7.3409|±  |   N/A|
+
+Completed BS=2
+--------------------------------------------------------
+Running Batch Sweep: Model=google/gemma-2-27b, BS=4, Dtype=bfloat16
+Completed BS=4
+--------------------------------------------------------
+Running Batch Sweep: Model=google/gemma-2-27b, BS=8, Dtype=bfloat16
+Completed BS=8
+--------------------------------------------------------
+Running Batch Sweep: Model=google/gemma-2-27b, BS=16, Dtype=bfloat16
+Completed BS=16
+=== Job Completed ===

@@ -1,0 +1,20 @@
+=== Job Started ===
+Node: c0910a-s15.ufhpc
+MODEL: google/gemma-2-2b
+MODE: batch
+--------------------------------------------------------
+Running Batch Sweep: Model=google/gemma-2-2b, BS=1, Dtype=bfloat16
+Completed BS=1
+--------------------------------------------------------
+Running Batch Sweep: Model=google/gemma-2-2b, BS=2, Dtype=bfloat16
+Completed BS=2
+--------------------------------------------------------
+Running Batch Sweep: Model=google/gemma-2-2b, BS=4, Dtype=bfloat16
+Completed BS=4
+--------------------------------------------------------
+Running Batch Sweep: Model=google/gemma-2-2b, BS=8, Dtype=bfloat16
+Completed BS=8
+--------------------------------------------------------
+Running Batch Sweep: Model=google/gemma-2-2b, BS=16, Dtype=bfloat16
+Completed BS=16
+=== Job Completed ===

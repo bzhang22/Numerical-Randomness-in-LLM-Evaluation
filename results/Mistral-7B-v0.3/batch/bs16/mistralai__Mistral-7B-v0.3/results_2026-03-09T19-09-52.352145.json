@@ -1,0 +1,5582 @@
+{
+  "results": {
+    "cmmlu": {
+      "acc_norm,none": 0.39561388361250216,
+      "acc_norm_stderr,none": 0.00447951636700318,
+      "acc,none": 0.39561388361250216,
+      "acc_stderr,none": 0.00447951636700318,
+      "alias": "cmmlu"
+    },
+    "cmmlu_agronomy": {
+      "alias": " - cmmlu_agronomy",
+      "acc,none": 0.31952662721893493,
+      "acc_stderr,none": 0.035975302516765284,
+      "acc_norm,none": 0.31952662721893493,
+      "acc_norm_stderr,none": 0.035975302516765284
+    },
+    "cmmlu_anatomy": {
+      "alias": " - cmmlu_anatomy",
+      "acc,none": 0.25675675675675674,
+      "acc_stderr,none": 0.036030290036472144,
+      "acc_norm,none": 0.25675675675675674,
+      "acc_norm_stderr,none": 0.036030290036472144
+    },
+    "cmmlu_ancient_chinese": {
+      "alias": " - cmmlu_ancient_chinese",
+      "acc,none": 0.2804878048780488,
+      "acc_stderr,none": 0.03518700228801578,
+      "acc_norm,none": 0.2804878048780488,
+      "acc_norm_stderr,none": 0.03518700228801578
+    },
+    "cmmlu_arts": {
+      "alias": " - cmmlu_arts",
+      "acc,none": 0.3875,
+      "acc_stderr,none": 0.03863583812241406,
+      "acc_norm,none": 0.3875,
+      "acc_norm_stderr,none": 0.03863583812241406
+    },
+    "cmmlu_astronomy": {
+      "alias": " - cmmlu_astronomy",
+      "acc,none": 0.3393939393939394,
+      "acc_stderr,none": 0.03697442205031596,
+      "acc_norm,none": 0.3393939393939394,
+      "acc_norm_stderr,none": 0.03697442205031596
+    },
+    "cmmlu_business_ethics": {
+      "alias": " - cmmlu_business_ethics",
+      "acc,none": 0.42105263157894735,
+      "acc_stderr,none": 0.03423387555726266,
+      "acc_norm,none": 0.42105263157894735,
+      "acc_norm_stderr,none": 0.03423387555726266
+    },
+    "cmmlu_chinese_civil_service_exam": {
+      "alias": " - cmmlu_chinese_civil_service_exam",
+      "acc,none": 0.3875,
+      "acc_stderr,none": 0.03863583812241406,
+      "acc_norm,none": 0.3875,
+      "acc_norm_stderr,none": 0.03863583812241406
+    },
+    "cmmlu_chinese_driving_rule": {
+      "alias": " - cmmlu_chinese_driving_rule",
+      "acc,none": 0.549618320610687,
+      "acc_stderr,none": 0.04363643698524779,
+      "acc_norm,none": 0.549618320610687,
+      "acc_norm_stderr,none": 0.04363643698524779
+    },
+    "cmmlu_chinese_food_culture": {
+      "alias": " - cmmlu_chinese_food_culture",
+      "acc,none": 0.35294117647058826,
+      "acc_stderr,none": 0.04112975875177065,
+      "acc_norm,none": 0.35294117647058826,
+      "acc_norm_stderr,none": 0.04112975875177065
+    },
+    "cmmlu_chinese_foreign_policy": {
+      "alias": " - cmmlu_chinese_foreign_policy",
+      "acc,none": 0.5233644859813084,
+      "acc_stderr,none": 0.048511241723296745,
+      "acc_norm,none": 0.5233644859813084,
+      "acc_norm_stderr,none": 0.048511241723296745
+    },
+    "cmmlu_chinese_history": {
+      "alias": " - cmmlu_chinese_history",
+      "acc,none": 0.43343653250773995,
+      "acc_stderr,none": 0.02761589383909775,
+      "acc_norm,none": 0.43343653250773995,
+      "acc_norm_stderr,none": 0.02761589383909775
+    },
+    "cmmlu_chinese_literature": {
+      "alias": " - cmmlu_chinese_literature",
+      "acc,none": 0.3333333333333333,
+      "acc_stderr,none": 0.03308611113236436,
+      "acc_norm,none": 0.3333333333333333,
+      "acc_norm_stderr,none": 0.03308611113236436
+    },
+    "cmmlu_chinese_teacher_qualification": {
+      "alias": " - cmmlu_chinese_teacher_qualification",
+      "acc,none": 0.4581005586592179,
+      "acc_stderr,none": 0.037344767605407,
+      "acc_norm,none": 0.4581005586592179,
+      "acc_norm_stderr,none": 0.037344767605407
+    },
+    "cmmlu_clinical_knowledge": {
+      "alias": " - cmmlu_clinical_knowledge",
+      "acc,none": 0.3459915611814346,
+      "acc_stderr,none": 0.030964810588786716,
+      "acc_norm,none": 0.3459915611814346,
+      "acc_norm_stderr,none": 0.030964810588786716
+    },
+    "cmmlu_college_actuarial_science": {
+      "alias": " - cmmlu_college_actuarial_science",
+      "acc,none": 0.22641509433962265,
+      "acc_stderr,none": 0.040842473153371,
+      "acc_norm,none": 0.22641509433962265,
+      "acc_norm_stderr,none": 0.040842473153371
+    },
+    "cmmlu_college_education": {
+      "alias": " - cmmlu_college_education",
+      "acc,none": 0.4485981308411215,
+      "acc_stderr,none": 0.04830698295619321,
+      "acc_norm,none": 0.4485981308411215,
+      "acc_norm_stderr,none": 0.04830698295619321
+    },
+    "cmmlu_college_engineering_hydrology": {
+      "alias": " - cmmlu_college_engineering_hydrology",
+      "acc,none": 0.3867924528301887,
+      "acc_stderr,none": 0.04752784159123843,
+      "acc_norm,none": 0.3867924528301887,
+      "acc_norm_stderr,none": 0.04752784159123843
+    },
+    "cmmlu_college_law": {
+      "alias": " - cmmlu_college_law",
+      "acc,none": 0.3055555555555556,
+      "acc_stderr,none": 0.044531975073749834,
+      "acc_norm,none": 0.3055555555555556,
+      "acc_norm_stderr,none": 0.044531975073749834
+    },
+    "cmmlu_college_mathematics": {
+      "alias": " - cmmlu_college_mathematics",
+      "acc,none": 0.24761904761904763,
+      "acc_stderr,none": 0.04232473532055041,
+      "acc_norm,none": 0.24761904761904763,
+      "acc_norm_stderr,none": 0.04232473532055041
+    },
+    "cmmlu_college_medical_statistics": {
+      "alias": " - cmmlu_college_medical_statistics",
+      "acc,none": 0.42452830188679247,
+      "acc_stderr,none": 0.04823593037243471,
+      "acc_norm,none": 0.42452830188679247,
+      "acc_norm_stderr,none": 0.04823593037243471
+    },
+    "cmmlu_college_medicine": {
+      "alias": " - cmmlu_college_medicine",
+      "acc,none": 0.326007326007326,
+      "acc_stderr,none": 0.028422142711485646,
+      "acc_norm,none": 0.326007326007326,
+      "acc_norm_stderr,none": 0.028422142711485646
+    },
+    "cmmlu_computer_science": {
+      "alias": " - cmmlu_computer_science",
+      "acc,none": 0.46568627450980393,
+      "acc_stderr,none": 0.03501038327635896,
+      "acc_norm,none": 0.46568627450980393,
+      "acc_norm_stderr,none": 0.03501038327635896
+    },
+    "cmmlu_computer_security": {
+      "alias": " - cmmlu_computer_security",
+      "acc,none": 0.5321637426900585,
+      "acc_stderr,none": 0.038268824176603704,
+      "acc_norm,none": 0.5321637426900585,
+      "acc_norm_stderr,none": 0.038268824176603704
+    },
+    "cmmlu_conceptual_physics": {
+      "alias": " - cmmlu_conceptual_physics",
+      "acc,none": 0.35374149659863946,
+      "acc_stderr,none": 0.03957033361777324,
+      "acc_norm,none": 0.35374149659863946,
+      "acc_norm_stderr,none": 0.03957033361777324
+    },
+    "cmmlu_construction_project_management": {
+      "alias": " - cmmlu_construction_project_management",
+      "acc,none": 0.37410071942446044,
+      "acc_stderr,none": 0.04119143810981593,
+      "acc_norm,none": 0.37410071942446044,
+      "acc_norm_stderr,none": 0.04119143810981593
+    },
+    "cmmlu_economics": {
+      "alias": " - cmmlu_economics",
+      "acc,none": 0.4779874213836478,
+      "acc_stderr,none": 0.039739296495612426,
+      "acc_norm,none": 0.4779874213836478,
+      "acc_norm_stderr,none": 0.039739296495612426
+    },
+    "cmmlu_education": {
+      "alias": " - cmmlu_education",
+      "acc,none": 0.4601226993865031,
+      "acc_stderr,none": 0.03915857291436971,
+      "acc_norm,none": 0.4601226993865031,
+      "acc_norm_stderr,none": 0.03915857291436971
+    },
+    "cmmlu_electrical_engineering": {
+      "alias": " - cmmlu_electrical_engineering",
+      "acc,none": 0.38953488372093026,
+      "acc_stderr,none": 0.037291130444871784,
+      "acc_norm,none": 0.38953488372093026,
+      "acc_norm_stderr,none": 0.037291130444871784
+    },
+    "cmmlu_elementary_chinese": {
+      "alias": " - cmmlu_elementary_chinese",
+      "acc,none": 0.27380952380952384,
+      "acc_stderr,none": 0.02814574111568385,
+      "acc_norm,none": 0.27380952380952384,
+      "acc_norm_stderr,none": 0.02814574111568385
+    },
+    "cmmlu_elementary_commonsense": {
+      "alias": " - cmmlu_elementary_commonsense",
+      "acc,none": 0.3888888888888889,
+      "acc_stderr,none": 0.0347327959083696,
+      "acc_norm,none": 0.3888888888888889,
+      "acc_norm_stderr,none": 0.0347327959083696
+    },
+    "cmmlu_elementary_information_and_technology": {
+      "alias": " - cmmlu_elementary_information_and_technology",
+      "acc,none": 0.634453781512605,
+      "acc_stderr,none": 0.031282177063684614,
+      "acc_norm,none": 0.634453781512605,
+      "acc_norm_stderr,none": 0.031282177063684614
+    },
+    "cmmlu_elementary_mathematics": {
+      "alias": " - cmmlu_elementary_mathematics",
+      "acc,none": 0.2565217391304348,
+      "acc_stderr,none": 0.028858814315305643,
+      "acc_norm,none": 0.2565217391304348,
+      "acc_norm_stderr,none": 0.028858814315305643
+    },
+    "cmmlu_ethnology": {
+      "alias": " - cmmlu_ethnology",
+      "acc,none": 0.35555555555555557,
+      "acc_stderr,none": 0.04135176749720386,
+      "acc_norm,none": 0.35555555555555557,
+      "acc_norm_stderr,none": 0.04135176749720386
+    },
+    "cmmlu_food_science": {
+      "alias": " - cmmlu_food_science",
+      "acc,none": 0.42657342657342656,
+      "acc_stderr,none": 0.041504160517293893,
+      "acc_norm,none": 0.42657342657342656,
+      "acc_norm_stderr,none": 0.041504160517293893
+    },
+    "cmmlu_genetics": {
+      "alias": " - cmmlu_genetics",
+      "acc,none": 0.3806818181818182,
+      "acc_stderr,none": 0.03670447006546079,
+      "acc_norm,none": 0.3806818181818182,
+      "acc_norm_stderr,none": 0.03670447006546079
+    },
+    "cmmlu_global_facts": {
+      "alias": " - cmmlu_global_facts",
+      "acc,none": 0.4228187919463087,
+      "acc_stderr,none": 0.04060713733058447,
+      "acc_norm,none": 0.4228187919463087,
+      "acc_norm_stderr,none": 0.04060713733058447
+    },
+    "cmmlu_high_school_biology": {
+      "alias": " - cmmlu_high_school_biology",
+      "acc,none": 0.3136094674556213,
+      "acc_stderr,none": 0.035795265164562266,
+      "acc_norm,none": 0.3136094674556213,
+      "acc_norm_stderr,none": 0.035795265164562266
+    },
+    "cmmlu_high_school_chemistry": {
+      "alias": " - cmmlu_high_school_chemistry",
+      "acc,none": 0.2803030303030303,
+      "acc_stderr,none": 0.03924217639788229,
+      "acc_norm,none": 0.2803030303030303,
+      "acc_norm_stderr,none": 0.03924217639788229
+    },
+    "cmmlu_high_school_geography": {
+      "alias": " - cmmlu_high_school_geography",
+      "acc,none": 0.4067796610169492,
+      "acc_stderr,none": 0.04541451708861589,
+      "acc_norm,none": 0.4067796610169492,
+      "acc_norm_stderr,none": 0.04541451708861589
+    },
+    "cmmlu_high_school_mathematics": {
+      "alias": " - cmmlu_high_school_mathematics",
+      "acc,none": 0.25,
+      "acc_stderr,none": 0.03391617237346009,
+      "acc_norm,none": 0.25,
+      "acc_norm_stderr,none": 0.03391617237346009
+    },
+    "cmmlu_high_school_physics": {
+      "alias": " - cmmlu_high_school_physics",
+      "acc,none": 0.2636363636363636,
+      "acc_stderr,none": 0.04220224692971987,
+      "acc_norm,none": 0.2636363636363636,
+      "acc_norm_stderr,none": 0.04220224692971987
+    },
+    "cmmlu_high_school_politics": {
+      "alias": " - cmmlu_high_school_politics",
+      "acc,none": 0.36363636363636365,
+      "acc_stderr,none": 0.04036845779880779,
+      "acc_norm,none": 0.36363636363636365,
+      "acc_norm_stderr,none": 0.04036845779880779
+    },
+    "cmmlu_human_sexuality": {
+      "alias": " - cmmlu_human_sexuality",
+      "acc,none": 0.3968253968253968,
+      "acc_stderr,none": 0.043758884927270605,
+      "acc_norm,none": 0.3968253968253968,
+      "acc_norm_stderr,none": 0.043758884927270605
+    },
+    "cmmlu_international_law": {
+      "alias": " - cmmlu_international_law",
+      "acc,none": 0.3567567567567568,
+      "acc_stderr,none": 0.035315455206482514,
+      "acc_norm,none": 0.3567567567567568,
+      "acc_norm_stderr,none": 0.035315455206482514
+    },
+    "cmmlu_journalism": {
+      "alias": " - cmmlu_journalism",
+      "acc,none": 0.45930232558139533,
+      "acc_stderr,none": 0.03810908467898032,
+      "acc_norm,none": 0.45930232558139533,
+      "acc_norm_stderr,none": 0.03810908467898032
+    },
+    "cmmlu_jurisprudence": {
+      "alias": " - cmmlu_jurisprudence",
+      "acc,none": 0.39902676399026765,
+      "acc_stderr,none": 0.024184474238032477,
+      "acc_norm,none": 0.39902676399026765,
+      "acc_norm_stderr,none": 0.024184474238032477
+    },
+    "cmmlu_legal_and_moral_basis": {
+      "alias": " - cmmlu_legal_and_moral_basis",
+      "acc,none": 0.6448598130841121,
+      "acc_stderr,none": 0.03279010174656989,
+      "acc_norm,none": 0.6448598130841121,
+      "acc_norm_stderr,none": 0.03279010174656989
+    },
+    "cmmlu_logical": {
+      "alias": " - cmmlu_logical",
+      "acc,none": 0.36585365853658536,
+      "acc_stderr,none": 0.04360823721556536,
+      "acc_norm,none": 0.36585365853658536,
+      "acc_norm_stderr,none": 0.04360823721556536
+    },
+    "cmmlu_machine_learning": {
+      "alias": " - cmmlu_machine_learning",
+      "acc,none": 0.45081967213114754,
+      "acc_stderr,none": 0.04523412879516006,
+      "acc_norm,none": 0.45081967213114754,
+      "acc_norm_stderr,none": 0.04523412879516006
+    },
+    "cmmlu_management": {
+      "alias": " - cmmlu_management",
+      "acc,none": 0.48095238095238096,
+      "acc_stderr,none": 0.034560617865111484,
+      "acc_norm,none": 0.48095238095238096,
+      "acc_norm_stderr,none": 0.034560617865111484
+    },
+    "cmmlu_marketing": {
+      "alias": " - cmmlu_marketing",
+      "acc,none": 0.5055555555555555,
+      "acc_stderr,none": 0.03736944766795738,
+      "acc_norm,none": 0.5055555555555555,
+      "acc_norm_stderr,none": 0.03736944766795738
+    },
+    "cmmlu_marxist_theory": {
+      "alias": " - cmmlu_marxist_theory",
+      "acc,none": 0.5132275132275133,
+      "acc_stderr,none": 0.03645348485324587,
+      "acc_norm,none": 0.5132275132275133,
+      "acc_norm_stderr,none": 0.03645348485324587
+    },
+    "cmmlu_modern_chinese": {
+      "alias": " - cmmlu_modern_chinese",
+      "acc,none": 0.33620689655172414,
+      "acc_stderr,none": 0.04405251996570163,
+      "acc_norm,none": 0.33620689655172414,
+      "acc_norm_stderr,none": 0.04405251996570163
+    },
+    "cmmlu_nutrition": {
+      "alias": " - cmmlu_nutrition",
+      "acc,none": 0.3310344827586207,
+      "acc_stderr,none": 0.03921545312467122,
+      "acc_norm,none": 0.3310344827586207,
+      "acc_norm_stderr,none": 0.03921545312467122
+    },
+    "cmmlu_philosophy": {
+      "alias": " - cmmlu_philosophy",
+      "acc,none": 0.4,
+      "acc_stderr,none": 0.04803844614152614,
+      "acc_norm,none": 0.4,
+      "acc_norm_stderr,none": 0.04803844614152614
+    },
+    "cmmlu_professional_accounting": {
+      "alias": " - cmmlu_professional_accounting",
+      "acc,none": 0.4228571428571429,
+      "acc_stderr,none": 0.037451039271051256,
+      "acc_norm,none": 0.4228571428571429,
+      "acc_norm_stderr,none": 0.037451039271051256
+    },
+    "cmmlu_professional_law": {
+      "alias": " - cmmlu_professional_law",
+      "acc,none": 0.3222748815165877,
+      "acc_stderr,none": 0.03225004852414643,
+      "acc_norm,none": 0.3222748815165877,
+      "acc_norm_stderr,none": 0.03225004852414643
+    },
+    "cmmlu_professional_medicine": {
+      "alias": " - cmmlu_professional_medicine",
+      "acc,none": 0.300531914893617,
+      "acc_stderr,none": 0.023676288167643916,
+      "acc_norm,none": 0.300531914893617,
+      "acc_norm_stderr,none": 0.023676288167643916
+    },
+    "cmmlu_professional_psychology": {
+      "alias": " - cmmlu_professional_psychology",
+      "acc,none": 0.41810344827586204,
+      "acc_stderr,none": 0.032453293432460714,
+      "acc_norm,none": 0.41810344827586204,
+      "acc_norm_stderr,none": 0.032453293432460714
+    },
+    "cmmlu_public_relations": {
+      "alias": " - cmmlu_public_relations",
+      "acc,none": 0.4482758620689655,
+      "acc_stderr,none": 0.03781034307794902,
+      "acc_norm,none": 0.4482758620689655,
+      "acc_norm_stderr,none": 0.03781034307794902
+    },
+    "cmmlu_security_study": {
+      "alias": " - cmmlu_security_study",
+      "acc,none": 0.48148148148148145,
+      "acc_stderr,none": 0.043163785995113245,
+      "acc_norm,none": 0.48148148148148145,
+      "acc_norm_stderr,none": 0.043163785995113245
+    },
+    "cmmlu_sociology": {
+      "alias": " - cmmlu_sociology",
+      "acc,none": 0.40707964601769914,
+      "acc_stderr,none": 0.03275266284786317,
+      "acc_norm,none": 0.40707964601769914,
+      "acc_norm_stderr,none": 0.03275266284786317
+    },
+    "cmmlu_sports_science": {
+      "alias": " - cmmlu_sports_science",
+      "acc,none": 0.43636363636363634,
+      "acc_stderr,none": 0.03872592983524754,
+      "acc_norm,none": 0.43636363636363634,
+      "acc_norm_stderr,none": 0.03872592983524754
+    },
+    "cmmlu_traditional_chinese_medicine": {
+      "alias": " - cmmlu_traditional_chinese_medicine",
+      "acc,none": 0.2864864864864865,
+      "acc_stderr,none": 0.03333068663336699,
+      "acc_norm,none": 0.2864864864864865,
+      "acc_norm_stderr,none": 0.03333068663336699
+    },
+    "cmmlu_virology": {
+      "alias": " - cmmlu_virology",
+      "acc,none": 0.46745562130177515,
+      "acc_stderr,none": 0.03849403659869391,
+      "acc_norm,none": 0.46745562130177515,
+      "acc_norm_stderr,none": 0.03849403659869391
+    },
+    "cmmlu_world_history": {
+      "alias": " - cmmlu_world_history",
+      "acc,none": 0.4906832298136646,
+      "acc_stderr,none": 0.03952160783935914,
+      "acc_norm,none": 0.4906832298136646,
+      "acc_norm_stderr,none": 0.03952160783935914
+    },
+    "cmmlu_world_religions": {
+      "alias": " - cmmlu_world_religions",
+      "acc,none": 0.4625,
+      "acc_stderr,none": 0.039540899134978165,
+      "acc_norm,none": 0.4625,
+      "acc_norm_stderr,none": 0.039540899134978165
+    },
+    "gsm8k": {
+      "alias": "gsm8k",
+      "exact_match,strict-match": 0.3639120545868082,
+      "exact_match_stderr,strict-match": 0.013252539227966187,
+      "exact_match,flexible-extract": 0.3639120545868082,
+      "exact_match_stderr,flexible-extract": 0.013252539227966187
+    },
+    "humaneval": {
+      "alias": "humaneval",
+      "pass@1,create_test": 0.006097560975609756,
+      "pass@1_stderr,create_test": 0.006097560975609764
+    },
+    "piqa": {
+      "alias": "piqa",
+      "acc,none": 0.8003264417845484,
+      "acc_stderr,none": 0.009326942154519176,
+      "acc_norm,none": 0.8182807399347116,
+      "acc_norm_stderr,none": 0.008996986448433702
+    }
+  },
+  "groups": {
+    "cmmlu": {
+      "acc_norm,none": 0.39561388361250216,
+      "acc_norm_stderr,none": 0.00447951636700318,
+      "acc,none": 0.39561388361250216,
+      "acc_stderr,none": 0.00447951636700318,
+      "alias": "cmmlu"
+    }
+  },
+  "group_subtasks": {
+    "piqa": [],
+    "cmmlu": [
+      "cmmlu_agronomy",
+      "cmmlu_anatomy",
+      "cmmlu_ancient_chinese",
+      "cmmlu_arts",
+      "cmmlu_astronomy",
+      "cmmlu_business_ethics",
+      "cmmlu_chinese_civil_service_exam",
+      "cmmlu_chinese_driving_rule",
+      "cmmlu_chinese_food_culture",
+      "cmmlu_chinese_foreign_policy",
+      "cmmlu_chinese_history",
+      "cmmlu_chinese_literature",
+      "cmmlu_chinese_teacher_qualification",
+      "cmmlu_clinical_knowledge",
+      "cmmlu_college_actuarial_science",
+      "cmmlu_college_education",
+      "cmmlu_college_engineering_hydrology",
+      "cmmlu_college_law",
+      "cmmlu_college_mathematics",
+      "cmmlu_college_medical_statistics",
+      "cmmlu_college_medicine",
+      "cmmlu_computer_science",
+      "cmmlu_computer_security",
+      "cmmlu_conceptual_physics",
+      "cmmlu_construction_project_management",
+      "cmmlu_economics",
+      "cmmlu_education",
+      "cmmlu_electrical_engineering",
+      "cmmlu_elementary_chinese",
+      "cmmlu_elementary_commonsense",
+      "cmmlu_elementary_information_and_technology",
+      "cmmlu_elementary_mathematics",
+      "cmmlu_ethnology",
+      "cmmlu_food_science",
+      "cmmlu_genetics",
+      "cmmlu_global_facts",
+      "cmmlu_high_school_biology",
+      "cmmlu_high_school_chemistry",
+      "cmmlu_high_school_geography",
+      "cmmlu_high_school_mathematics",
+      "cmmlu_high_school_physics",
+      "cmmlu_high_school_politics",
+      "cmmlu_human_sexuality",
+      "cmmlu_international_law",
+      "cmmlu_journalism",
+      "cmmlu_jurisprudence",
+      "cmmlu_legal_and_moral_basis",
+      "cmmlu_logical",
+      "cmmlu_machine_learning",
+      "cmmlu_management",
+      "cmmlu_marketing",
+      "cmmlu_marxist_theory",
+      "cmmlu_modern_chinese",
+      "cmmlu_nutrition",
+      "cmmlu_philosophy",
+      "cmmlu_professional_accounting",
+      "cmmlu_professional_law",
+      "cmmlu_professional_medicine",
+      "cmmlu_professional_psychology",
+      "cmmlu_public_relations",
+      "cmmlu_security_study",
+      "cmmlu_sociology",
+      "cmmlu_sports_science",
+      "cmmlu_traditional_chinese_medicine",
+      "cmmlu_virology",
+      "cmmlu_world_history",
+      "cmmlu_world_religions"
+    ],
+    "gsm8k": [],
+    "humaneval": []
+  },
+  "configs": {
+    "cmmlu_agronomy": {
+      "task": "cmmlu_agronomy",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "agronomy",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于农学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_anatomy": {
+      "task": "cmmlu_anatomy",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "anatomy",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于解剖学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_ancient_chinese": {
+      "task": "cmmlu_ancient_chinese",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "ancient_chinese",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于古汉语的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_arts": {
+      "task": "cmmlu_arts",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "arts",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于艺术学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_astronomy": {
+      "task": "cmmlu_astronomy",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "astronomy",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于天文学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_business_ethics": {
+      "task": "cmmlu_business_ethics",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "business_ethics",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于商业伦理的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_chinese_civil_service_exam": {
+      "task": "cmmlu_chinese_civil_service_exam",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "chinese_civil_service_exam",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于中国公务员考试的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_chinese_driving_rule": {
+      "task": "cmmlu_chinese_driving_rule",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "chinese_driving_rule",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于中国驾驶规则的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_chinese_food_culture": {
+      "task": "cmmlu_chinese_food_culture",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "chinese_food_culture",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于中国饮食文化的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_chinese_foreign_policy": {
+      "task": "cmmlu_chinese_foreign_policy",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "chinese_foreign_policy",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于中国外交政策的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_chinese_history": {
+      "task": "cmmlu_chinese_history",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "chinese_history",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于中国历史的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_chinese_literature": {
+      "task": "cmmlu_chinese_literature",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "chinese_literature",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于中国文学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_chinese_teacher_qualification": {
+      "task": "cmmlu_chinese_teacher_qualification",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "chinese_teacher_qualification",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于中国教师资格的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_clinical_knowledge": {
+      "task": "cmmlu_clinical_knowledge",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "clinical_knowledge",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于临床知识的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_college_actuarial_science": {
+      "task": "cmmlu_college_actuarial_science",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "college_actuarial_science",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于大学精算学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_college_education": {
+      "task": "cmmlu_college_education",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "college_education",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于大学教育学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_college_engineering_hydrology": {
+      "task": "cmmlu_college_engineering_hydrology",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "college_engineering_hydrology",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于大学工程水文学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_college_law": {
+      "task": "cmmlu_college_law",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "college_law",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于大学法律的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_college_mathematics": {
+      "task": "cmmlu_college_mathematics",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "college_mathematics",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于大学数学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_college_medical_statistics": {
+      "task": "cmmlu_college_medical_statistics",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "college_medical_statistics",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于大学医学统计的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_college_medicine": {
+      "task": "cmmlu_college_medicine",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "college_medicine",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于大学医学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_computer_science": {
+      "task": "cmmlu_computer_science",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "computer_science",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于计算机科学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_computer_security": {
+      "task": "cmmlu_computer_security",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "computer_security",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于计算机安全的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_conceptual_physics": {
+      "task": "cmmlu_conceptual_physics",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "conceptual_physics",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于概念物理学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_construction_project_management": {
+      "task": "cmmlu_construction_project_management",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "construction_project_management",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于建设工程管理的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_economics": {
+      "task": "cmmlu_economics",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "economics",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于经济学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_education": {
+      "task": "cmmlu_education",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "education",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于教育学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_electrical_engineering": {
+      "task": "cmmlu_electrical_engineering",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "electrical_engineering",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于电气工程的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_elementary_chinese": {
+      "task": "cmmlu_elementary_chinese",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "elementary_chinese",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于小学语文的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_elementary_commonsense": {
+      "task": "cmmlu_elementary_commonsense",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "elementary_commonsense",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于小学常识的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_elementary_information_and_technology": {
+      "task": "cmmlu_elementary_information_and_technology",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "elementary_information_and_technology",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于小学信息技术的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_elementary_mathematics": {
+      "task": "cmmlu_elementary_mathematics",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "elementary_mathematics",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于初等数学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_ethnology": {
+      "task": "cmmlu_ethnology",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "ethnology",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于民族学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_food_science": {
+      "task": "cmmlu_food_science",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "food_science",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于食品科学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_genetics": {
+      "task": "cmmlu_genetics",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "genetics",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于遗传学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_global_facts": {
+      "task": "cmmlu_global_facts",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "global_facts",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于全球事实的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_high_school_biology": {
+      "task": "cmmlu_high_school_biology",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "high_school_biology",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于高中生物的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_high_school_chemistry": {
+      "task": "cmmlu_high_school_chemistry",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "high_school_chemistry",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于高中化学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_high_school_geography": {
+      "task": "cmmlu_high_school_geography",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "high_school_geography",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于高中地理的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_high_school_mathematics": {
+      "task": "cmmlu_high_school_mathematics",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "high_school_mathematics",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于高中数学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_high_school_physics": {
+      "task": "cmmlu_high_school_physics",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "high_school_physics",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于高中物理学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_high_school_politics": {
+      "task": "cmmlu_high_school_politics",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "high_school_politics",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于高中政治的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_human_sexuality": {
+      "task": "cmmlu_human_sexuality",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "human_sexuality",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于人类性行为的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_international_law": {
+      "task": "cmmlu_international_law",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "international_law",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于国际法学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_journalism": {
+      "task": "cmmlu_journalism",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "journalism",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于新闻学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_jurisprudence": {
+      "task": "cmmlu_jurisprudence",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "jurisprudence",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于法理学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_legal_and_moral_basis": {
+      "task": "cmmlu_legal_and_moral_basis",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "legal_and_moral_basis",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于法律与道德基础的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_logical": {
+      "task": "cmmlu_logical",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "logical",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于逻辑学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_machine_learning": {
+      "task": "cmmlu_machine_learning",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "machine_learning",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于机器学习的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_management": {
+      "task": "cmmlu_management",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "management",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于管理学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_marketing": {
+      "task": "cmmlu_marketing",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "marketing",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于市场营销的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_marxist_theory": {
+      "task": "cmmlu_marxist_theory",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "marxist_theory",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于马克思主义理论的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_modern_chinese": {
+      "task": "cmmlu_modern_chinese",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "modern_chinese",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于现代汉语的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_nutrition": {
+      "task": "cmmlu_nutrition",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "nutrition",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于营养学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_philosophy": {
+      "task": "cmmlu_philosophy",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "philosophy",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于哲学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_professional_accounting": {
+      "task": "cmmlu_professional_accounting",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "professional_accounting",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于专业会计的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_professional_law": {
+      "task": "cmmlu_professional_law",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "professional_law",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于专业法学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_professional_medicine": {
+      "task": "cmmlu_professional_medicine",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "professional_medicine",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于专业医学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_professional_psychology": {
+      "task": "cmmlu_professional_psychology",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "professional_psychology",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于专业心理学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_public_relations": {
+      "task": "cmmlu_public_relations",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "public_relations",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于公共关系的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_security_study": {
+      "task": "cmmlu_security_study",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "security_study",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于安全研究的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_sociology": {
+      "task": "cmmlu_sociology",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "sociology",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于社会学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_sports_science": {
+      "task": "cmmlu_sports_science",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "sports_science",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于体育学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_traditional_chinese_medicine": {
+      "task": "cmmlu_traditional_chinese_medicine",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "traditional_chinese_medicine",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于中医中药的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_virology": {
+      "task": "cmmlu_virology",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "virology",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于病毒学的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_world_history": {
+      "task": "cmmlu_world_history",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "world_history",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于世界历史的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "cmmlu_world_religions": {
+      "task": "cmmlu_world_religions",
+      "dataset_path": "haonan-li/cmmlu",
+      "dataset_name": "world_religions",
+      "test_split": "test",
+      "fewshot_split": "dev",
+      "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+      "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "以下是关于世界宗教的单项选择题，请直接给出正确答案的选项。\n\n",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "dev",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{Question.strip()}}\nA. {{A}}\nB. {{B}}\nC. {{C}}\nD. {{D}}\n答案：",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['A', 'B', 'C', 'D'].index(Answer)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "gsm8k": {
+      "task": "gsm8k",
+      "tag": [
+        "math_word_problems"
+      ],
+      "dataset_path": "openai/gsm8k",
+      "dataset_name": "main",
+      "training_split": "train",
+      "test_split": "test",
+      "fewshot_split": "train",
+      "doc_to_text": "Question: {{question}}\nAnswer:",
+      "doc_to_target": "{{answer}}",
+      "unsafe_code": false,
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": "train",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "Question: {{question}}\nAnswer:",
+        "doc_to_choice": null,
+        "doc_to_target": "{{answer}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 5,
+      "metric_list": [
+        {
+          "metric": "exact_match",
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "ignore_case": true,
+          "ignore_punctuation": false,
+          "regexes_to_ignore": [
+            ",",
+            "\\$",
+            "(?s).*#### ",
+            "\\.$"
+          ]
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "Question:",
+          "</s>",
+          "<|im_end|>"
+        ],
+        "do_sample": false,
+        "temperature": 0
+      },
+      "repeats": 1,
+      "filter_list": [
+        {
+          "name": "strict-match",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "#### (\\-?[0-9\\.\\,]+)"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        },
+        {
+          "name": "flexible-extract",
+          "filter": [
+            {
+              "function": "regex",
+              "group_select": -1,
+              "regex_pattern": "(-?[$0-9.,]{2,})|(-?[0-9]+)"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 3.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "humaneval": {
+      "task": "humaneval",
+      "dataset_path": "openai/openai_humaneval",
+      "test_split": "test",
+      "doc_to_text": "{{prompt}}",
+      "doc_to_target": "{{test}}\ncheck({{entry_point}})",
+      "unsafe_code": true,
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{prompt}}",
+        "doc_to_choice": null,
+        "doc_to_target": "{{test}}\ncheck({{entry_point}})",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "def pass_at_k(references: list[str], predictions: list[list[str]], k: list[int] = None):\n    global compute_\n    assert k is not None\n    if isinstance(k, int):\n        k = [k]\n    res = compute_.compute(\n        references=references,\n        predictions=predictions,\n        k=k,\n    )\n    return res[0]\n",
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "k": [
+            1
+          ]
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "\nclass",
+          "\ndef",
+          "\n#",
+          "\nif",
+          "\nprint"
+        ],
+        "max_gen_toks": 1024,
+        "do_sample": false,
+        "temperature": 0
+      },
+      "repeats": 1,
+      "filter_list": [
+        {
+          "name": "create_test",
+          "filter": [
+            {
+              "function": "custom",
+              "filter_fn": "<function build_predictions at 0x145715b0b880>"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    },
+    "piqa": {
+      "task": "piqa",
+      "dataset_path": "baber/piqa",
+      "training_split": "train",
+      "validation_split": "validation",
+      "doc_to_text": "Question: {{goal}}\nAnswer:",
+      "doc_to_target": "label",
+      "unsafe_code": false,
+      "doc_to_choice": "{{[sol1, sol2]}}",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "Question: {{goal}}\nAnswer:",
+        "doc_to_choice": "{{[sol1, sol2]}}",
+        "doc_to_target": "label",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "goal",
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "mistralai/Mistral-7B-v0.3",
+        "dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    }
+  },
+  "versions": {
+    "cmmlu": 1.0,
+    "cmmlu_agronomy": 1.0,
+    "cmmlu_anatomy": 1.0,
+    "cmmlu_ancient_chinese": 1.0,
+    "cmmlu_arts": 1.0,
+    "cmmlu_astronomy": 1.0,
+    "cmmlu_business_ethics": 1.0,
+    "cmmlu_chinese_civil_service_exam": 1.0,
+    "cmmlu_chinese_driving_rule": 1.0,
+    "cmmlu_chinese_food_culture": 1.0,
+    "cmmlu_chinese_foreign_policy": 1.0,
+    "cmmlu_chinese_history": 1.0,
+    "cmmlu_chinese_literature": 1.0,
+    "cmmlu_chinese_teacher_qualification": 1.0,
+    "cmmlu_clinical_knowledge": 1.0,
+    "cmmlu_college_actuarial_science": 1.0,
+    "cmmlu_college_education": 1.0,
+    "cmmlu_college_engineering_hydrology": 1.0,
+    "cmmlu_college_law": 1.0,
+    "cmmlu_college_mathematics": 1.0,
+    "cmmlu_college_medical_statistics": 1.0,
+    "cmmlu_college_medicine": 1.0,
+    "cmmlu_computer_science": 1.0,
+    "cmmlu_computer_security": 1.0,
+    "cmmlu_conceptual_physics": 1.0,
+    "cmmlu_construction_project_management": 1.0,
+    "cmmlu_economics": 1.0,
+    "cmmlu_education": 1.0,
+    "cmmlu_electrical_engineering": 1.0,
+    "cmmlu_elementary_chinese": 1.0,
+    "cmmlu_elementary_commonsense": 1.0,
+    "cmmlu_elementary_information_and_technology": 1.0,
+    "cmmlu_elementary_mathematics": 1.0,
+    "cmmlu_ethnology": 1.0,
+    "cmmlu_food_science": 1.0,
+    "cmmlu_genetics": 1.0,
+    "cmmlu_global_facts": 1.0,
+    "cmmlu_high_school_biology": 1.0,
+    "cmmlu_high_school_chemistry": 1.0,
+    "cmmlu_high_school_geography": 1.0,
+    "cmmlu_high_school_mathematics": 1.0,
+    "cmmlu_high_school_physics": 1.0,
+    "cmmlu_high_school_politics": 1.0,
+    "cmmlu_human_sexuality": 1.0,
+    "cmmlu_international_law": 1.0,
+    "cmmlu_journalism": 1.0,
+    "cmmlu_jurisprudence": 1.0,
+    "cmmlu_legal_and_moral_basis": 1.0,
+    "cmmlu_logical": 1.0,
+    "cmmlu_machine_learning": 1.0,
+    "cmmlu_management": 1.0,
+    "cmmlu_marketing": 1.0,
+    "cmmlu_marxist_theory": 1.0,
+    "cmmlu_modern_chinese": 1.0,
+    "cmmlu_nutrition": 1.0,
+    "cmmlu_philosophy": 1.0,
+    "cmmlu_professional_accounting": 1.0,
+    "cmmlu_professional_law": 1.0,
+    "cmmlu_professional_medicine": 1.0,
+    "cmmlu_professional_psychology": 1.0,
+    "cmmlu_public_relations": 1.0,
+    "cmmlu_security_study": 1.0,
+    "cmmlu_sociology": 1.0,
+    "cmmlu_sports_science": 1.0,
+    "cmmlu_traditional_chinese_medicine": 1.0,
+    "cmmlu_virology": 1.0,
+    "cmmlu_world_history": 1.0,
+    "cmmlu_world_religions": 1.0,
+    "gsm8k": 3.0,
+    "humaneval": 1.0,
+    "piqa": 1.0
+  },
+  "n-shot": {
+    "cmmlu_agronomy": 0,
+    "cmmlu_anatomy": 0,
+    "cmmlu_ancient_chinese": 0,
+    "cmmlu_arts": 0,
+    "cmmlu_astronomy": 0,
+    "cmmlu_business_ethics": 0,
+    "cmmlu_chinese_civil_service_exam": 0,
+    "cmmlu_chinese_driving_rule": 0,
+    "cmmlu_chinese_food_culture": 0,
+    "cmmlu_chinese_foreign_policy": 0,
+    "cmmlu_chinese_history": 0,
+    "cmmlu_chinese_literature": 0,
+    "cmmlu_chinese_teacher_qualification": 0,
+    "cmmlu_clinical_knowledge": 0,
+    "cmmlu_college_actuarial_science": 0,
+    "cmmlu_college_education": 0,
+    "cmmlu_college_engineering_hydrology": 0,
+    "cmmlu_college_law": 0,
+    "cmmlu_college_mathematics": 0,
+    "cmmlu_college_medical_statistics": 0,
+    "cmmlu_college_medicine": 0,
+    "cmmlu_computer_science": 0,
+    "cmmlu_computer_security": 0,
+    "cmmlu_conceptual_physics": 0,
+    "cmmlu_construction_project_management": 0,
+    "cmmlu_economics": 0,
+    "cmmlu_education": 0,
+    "cmmlu_electrical_engineering": 0,
+    "cmmlu_elementary_chinese": 0,
+    "cmmlu_elementary_commonsense": 0,
+    "cmmlu_elementary_information_and_technology": 0,
+    "cmmlu_elementary_mathematics": 0,
+    "cmmlu_ethnology": 0,
+    "cmmlu_food_science": 0,
+    "cmmlu_genetics": 0,
+    "cmmlu_global_facts": 0,
+    "cmmlu_high_school_biology": 0,
+    "cmmlu_high_school_chemistry": 0,
+    "cmmlu_high_school_geography": 0,
+    "cmmlu_high_school_mathematics": 0,
+    "cmmlu_high_school_physics": 0,
+    "cmmlu_high_school_politics": 0,
+    "cmmlu_human_sexuality": 0,
+    "cmmlu_international_law": 0,
+    "cmmlu_journalism": 0,
+    "cmmlu_jurisprudence": 0,
+    "cmmlu_legal_and_moral_basis": 0,
+    "cmmlu_logical": 0,
+    "cmmlu_machine_learning": 0,
+    "cmmlu_management": 0,
+    "cmmlu_marketing": 0,
+    "cmmlu_marxist_theory": 0,
+    "cmmlu_modern_chinese": 0,
+    "cmmlu_nutrition": 0,
+    "cmmlu_philosophy": 0,
+    "cmmlu_professional_accounting": 0,
+    "cmmlu_professional_law": 0,
+    "cmmlu_professional_medicine": 0,
+    "cmmlu_professional_psychology": 0,
+    "cmmlu_public_relations": 0,
+    "cmmlu_security_study": 0,
+    "cmmlu_sociology": 0,
+    "cmmlu_sports_science": 0,
+    "cmmlu_traditional_chinese_medicine": 0,
+    "cmmlu_virology": 0,
+    "cmmlu_world_history": 0,
+    "cmmlu_world_religions": 0,
+    "gsm8k": 5,
+    "humaneval": 0,
+    "piqa": 0
+  },
+  "higher_is_better": {
+    "cmmlu": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_agronomy": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_anatomy": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_ancient_chinese": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_arts": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_astronomy": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_business_ethics": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_chinese_civil_service_exam": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_chinese_driving_rule": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_chinese_food_culture": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_chinese_foreign_policy": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_chinese_history": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_chinese_literature": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_chinese_teacher_qualification": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_clinical_knowledge": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_college_actuarial_science": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_college_education": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_college_engineering_hydrology": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_college_law": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_college_mathematics": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_college_medical_statistics": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_college_medicine": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_computer_science": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_computer_security": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_conceptual_physics": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_construction_project_management": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_economics": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_education": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_electrical_engineering": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_elementary_chinese": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_elementary_commonsense": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_elementary_information_and_technology": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_elementary_mathematics": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_ethnology": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_food_science": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_genetics": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_global_facts": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_high_school_biology": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_high_school_chemistry": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_high_school_geography": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_high_school_mathematics": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_high_school_physics": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_high_school_politics": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_human_sexuality": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_international_law": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_journalism": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_jurisprudence": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_legal_and_moral_basis": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_logical": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_machine_learning": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_management": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_marketing": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_marxist_theory": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_modern_chinese": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_nutrition": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_philosophy": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_professional_accounting": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_professional_law": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_professional_medicine": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_professional_psychology": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_public_relations": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_security_study": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_sociology": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_sports_science": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_traditional_chinese_medicine": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_virology": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_world_history": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "cmmlu_world_religions": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "gsm8k": {
+      "exact_match": true
+    },
+    "humaneval": {
+      "pass_at_k": true
+    },
+    "piqa": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "humaneval": {
+      "original": 164,
+      "effective": 164
+    },
+    "gsm8k": {
+      "original": 1319,
+      "effective": 1319
+    },
+    "cmmlu_agronomy": {
+      "original": 169,
+      "effective": 169
+    },
+    "cmmlu_anatomy": {
+      "original": 148,
+      "effective": 148
+    },
+    "cmmlu_ancient_chinese": {
+      "original": 164,
+      "effective": 164
+    },
+    "cmmlu_arts": {
+      "original": 160,
+      "effective": 160
+    },
+    "cmmlu_astronomy": {
+      "original": 165,
+      "effective": 165
+    },
+    "cmmlu_business_ethics": {
+      "original": 209,
+      "effective": 209
+    },
+    "cmmlu_chinese_civil_service_exam": {
+      "original": 160,
+      "effective": 160
+    },
+    "cmmlu_chinese_driving_rule": {
+      "original": 131,
+      "effective": 131
+    },
+    "cmmlu_chinese_food_culture": {
+      "original": 136,
+      "effective": 136
+    },
+    "cmmlu_chinese_foreign_policy": {
+      "original": 107,
+      "effective": 107
+    },
+    "cmmlu_chinese_history": {
+      "original": 323,
+      "effective": 323
+    },
+    "cmmlu_chinese_literature": {
+      "original": 204,
+      "effective": 204
+    },
+    "cmmlu_chinese_teacher_qualification": {
+      "original": 179,
+      "effective": 179
+    },
+    "cmmlu_clinical_knowledge": {
+      "original": 237,
+      "effective": 237
+    },
+    "cmmlu_college_actuarial_science": {
+      "original": 106,
+      "effective": 106
+    },
+    "cmmlu_college_education": {
+      "original": 107,
+      "effective": 107
+    },
+    "cmmlu_college_engineering_hydrology": {
+      "original": 106,
+      "effective": 106
+    },
+    "cmmlu_college_law": {
+      "original": 108,
+      "effective": 108
+    },
+    "cmmlu_college_mathematics": {
+      "original": 105,
+      "effective": 105
+    },
+    "cmmlu_college_medical_statistics": {
+      "original": 106,
+      "effective": 106
+    },
+    "cmmlu_college_medicine": {
+      "original": 273,
+      "effective": 273
+    },
+    "cmmlu_computer_science": {
+      "original": 204,
+      "effective": 204
+    },
+    "cmmlu_computer_security": {
+      "original": 171,
+      "effective": 171
+    },
+    "cmmlu_conceptual_physics": {
+      "original": 147,
+      "effective": 147
+    },
+    "cmmlu_construction_project_management": {
+      "original": 139,
+      "effective": 139
+    },
+    "cmmlu_economics": {
+      "original": 159,
+      "effective": 159
+    },
+    "cmmlu_education": {
+      "original": 163,
+      "effective": 163
+    },
+    "cmmlu_electrical_engineering": {
+      "original": 172,
+      "effective": 172
+    },
+    "cmmlu_elementary_chinese": {
+      "original": 252,
+      "effective": 252
+    },
+    "cmmlu_elementary_commonsense": {
+      "original": 198,
+      "effective": 198
+    },
+    "cmmlu_elementary_information_and_technology": {
+      "original": 238,
+      "effective": 238
+    },
+    "cmmlu_elementary_mathematics": {
+      "original": 230,
+      "effective": 230
+    },
+    "cmmlu_ethnology": {
+      "original": 135,
+      "effective": 135
+    },
+    "cmmlu_food_science": {
+      "original": 143,
+      "effective": 143
+    },
+    "cmmlu_genetics": {
+      "original": 176,
+      "effective": 176
+    },
+    "cmmlu_global_facts": {
+      "original": 149,
+      "effective": 149
+    },
+    "cmmlu_high_school_biology": {
+      "original": 169,
+      "effective": 169
+    },
+    "cmmlu_high_school_chemistry": {
+      "original": 132,
+      "effective": 132
+    },
+    "cmmlu_high_school_geography": {
+      "original": 118,
+      "effective": 118
+    },
+    "cmmlu_high_school_mathematics": {
+      "original": 164,
+      "effective": 164
+    },
+    "cmmlu_high_school_physics": {
+      "original": 110,
+      "effective": 110
+    },
+    "cmmlu_high_school_politics": {
+      "original": 143,
+      "effective": 143
+    },
+    "cmmlu_human_sexuality": {
+      "original": 126,
+      "effective": 126
+    },
+    "cmmlu_international_law": {
+      "original": 185,
+      "effective": 185
+    },
+    "cmmlu_journalism": {
+      "original": 172,
+      "effective": 172
+    },
+    "cmmlu_jurisprudence": {
+      "original": 411,
+      "effective": 411
+    },
+    "cmmlu_legal_and_moral_basis": {
+      "original": 214,
+      "effective": 214
+    },
+    "cmmlu_logical": {
+      "original": 123,
+      "effective": 123
+    },
+    "cmmlu_machine_learning": {
+      "original": 122,
+      "effective": 122
+    },
+    "cmmlu_management": {
+      "original": 210,
+      "effective": 210
+    },
+    "cmmlu_marketing": {
+      "original": 180,
+      "effective": 180
+    },
+    "cmmlu_marxist_theory": {
+      "original": 189,
+      "effective": 189
+    },
+    "cmmlu_modern_chinese": {
+      "original": 116,
+      "effective": 116
+    },
+    "cmmlu_nutrition": {
+      "original": 145,
+      "effective": 145
+    },
+    "cmmlu_philosophy": {
+      "original": 105,
+      "effective": 105
+    },
+    "cmmlu_professional_accounting": {
+      "original": 175,
+      "effective": 175
+    },
+    "cmmlu_professional_law": {
+      "original": 211,
+      "effective": 211
+    },
+    "cmmlu_professional_medicine": {
+      "original": 376,
+      "effective": 376
+    },
+    "cmmlu_professional_psychology": {
+      "original": 232,
+      "effective": 232
+    },
+    "cmmlu_public_relations": {
+      "original": 174,
+      "effective": 174
+    },
+    "cmmlu_security_study": {
+      "original": 135,
+      "effective": 135
+    },
+    "cmmlu_sociology": {
+      "original": 226,
+      "effective": 226
+    },
+    "cmmlu_sports_science": {
+      "original": 165,
+      "effective": 165
+    },
+    "cmmlu_traditional_chinese_medicine": {
+      "original": 185,
+      "effective": 185
+    },
+    "cmmlu_virology": {
+      "original": 169,
+      "effective": 169
+    },
+    "cmmlu_world_history": {
+      "original": 161,
+      "effective": 161
+    },
+    "cmmlu_world_religions": {
+      "original": 160,
+      "effective": 160
+    },
+    "piqa": {
+      "original": 1838,
+      "effective": 1838
+    }
+  },
+  "config": {
+    "model": "hf",
+    "model_args": {
+      "pretrained": "mistralai/Mistral-7B-v0.3",
+      "dtype": "bfloat16",
+      "trust_remote_code": true
+    },
+    "model_num_parameters": 7248023552,
+    "model_dtype": "torch.bfloat16",
+    "model_revision": "main",
+    "model_sha": "caa1feb0e54d415e2df31207e5f4e273e33509b1",
+    "batch_size": "16",
+    "batch_sizes": [],
+    "device": "cuda:0",
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": {
+      "temperature": 0,
+      "do_sample": false
+    },
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234
+  },
+  "git_hash": "d3cfe53",
+  "date": 1773096573.1287518,
+  "pretty_env_info": "PyTorch version: 2.9.1+cu128\nIs debug build: False\nCUDA used to build PyTorch: 12.8\nROCM used to build PyTorch: N/A\n\nOS: NVIDIA DGX Server (x86_64)\nGCC version: (GCC) 11.5.0 20240719 (Red Hat 11.5.0-5)\nClang version: Could not collect\nCMake version: version 3.26.5\nLibc version: glibc-2.34\n\nPython version: 3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0] (64-bit runtime)\nPython platform: Linux-5.14.0-503.40.1.el9_5.x86_64-x86_64-with-glibc2.34\nIs CUDA available: True\nCUDA runtime version: Could not collect\nCUDA_MODULE_LOADING set to: \nGPU models and configuration: GPU 0: NVIDIA B200\nNvidia driver version: 570.148.08\ncuDNN version: Could not collect\nIs XPU available: False\nHIP runtime version: N/A\nMIOpen runtime version: N/A\nIs XNNPACK available: True\n\nCPU:\nArchitecture:                         x86_64\nCPU op-mode(s):                       32-bit, 64-bit\nAddress sizes:                        52 bits physical, 57 bits virtual\nByte Order:                           Little Endian\nCPU(s):                               112\nOn-line CPU(s) list:                  0-111\nVendor ID:                            GenuineIntel\nModel name:                           INTEL(R) XEON(R) PLATINUM 8570\nCPU family:                           6\nModel:                                207\nThread(s) per core:                   1\nCore(s) per socket:                   56\nSocket(s):                            2\nStepping:                             2\nCPU(s) scaling MHz:                   53%\nCPU max MHz:                          4000.0000\nCPU min MHz:                          800.0000\nBogoMIPS:                             4200.00\nFlags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cat_l2 cdp_l3 intel_ppin cdp_l2 ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local split_lock_detect avx_vnni avx512_bf16 wbnoinvd dtherm ida arat pln pts hwp hwp_act_window hwp_epp hwp_pkg_req vnmi avx512vbmi umip pku ospke waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg tme avx512_vpopcntdq la57 rdpid bus_lock_detect cldemote movdiri movdir64b enqcmd fsrm md_clear serialize tsxldtrk pconfig arch_lbr ibt amx_bf16 avx512_fp16 amx_tile amx_int8 flush_l1d arch_capabilities\nVirtualization:                       VT-x\nL1d cache:                            5.3 MiB (112 instances)\nL1i cache:                            3.5 MiB (112 instances)\nL2 cache:                             224 MiB (112 instances)\nL3 cache:                             600 MiB (2 instances)\nNUMA node(s):                         2\nNUMA node0 CPU(s):                    0-55\nNUMA node1 CPU(s):                    56-111\nVulnerability Gather data sampling:   Not affected\nVulnerability Itlb multihit:          Not affected\nVulnerability L1tf:                   Not affected\nVulnerability Mds:                    Not affected\nVulnerability Meltdown:               Not affected\nVulnerability Mmio stale data:        Not affected\nVulnerability Reg file data sampling: Not affected\nVulnerability Retbleed:               Not affected\nVulnerability Spec rstack overflow:   Not affected\nVulnerability Spec store bypass:      Vulnerable\nVulnerability Spectre v1:             Vulnerable: __user pointer sanitization and usercopy barriers only; no swapgs barriers\nVulnerability Spectre v2:             Vulnerable; IBPB: disabled; STIBP: disabled; PBRSB-eIBRS: Vulnerable; BHI: Vulnerable\nVulnerability Srbds:                  Not affected\nVulnerability Tsx async abort:        Not affected\n\nVersions of relevant libraries:\n[pip3] numpy==2.2.6\n[pip3] nvidia-cublas-cu12==12.8.4.1\n[pip3] nvidia-cuda-cupti-cu12==12.8.90\n[pip3] nvidia-cuda-nvrtc-cu12==12.8.93\n[pip3] nvidia-cuda-runtime-cu12==12.8.90\n[pip3] nvidia-cudnn-cu12==9.10.2.21\n[pip3] nvidia-cudnn-frontend==1.18.0\n[pip3] nvidia-cufft-cu12==11.3.3.83\n[pip3] nvidia-curand-cu12==10.3.9.90\n[pip3] nvidia-cusolver-cu12==11.7.3.90\n[pip3] nvidia-cusparse-cu12==12.5.8.93\n[pip3] nvidia-cusparselt-cu12==0.7.1\n[pip3] nvidia-nccl-cu12==2.27.5\n[pip3] nvidia-nvjitlink-cu12==12.8.93\n[pip3] nvidia-nvtx-cu12==12.8.90\n[pip3] torch==2.9.1\n[pip3] torchaudio==2.9.1\n[pip3] torchvision==0.24.1\n[pip3] triton==3.5.1\n[conda] numpy                                2.2.6            pypi_0           pypi\n[conda] nvidia-cublas-cu12                   12.8.4.1         pypi_0           pypi\n[conda] nvidia-cuda-cupti-cu12               12.8.90          pypi_0           pypi\n[conda] nvidia-cuda-nvrtc-cu12               12.8.93          pypi_0           pypi\n[conda] nvidia-cuda-runtime-cu12             12.8.90          pypi_0           pypi\n[conda] nvidia-cudnn-cu12                    9.10.2.21        pypi_0           pypi\n[conda] nvidia-cudnn-frontend                1.18.0           pypi_0           pypi\n[conda] nvidia-cufft-cu12                    11.3.3.83        pypi_0           pypi\n[conda] nvidia-curand-cu12                   10.3.9.90        pypi_0           pypi\n[conda] nvidia-cusolver-cu12                 11.7.3.90        pypi_0           pypi\n[conda] nvidia-cusparse-cu12                 12.5.8.93        pypi_0           pypi\n[conda] nvidia-cusparselt-cu12               0.7.1            pypi_0           pypi\n[conda] nvidia-nccl-cu12                     2.27.5           pypi_0           pypi\n[conda] nvidia-nvjitlink-cu12                12.8.93          pypi_0           pypi\n[conda] nvidia-nvtx-cu12                     12.8.90          pypi_0           pypi\n[conda] torch                                2.9.1            pypi_0           pypi\n[conda] torchaudio                           2.9.1            pypi_0           pypi\n[conda] torchvision                          0.24.1           pypi_0           pypi\n[conda] triton                               3.5.1            pypi_0           pypi",
+  "transformers_version": "4.57.6",
+  "lm_eval_version": "0.4.11",
+  "upper_git_hash": null,
+  "tokenizer_pad_token": [
+    "<unk>",
+    "0"
+  ],
+  "tokenizer_eos_token": [
+    "</s>",
+    "2"
+  ],
+  "tokenizer_bos_token": [
+    "<s>",
+    "1"
+  ],
+  "eot_token_id": 2,
+  "max_length": 32768,
+  "task_hashes": {
+    "humaneval": "c122632f0bdffdd0162cc8033a879dfe9d3b35e82c52eda6a767069e0a2beb40",
+    "gsm8k": "2330f4ebfcccaf66a892922df2819cdb1f118e448d076d3f42bdde4177678ac7",
+    "cmmlu_agronomy": "996278a3b994c6f11aff9e2d2ae870e4e5df4fc9460bc567c276eb5c384b4e7f",
+    "cmmlu_anatomy": "9bae45d216c61365148c9b7962fdf35a8608dabbb3ef0e519479bd9cd12e4091",
+    "cmmlu_ancient_chinese": "c2aef42f435eaeacf303c51d8f0245ddeefbd174c2880699c8e0c0122e3a8be4",
+    "cmmlu_arts": "d0e923fe78c0351dc0839e212a1a3ed67f488cdfa20b52550317300def46e8e3",
+    "cmmlu_astronomy": "b02d9203c1d3b77afa2f4c2b426d470ea90104819e408ddc50785b9e6723bf0a",
+    "cmmlu_business_ethics": "ea0c405dfd6d783d2101e814faaca13c62d2787894a1da64c879848390f1a87c",
+    "cmmlu_chinese_civil_service_exam": "533b07554b69d0b1286fe35f8e4a0f8867b6e910b5a04f2d034c4de6392c7925",
+    "cmmlu_chinese_driving_rule": "c0020e7ec42841231b3322aecbe93d2b46686a8c42cd7d2b2c5113e0cf697ba6",
+    "cmmlu_chinese_food_culture": "2ef97e793d43721f2371a033597c2bcf1be111fe685e3b249a9fc1816eedae93",
+    "cmmlu_chinese_foreign_policy": "614696e932aa23ab44efe04b41e3953cea28907f743d06d07a758aa112ad5168",
+    "cmmlu_chinese_history": "33c00b8548dd9d69aa874c634d5a8d9f47ace3a5088658f62587b39ce0163080",
+    "cmmlu_chinese_literature": "e46bc170f05fa15bb4fec92088fd600adf9c1d9551387edf719eac0b044c5c1f",
+    "cmmlu_chinese_teacher_qualification": "b7238f9f1db92de475def5b36381b0e781d524b257afb4214c3ff135a41cdea3",
+    "cmmlu_clinical_knowledge": "da1df3c26948448031816c846654ea3164757e9fd33170eb8bc07a9781b8f118",
+    "cmmlu_college_actuarial_science": "5670154ff1400035a0ff4330af207544fb78b5c8bca39d7d1b4478eaab07e1c1",
+    "cmmlu_college_education": "e0e5d935eb5e32e6a44e27525a7bae99d682c45c49b67d7a7d91468c78be553c",
+    "cmmlu_college_engineering_hydrology": "f618ae7889bfdcfe9842a79222fb848d4b655855cd5e7ccdcad0a410f8e99cc8",
+    "cmmlu_college_law": "2e78c4776c9ec6dcfe9d9fbf62a085b112a88c3c8fb5eb484d8da1c5fc91df3c",
+    "cmmlu_college_mathematics": "e329fbf16cb882bfd8b9ef3657f223c40d9f7614f7462bade0bbe9d51e195d0c",
+    "cmmlu_college_medical_statistics": "282b5b652b5ce5336e0e06c04c3dee4d407e5effb2d7fdb0d3b2c8204a3ad961",
+    "cmmlu_college_medicine": "04f527e56ca10caf53368643a12068d153f38df4e0c352ae595a13de1b932d52",
+    "cmmlu_computer_science": "be1509f891603e755f4eb5c7c047fe0278af22e59075cecb2c707987e8c688c9",
+    "cmmlu_computer_security": "9f182165418a83a345f652f027eefd528470ecc69f825c670df4c624f77ac4c8",
+    "cmmlu_conceptual_physics": "8de4099a8405fb3c1db4841b53617fd33f74b2d3515a54abc75d35c7d5e79c39",
+    "cmmlu_construction_project_management": "a6035c66e8b35965a95274da719cf41f4db822d8e35924d0a046cb0b4c016cd2",
+    "cmmlu_economics": "d9da6bf69c66932ced66a775c5ee72b451e740c2e6bf4d665e7a8ffbe1d7d950",
+    "cmmlu_education": "ef10af691abdae64469d077cd4b10355955a8bea0e683cb3fe66a7cb1b891c6e",
+    "cmmlu_electrical_engineering": "1bb7164c12d5133de65aa76839530ddf6101dc4dc5ed47632cb824a8dc1ffcb4",
+    "cmmlu_elementary_chinese": "f3a4c33aa75c31735877b2605c64feb75d71cd323e36cfe58e26891d5d2a6d84",
+    "cmmlu_elementary_commonsense": "a072fc43ae51f45c4230a6e59d574e37ae57016ea16873aa5861ac08fa0bea8e",
+    "cmmlu_elementary_information_and_technology": "e72fc9f078bd65196a891a8776c29c760a469569d49e270f2540751b108f29f0",
+    "cmmlu_elementary_mathematics": "3a27d0feb061981f4cf979059345d759f41152eb4f8e0414a97679b8879de8ca",
+    "cmmlu_ethnology": "e304db9ba6db01be2f5196470151e3e264043d0ffffcd29db25e5f36a7b25e06",
+    "cmmlu_food_science": "43d6b662a7c9ea7bf891eac02ec9f20c3a9b0c93998c4688885f452b245d3a62",
+    "cmmlu_genetics": "5fbc20dfcefa8d02a00bab037cc7776f885a31c6e3a8b0ff019aef04f791a58e",
+    "cmmlu_global_facts": "089ced0b19d178746567726a944ec477ed034817f63cbfd607ce0ba01761b444",
+    "cmmlu_high_school_biology": "76cab96e9717b63d75782ba6ef23b843cba40817f1ad8035b62a7b3b64548ba4",
+    "cmmlu_high_school_chemistry": "683e7658cc0360b52883ec1d5de036f4a277a459684700cc728ead2d1fb84579",
+    "cmmlu_high_school_geography": "511dececf24819e1e9be37ae133a158dbf20940ba53d8ef3350c5a514745da56",
+    "cmmlu_high_school_mathematics": "7b191504c39305dd753fd679d2bcfb0fc68228141666be5f2f2586b91a54a6fd",
+    "cmmlu_high_school_physics": "eacf6d9946c1e7d0e518a2321c48316bb4834ff6e6cd3a1de0416f72de42afb0",
+    "cmmlu_high_school_politics": "8f6e0bd6efe5319502b91e0978ba4b0e88553f3750e80dfff85d2a1b67fb4cb6",
+    "cmmlu_human_sexuality": "7059d619d514558f1da8d8cecf6453237a95dd86da6c78d1ab0e9aa6be6ffadc",
+    "cmmlu_international_law": "443f162bce3d8e539c632e611ec17229ae3285afd5858a16472b03875acd3152",
+    "cmmlu_journalism": "6f44c1a01c3d593bf41e1caecbb0aed8812b8a5a110830b137dbefbeba288242",
+    "cmmlu_jurisprudence": "4c26f9e08e2745274c6c66519c2c60f6fd75eb59ab3e6eef20c9dc04e1e7c220",
+    "cmmlu_legal_and_moral_basis": "3e4c01241a7eb11e6b5249476a172a6db6321f34be79b5ee0fa55ad689f1db44",
+    "cmmlu_logical": "fd9a45c7fa55036bc10ba17daa3232106f167ec27bfe2f2dbabe4f652af23f1f",
+    "cmmlu_machine_learning": "d57e956d351159bf45eaf6bd0309df5c54f73c4a9b84d401815f2adf8502c9db",
+    "cmmlu_management": "a5abf72b70772ad37d5dfa5e98d3abf7fcb66ef1af55ba4c73f3205c3e7acb18",
+    "cmmlu_marketing": "76c0137a49b080444e8006d287a1bf09a87f7cac71d71508260ef63127aa37fd",
+    "cmmlu_marxist_theory": "6d41677f2cd85490ccf7cfd66878c775a8ee764600e33f9d1e75433977cb4cc3",
+    "cmmlu_modern_chinese": "7d2805d301efb7a1f5c481ddc83b9dc254e10e7358733701bd9f39f54374dc6c",
+    "cmmlu_nutrition": "16ada0c23075b84578a6792da8fcd5990fe784885889c8bfbcd56b1fff905195",
+    "cmmlu_philosophy": "3c317dc578b41c46a99590fae313ef171ccfe40641b06bf9e9f7445e52c77299",
+    "cmmlu_professional_accounting": "3d42d3cafbefee7aa309d4fee63dfc15d1334f320d957a41a3bcaf0f83af9cb3",
+    "cmmlu_professional_law": "c7c0334e0ed1887ae4ad51d0496b6e0d4d35dc2f25a89f9ab7bad44bdf8d311f",
+    "cmmlu_professional_medicine": "aa458f76f89ad28a671cbd01e7ea854333e99d6099d094d8065741909efaf18a",
+    "cmmlu_professional_psychology": "2099669d05e91594a15cf1185282b35b4957ccbf18f02d6bdb69852b254efccb",
+    "cmmlu_public_relations": "d8d013da2f8e1c85cca7554ade85a20a0b7b3522aa8691aaf5bf28eafa338755",
+    "cmmlu_security_study": "c3dda148948687cb294108697c5e9350a5447cf1801a7cae03fc29f9616bba58",
+    "cmmlu_sociology": "4798d1a68660e953f6c93b10d313308c928b10d25923f5938b11c928daa258b0",
+    "cmmlu_sports_science": "ba0d19155f7e56c4ef24961781bb722b225e910446b00b29cbf1dc20648c43ee",
+    "cmmlu_traditional_chinese_medicine": "97d9c60a946ce855c908012c0910f7943100ed4397f35d49d77705dfce96e0b4",
+    "cmmlu_virology": "f51a4bffdadcf3f91fd58ea53deaa1a81c90716f18d1c015d4519c6e1d329faf",
+    "cmmlu_world_history": "22c9050ec8968418955d58483218e6b9cda07a007f9ead4f16c45e66013ea1b9",
+    "cmmlu_world_religions": "a66849eae239c6327258592b84a309c542292dddb6df79c78b142ec5ec13c27a",
+    "piqa": "74d5a816572c396ad46edbd386954abe5ddb3db2d7195088387d1d5c1b32fd8b"
+  },
+  "model_source": "hf",
+  "model_name": "mistralai/Mistral-7B-v0.3",
+  "model_name_sanitized": "mistralai__Mistral-7B-v0.3",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": null,
+  "chat_template": null,
+  "chat_template_sha": null,
+  "total_evaluation_time_seconds": "1232.602936773561"
+}

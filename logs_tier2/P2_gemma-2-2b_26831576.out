@@ -1,0 +1,14 @@
+=== Job Started ===
+Node: c1010a-s15.ufhpc
+MODEL: google/gemma-2-2b
+MODE: precision
+--------------------------------------------------------
+Running Precision Sweep: Model=google/gemma-2-2b, Dtype=float32
+Completed Dtype=float32
+--------------------------------------------------------
+Running Precision Sweep: Model=google/gemma-2-2b, Dtype=float16
+Completed Dtype=float16
+--------------------------------------------------------
+Running Precision Sweep: Model=google/gemma-2-2b, Dtype=bfloat16
+Completed Dtype=bfloat16
+=== Job Completed ===

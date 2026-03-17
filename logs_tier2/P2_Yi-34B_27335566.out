@@ -1,0 +1,44 @@
+=== Job Started ===
+Node: c1010a-s25.ufhpc
+MODEL: 01-ai/Yi-34B
+MODE: precision
+--------------------------------------------------------
+Running Precision Sweep: Model=01-ai/Yi-34B, Dtype=float32
+bootstrapping for stddev: perplexity
+hf ({'pretrained': '01-ai/Yi-34B', 'dtype': 'float32', 'parallelize': True}), gen_kwargs: ({'temperature': 0, 'do_sample': False}), limit: None, num_fewshot: None, batch_size: 1
+|    Tasks     |Version|Filter|n-shot|    Metric     |   |Value |   |Stderr|
+|--------------|------:|------|-----:|---------------|---|-----:|---|------|
+|lambada_openai|      1|none  |     0|acc            |↑  |0.7357|±  |0.0061|
+|              |       |none  |     0|perplexity     |↓  |3.0331|±  |0.0545|
+|wikitext      |      2|none  |     0|bits_per_byte  |↓  |0.5391|±  |   N/A|
+|              |       |none  |     0|byte_perplexity|↓  |1.4531|±  |   N/A|
+|              |       |none  |     0|word_perplexity|↓  |7.3754|±  |   N/A|
+
+Completed Dtype=float32
+--------------------------------------------------------
+Running Precision Sweep: Model=01-ai/Yi-34B, Dtype=float16
+bootstrapping for stddev: perplexity
+hf ({'pretrained': '01-ai/Yi-34B', 'dtype': 'float16', 'parallelize': True}), gen_kwargs: ({'temperature': 0, 'do_sample': False}), limit: None, num_fewshot: None, batch_size: 1
+|    Tasks     |Version|Filter|n-shot|    Metric     |   |Value |   |Stderr|
+|--------------|------:|------|-----:|---------------|---|-----:|---|------|
+|lambada_openai|      1|none  |     0|acc            |↑  |0.7355|±  |0.0061|
+|              |       |none  |     0|perplexity     |↓  |3.0325|±  |0.0544|
+|wikitext      |      2|none  |     0|bits_per_byte  |↓  |0.5391|±  |   N/A|
+|              |       |none  |     0|byte_perplexity|↓  |1.4531|±  |   N/A|
+|              |       |none  |     0|word_perplexity|↓  |7.3759|±  |   N/A|
+
+Completed Dtype=float16
+--------------------------------------------------------
+Running Precision Sweep: Model=01-ai/Yi-34B, Dtype=bfloat16
+bootstrapping for stddev: perplexity
+hf ({'pretrained': '01-ai/Yi-34B', 'dtype': 'bfloat16', 'parallelize': True}), gen_kwargs: ({'temperature': 0, 'do_sample': False}), limit: None, num_fewshot: None, batch_size: 1
+|    Tasks     |Version|Filter|n-shot|    Metric     |   |Value |   |Stderr|
+|--------------|------:|------|-----:|---------------|---|-----:|---|------|
+|lambada_openai|      1|none  |     0|acc            |↑  |0.7330|±  |0.0062|
+|              |       |none  |     0|perplexity     |↓  |3.0291|±  |0.0544|
+|wikitext      |      2|none  |     0|bits_per_byte  |↓  |0.5392|±  |   N/A|
+|              |       |none  |     0|byte_perplexity|↓  |1.4531|±  |   N/A|
+|              |       |none  |     0|word_perplexity|↓  |7.3779|±  |   N/A|
+
+Completed Dtype=bfloat16
+=== Job Completed ===

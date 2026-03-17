@@ -1,0 +1,34 @@
+=== Job Started ===
+Node: c0906a-s15.ufhpc
+MODEL: meta-llama/Meta-Llama-3.1-70B
+MODE: precision
+--------------------------------------------------------
+Running Precision Sweep: Model=meta-llama/Meta-Llama-3.1-70B, Dtype=float32
+Completed Dtype=float32
+--------------------------------------------------------
+Running Precision Sweep: Model=meta-llama/Meta-Llama-3.1-70B, Dtype=float16
+bootstrapping for stddev: perplexity
+hf ({'pretrained': 'meta-llama/Meta-Llama-3.1-70B', 'dtype': 'float16', 'parallelize': True}), gen_kwargs: ({'temperature': 0, 'do_sample': False}), limit: None, num_fewshot: None, batch_size: 1
+|    Tasks     |Version|Filter|n-shot|    Metric     |   |Value |   |Stderr|
+|--------------|------:|------|-----:|---------------|---|-----:|---|------|
+|lambada_openai|      1|none  |     0|acc            |↑  |0.7999|±  |0.0056|
+|              |       |none  |     0|perplexity     |↓  |2.6085|±  |0.0438|
+|wikitext      |      2|none  |     0|bits_per_byte  |↓  |0.2835|±  |   N/A|
+|              |       |none  |     0|byte_perplexity|↓  |1.2171|±  |   N/A|
+|              |       |none  |     0|word_perplexity|↓  |2.8597|±  |   N/A|
+
+Completed Dtype=float16
+--------------------------------------------------------
+Running Precision Sweep: Model=meta-llama/Meta-Llama-3.1-70B, Dtype=bfloat16
+bootstrapping for stddev: perplexity
+hf ({'pretrained': 'meta-llama/Meta-Llama-3.1-70B', 'dtype': 'bfloat16', 'parallelize': True}), gen_kwargs: ({'temperature': 0, 'do_sample': False}), limit: None, num_fewshot: None, batch_size: 1
+|    Tasks     |Version|Filter|n-shot|    Metric     |   |Value |   |Stderr|
+|--------------|------:|------|-----:|---------------|---|-----:|---|------|
+|lambada_openai|      1|none  |     0|acc            |↑  |0.7931|±  |0.0056|
+|              |       |none  |     0|perplexity     |↓  |2.6119|±  |0.0439|
+|wikitext      |      2|none  |     0|bits_per_byte  |↓  |0.2838|±  |   N/A|
+|              |       |none  |     0|byte_perplexity|↓  |1.2174|±  |   N/A|
+|              |       |none  |     0|word_perplexity|↓  |2.8628|±  |   N/A|
+
+Completed Dtype=bfloat16
+=== Job Completed ===

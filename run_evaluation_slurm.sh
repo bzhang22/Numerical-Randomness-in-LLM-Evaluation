@@ -12,7 +12,7 @@ conda activate /blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness
 
 cd /home/bohanzhang1/Numerical-Randomness-in-LLM-Evaluation/
 
-TASKS="piqa,cmmlu,gsm8k,humaneval"
+TASKS="wikitext,lambada_openai"
 model_name=$(basename $MODEL)
 
 echo "=== Job Started ==="

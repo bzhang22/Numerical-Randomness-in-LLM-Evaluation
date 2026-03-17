@@ -148,29 +148,39 @@ def plot_p2_mismatch_rate(df: pd.DataFrame, output_dir: str):
 
     prec_df['pair'] = prec_df.apply(get_color_pair, axis=1)
     
-    # By Benchmark
-    agg_bench = prec_df.groupby(['benchmark', 'pair'])['sequence_mismatch_rate'].mean().reset_index()
-    plt.figure(figsize=(12, 6))
-    sns.barplot(data=agg_bench, x='benchmark', y='sequence_mismatch_rate', hue='pair')
-    plt.title('Sequence Mismatch Rate by Benchmark under Precision Variance')
-    plt.ylabel('Mismatch Rate (%)')
-    plt.xlabel('Benchmark Task')
-    plt.legend(title='Precision Transformation')
-    plt.tight_layout()
-    plt.savefig(os.path.join(output_dir, 'precision_mismatch_by_benchmark.pdf'))
+    # Calculate group means precisely
+    agg = prec_df.groupby(['model', 'benchmark', 'pair'])['sequence_mismatch_rate'].mean().reset_index()
+    
+    # 1. Catplot grouping by Model (one subplot per model)
+    g = sns.catplot(
+        data=agg, kind='bar',
+        x='benchmark', y='sequence_mismatch_rate', hue='pair',
+        col='model', col_wrap=4, height=4, aspect=1.2,
+        sharey=False
+    )
+    g.fig.subplots_adjust(top=0.9)
+    g.fig.suptitle('Sequence Mismatch Rate per Benchmark by Model')
+    g.set_axis_labels('Benchmark Task', 'Mismatch Rate (%)')
+    g.set_titles('{col_name}')
+    for axes in g.axes.flat:
+        _ = axes.set_xticklabels(axes.get_xticklabels(), rotation=45)
+    g.savefig(os.path.join(output_dir, 'precision_mismatch_faceted_by_model.pdf'))
     plt.close()
     
-    # By Model
-    agg_model = prec_df.groupby(['model', 'pair'])['sequence_mismatch_rate'].mean().reset_index()
-    plt.figure(figsize=(14, 6))
-    sns.barplot(data=agg_model, x='model', y='sequence_mismatch_rate', hue='pair')
-    plt.title('Sequence Mismatch Rate by Model under Precision Variance')
-    plt.ylabel('Mismatch Rate (%)')
-    plt.xlabel('Model Instance')
-    plt.xticks(rotation=45)
-    plt.legend(title='Precision Transformation')
-    plt.tight_layout()
-    plt.savefig(os.path.join(output_dir, 'precision_mismatch_by_model.pdf'))
+    # 2. Catplot grouping by Benchmark (one subplot per benchmark)
+    g2 = sns.catplot(
+        data=agg, kind='bar',
+        x='model', y='sequence_mismatch_rate', hue='pair',
+        col='benchmark', col_wrap=2, height=4, aspect=1.5,
+        sharey=False
+    )
+    g2.fig.subplots_adjust(top=0.9)
+    g2.fig.suptitle('Sequence Mismatch Rate per Model by Benchmark')
+    g2.set_axis_labels('Model Instance', 'Mismatch Rate (%)')
+    g2.set_titles('{col_name}')
+    for axes in g2.axes.flat:
+        _ = axes.set_xticklabels(axes.get_xticklabels(), rotation=45)
+    g2.savefig(os.path.join(output_dir, 'precision_mismatch_faceted_by_benchmark.pdf'))
     plt.close()
 
 def plot_p3_first_divergence_cdf(df: pd.DataFrame, output_dir: str):
@@ -235,16 +245,20 @@ def main():
         
         print("Rendering P1 (Precision Heatmaps)...")
         plot_p1_precision_heatmap(df, args.output_dir)
+        print("P1 complete!")
         
         print("Rendering P2 (Mismatch Bar Graphs)...")
         plot_p2_mismatch_rate(df, args.output_dir)
+        print("P2 complete!")
         
         print("Rendering P3 (Divergence CDF)...")
         plot_p3_first_divergence_cdf(df, args.output_dir)
+        print("P3 complete!")
         
         print("Rendering P6 (Benchmark Raw Score Extraction)...")
         scores_df = extract_benchmark_scores(args.base_dir)
         plot_p6_benchmark_score_variation(scores_df, args.output_dir)
+        print("P6 complete!")
 
         print(f"SUCCESS: All Paper-Ready Figures strictly compiled in {args.output_dir}/")
         

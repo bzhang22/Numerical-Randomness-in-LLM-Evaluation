@@ -44,6 +44,27 @@ def calculate_token_mismatch_rate(str1: str, str2: str) -> float:
     
     return distance / max_len if max_len > 0 else 0.0
 
+def extract_prediction(item: dict) -> str:
+    resps = item.get('resps', [])
+    if not resps: return ""
+    
+    try:
+        # Multiple-choice logical check: resps is [[["-6.98", "False"]], [["-7.49", "False"]]]
+        if isinstance(resps, list) and isinstance(resps[0], list) and isinstance(resps[0][0], list):
+            import numpy as np
+            loglikelihoods = [float(choice[0][0]) for choice in resps]
+            return str(np.argmax(loglikelihoods))
+    except Exception:
+        pass
+        
+    # Standard generative sequence fallback
+    try:
+        if isinstance(resps[0], list):
+            return str(resps[0][0])
+        return str(resps[0])
+    except Exception:
+        return str(resps)
+
 def compare_configs(model_name: str, benchmark: str, config_a_name: str, config_a_path: str, config_b_name: str, config_b_path: str) -> pd.DataFrame:
     """Compares two configurations for a specific model and benchmark."""
     
@@ -91,10 +112,8 @@ def compare_configs(model_name: str, benchmark: str, config_a_name: str, config_
         item_a = samples_a[doc_id]
         item_b = samples_b[doc_id]
         
-        # Typically 'resps' contains the generated text array
-        # Just grab the first response since temperature=0 greedy decoding
-        resp_a = str(item_a.get('resps', [['']])[0][0] if isinstance(item_a.get('resps', [['']])[0], list) else item_a.get('resps', [''])[0])
-        resp_b = str(item_b.get('resps', [['']])[0][0] if isinstance(item_b.get('resps', [['']])[0], list) else item_b.get('resps', [''])[0])
+        resp_a = extract_prediction(item_a)
+        resp_b = extract_prediction(item_b)
         
         # Determine correctness if available
         acc_a = item_a.get('acc', None)

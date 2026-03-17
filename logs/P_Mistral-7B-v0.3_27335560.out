@@ -1,0 +1,44 @@
+=== Job Started ===
+Node: c0900a-s5.ufhpc
+MODEL: mistralai/Mistral-7B-v0.3
+MODE: precision
+--------------------------------------------------------
+Running Precision Sweep: Model=mistralai/Mistral-7B-v0.3, Dtype=float32
+bootstrapping for stddev: perplexity
+hf ({'pretrained': 'mistralai/Mistral-7B-v0.3', 'dtype': 'float32', 'parallelize': True}), gen_kwargs: ({'temperature': 0, 'do_sample': False}), limit: None, num_fewshot: None, batch_size: 1
+|    Tasks     |Version|Filter|n-shot|    Metric     |   |Value |   |Stderr|
+|--------------|------:|------|-----:|---------------|---|-----:|---|------|
+|lambada_openai|      1|none  |     0|acc            |↑  |0.7524|±  |0.0060|
+|              |       |none  |     0|perplexity     |↓  |3.2567|±  |0.0598|
+|wikitext      |      2|none  |     0|bits_per_byte  |↓  |0.5602|±  |   N/A|
+|              |       |none  |     0|byte_perplexity|↓  |1.4745|±  |   N/A|
+|              |       |none  |     0|word_perplexity|↓  |7.9762|±  |   N/A|
+
+Completed Dtype=float32
+--------------------------------------------------------
+Running Precision Sweep: Model=mistralai/Mistral-7B-v0.3, Dtype=float16
+bootstrapping for stddev: perplexity
+hf ({'pretrained': 'mistralai/Mistral-7B-v0.3', 'dtype': 'float16', 'parallelize': True}), gen_kwargs: ({'temperature': 0, 'do_sample': False}), limit: None, num_fewshot: None, batch_size: 1
+|    Tasks     |Version|Filter|n-shot|    Metric     |   |Value |   |Stderr|
+|--------------|------:|------|-----:|---------------|---|-----:|---|------|
+|lambada_openai|      1|none  |     0|acc            |↑  |0.7533|±  |0.0060|
+|              |       |none  |     0|perplexity     |↓  |3.2571|±  |0.0598|
+|wikitext      |      2|none  |     0|bits_per_byte  |↓  |0.5602|±  |   N/A|
+|              |       |none  |     0|byte_perplexity|↓  |1.4745|±  |   N/A|
+|              |       |none  |     0|word_perplexity|↓  |7.9766|±  |   N/A|
+
+Completed Dtype=float16
+--------------------------------------------------------
+Running Precision Sweep: Model=mistralai/Mistral-7B-v0.3, Dtype=bfloat16
+bootstrapping for stddev: perplexity
+hf ({'pretrained': 'mistralai/Mistral-7B-v0.3', 'dtype': 'bfloat16', 'parallelize': True}), gen_kwargs: ({'temperature': 0, 'do_sample': False}), limit: None, num_fewshot: None, batch_size: 1
+|    Tasks     |Version|Filter|n-shot|    Metric     |   |Value |   |Stderr|
+|--------------|------:|------|-----:|---------------|---|-----:|---|------|
+|lambada_openai|      1|none  |     0|acc            |↑  |0.7514|±  |0.0060|
+|              |       |none  |     0|perplexity     |↓  |3.2469|±  |0.0596|
+|wikitext      |      2|none  |     0|bits_per_byte  |↓  |0.5603|±  |   N/A|
+|              |       |none  |     0|byte_perplexity|↓  |1.4746|±  |   N/A|
+|              |       |none  |     0|word_perplexity|↓  |7.9803|±  |   N/A|
+
+Completed Dtype=bfloat16
+=== Job Completed ===

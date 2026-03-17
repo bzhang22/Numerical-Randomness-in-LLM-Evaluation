@@ -1,0 +1,70 @@
+=== Job Started ===
+Node: c0901a-s5.ufhpc
+MODEL: mistralai/Mistral-7B-v0.3
+MODE: batch
+--------------------------------------------------------
+Running Batch Sweep: Model=mistralai/Mistral-7B-v0.3, BS=1, Dtype=bfloat16
+bootstrapping for stddev: perplexity
+hf ({'pretrained': 'mistralai/Mistral-7B-v0.3', 'dtype': 'bfloat16', 'parallelize': True}), gen_kwargs: ({'temperature': 0, 'do_sample': False}), limit: None, num_fewshot: None, batch_size: 1
+|    Tasks     |Version|Filter|n-shot|    Metric     |   |Value |   |Stderr|
+|--------------|------:|------|-----:|---------------|---|-----:|---|------|
+|lambada_openai|      1|none  |     0|acc            |↑  |0.7514|±  |0.0060|
+|              |       |none  |     0|perplexity     |↓  |3.2469|±  |0.0596|
+|wikitext      |      2|none  |     0|bits_per_byte  |↓  |0.5603|±  |   N/A|
+|              |       |none  |     0|byte_perplexity|↓  |1.4746|±  |   N/A|
+|              |       |none  |     0|word_perplexity|↓  |7.9803|±  |   N/A|
+
+Completed BS=1
+--------------------------------------------------------
+Running Batch Sweep: Model=mistralai/Mistral-7B-v0.3, BS=2, Dtype=bfloat16
+bootstrapping for stddev: perplexity
+hf ({'pretrained': 'mistralai/Mistral-7B-v0.3', 'dtype': 'bfloat16', 'parallelize': True}), gen_kwargs: ({'temperature': 0, 'do_sample': False}), limit: None, num_fewshot: None, batch_size: 2
+|    Tasks     |Version|Filter|n-shot|    Metric     |   |Value |   |Stderr|
+|--------------|------:|------|-----:|---------------|---|-----:|---|------|
+|lambada_openai|      1|none  |     0|acc            |↑  |0.7522|±  |0.0060|
+|              |       |none  |     0|perplexity     |↓  |3.2473|±  |0.0596|
+|wikitext      |      2|none  |     0|bits_per_byte  |↓  |0.5603|±  |   N/A|
+|              |       |none  |     0|byte_perplexity|↓  |1.4746|±  |   N/A|
+|              |       |none  |     0|word_perplexity|↓  |7.9803|±  |   N/A|
+
+Completed BS=2
+--------------------------------------------------------
+Running Batch Sweep: Model=mistralai/Mistral-7B-v0.3, BS=4, Dtype=bfloat16
+bootstrapping for stddev: perplexity
+hf ({'pretrained': 'mistralai/Mistral-7B-v0.3', 'dtype': 'bfloat16', 'parallelize': True}), gen_kwargs: ({'temperature': 0, 'do_sample': False}), limit: None, num_fewshot: None, batch_size: 4
+|    Tasks     |Version|Filter|n-shot|    Metric     |   |Value |   |Stderr|
+|--------------|------:|------|-----:|---------------|---|-----:|---|------|
+|lambada_openai|      1|none  |     0|acc            |↑  |0.7508|±  |0.0060|
+|              |       |none  |     0|perplexity     |↓  |3.2463|±  |0.0596|
+|wikitext      |      2|none  |     0|bits_per_byte  |↓  |0.5603|±  |   N/A|
+|              |       |none  |     0|byte_perplexity|↓  |1.4746|±  |   N/A|
+|              |       |none  |     0|word_perplexity|↓  |7.9803|±  |   N/A|
+
+Completed BS=4
+--------------------------------------------------------
+Running Batch Sweep: Model=mistralai/Mistral-7B-v0.3, BS=8, Dtype=bfloat16
+bootstrapping for stddev: perplexity
+hf ({'pretrained': 'mistralai/Mistral-7B-v0.3', 'dtype': 'bfloat16', 'parallelize': True}), gen_kwargs: ({'temperature': 0, 'do_sample': False}), limit: None, num_fewshot: None, batch_size: 8
+|    Tasks     |Version|Filter|n-shot|    Metric     |   |Value |   |Stderr|
+|--------------|------:|------|-----:|---------------|---|-----:|---|------|
+|lambada_openai|      1|none  |     0|acc            |↑  |0.7508|±  |0.0060|
+|              |       |none  |     0|perplexity     |↓  |3.2463|±  |0.0596|
+|wikitext      |      2|none  |     0|bits_per_byte  |↓  |0.5603|±  |   N/A|
+|              |       |none  |     0|byte_perplexity|↓  |1.4746|±  |   N/A|
+|              |       |none  |     0|word_perplexity|↓  |7.9803|±  |   N/A|
+
+Completed BS=8
+--------------------------------------------------------
+Running Batch Sweep: Model=mistralai/Mistral-7B-v0.3, BS=16, Dtype=bfloat16
+bootstrapping for stddev: perplexity
+hf ({'pretrained': 'mistralai/Mistral-7B-v0.3', 'dtype': 'bfloat16', 'parallelize': True}), gen_kwargs: ({'temperature': 0, 'do_sample': False}), limit: None, num_fewshot: None, batch_size: 16
+|    Tasks     |Version|Filter|n-shot|    Metric     |   |Value |   |Stderr|
+|--------------|------:|------|-----:|---------------|---|-----:|---|------|
+|lambada_openai|      1|none  |     0|acc            |↑  |0.7508|±  |0.0060|
+|              |       |none  |     0|perplexity     |↓  |3.2463|±  |0.0596|
+|wikitext      |      2|none  |     0|bits_per_byte  |↓  |0.5603|±  |   N/A|
+|              |       |none  |     0|byte_perplexity|↓  |1.4746|±  |   N/A|
+|              |       |none  |     0|word_perplexity|↓  |7.9803|±  |   N/A|
+
+Completed BS=16
+=== Job Completed ===

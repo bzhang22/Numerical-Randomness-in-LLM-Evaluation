@@ -135,10 +135,8 @@ def plot_p2_mismatch_rate(df: pd.DataFrame, output_dir: str):
     if prec_df.empty:
         return
         
-    prec_df['sequence_mismatch_rate'] = (1.0 - prec_df['exact_match']) * 100
+    prec_df['sequence_mismatch_rate'] = (1.0 - prec_df['exact_match'].astype(float)) * 100
     
-    # We want X-axis = benchmark, grouped by precision pair or model
-    # The prompt explicitly asks to color by precision pair (FP32 vs FP16, etc.)
     def get_color_pair(row):
         mapping = {"float32": "FP32", "float16": "FP16", "bfloat16": "BF16"}
         a, b = row['config_A'], row['config_B']
@@ -151,8 +149,9 @@ def plot_p2_mismatch_rate(df: pd.DataFrame, output_dir: str):
     prec_df['pair'] = prec_df.apply(get_color_pair, axis=1)
     
     # By Benchmark
+    agg_bench = prec_df.groupby(['benchmark', 'pair'])['sequence_mismatch_rate'].mean().reset_index()
     plt.figure(figsize=(12, 6))
-    sns.barplot(data=prec_df, x='benchmark', y='sequence_mismatch_rate', hue='pair', errorbar=None)
+    sns.barplot(data=agg_bench, x='benchmark', y='sequence_mismatch_rate', hue='pair')
     plt.title('Sequence Mismatch Rate by Benchmark under Precision Variance')
     plt.ylabel('Mismatch Rate (%)')
     plt.xlabel('Benchmark Task')
@@ -162,8 +161,9 @@ def plot_p2_mismatch_rate(df: pd.DataFrame, output_dir: str):
     plt.close()
     
     # By Model
+    agg_model = prec_df.groupby(['model', 'pair'])['sequence_mismatch_rate'].mean().reset_index()
     plt.figure(figsize=(14, 6))
-    sns.barplot(data=prec_df, x='model', y='sequence_mismatch_rate', hue='pair', errorbar=None)
+    sns.barplot(data=agg_model, x='model', y='sequence_mismatch_rate', hue='pair')
     plt.title('Sequence Mismatch Rate by Model under Precision Variance')
     plt.ylabel('Mismatch Rate (%)')
     plt.xlabel('Model Instance')

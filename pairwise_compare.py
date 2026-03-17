@@ -133,7 +133,7 @@ def main():
     args = parser.parse_args()
     
     models = [d for d in os.listdir(args.base_dir) if os.path.isdir(os.path.join(args.base_dir, d))]
-    benchmarks = ["piqa", "cmmlu", "gsm8k", "humaneval"]
+    benchmarks = ["piqa", "cmmlu", "gsm8k", "humaneval", "wikitext", "lambada_openai"]
     
     all_records = []
     

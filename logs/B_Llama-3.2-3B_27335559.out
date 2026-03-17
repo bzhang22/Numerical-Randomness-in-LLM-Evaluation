@@ -1,0 +1,70 @@
+=== Job Started ===
+Node: c0901a-s5.ufhpc
+MODEL: meta-llama/Llama-3.2-3B
+MODE: batch
+--------------------------------------------------------
+Running Batch Sweep: Model=meta-llama/Llama-3.2-3B, BS=1, Dtype=bfloat16
+bootstrapping for stddev: perplexity
+hf ({'pretrained': 'meta-llama/Llama-3.2-3B', 'dtype': 'bfloat16', 'parallelize': True}), gen_kwargs: ({'temperature': 0, 'do_sample': False}), limit: None, num_fewshot: None, batch_size: 1
+|    Tasks     |Version|Filter|n-shot|    Metric     |   |Value |   |Stderr|
+|--------------|------:|------|-----:|---------------|---|-----:|---|------|
+|lambada_openai|      1|none  |     0|acc            |↑  |0.6967|±  |0.0064|
+|              |       |none  |     0|perplexity     |↓  |3.8833|±  |0.0814|
+|wikitext      |      2|none  |     0|bits_per_byte  |↓  |0.6083|±  |   N/A|
+|              |       |none  |     0|byte_perplexity|↓  |1.5245|±  |   N/A|
+|              |       |none  |     0|word_perplexity|↓  |9.5325|±  |   N/A|
+
+Completed BS=1
+--------------------------------------------------------
+Running Batch Sweep: Model=meta-llama/Llama-3.2-3B, BS=2, Dtype=bfloat16
+bootstrapping for stddev: perplexity
+hf ({'pretrained': 'meta-llama/Llama-3.2-3B', 'dtype': 'bfloat16', 'parallelize': True}), gen_kwargs: ({'temperature': 0, 'do_sample': False}), limit: None, num_fewshot: None, batch_size: 2
+|    Tasks     |Version|Filter|n-shot|    Metric     |   |Value |   |Stderr|
+|--------------|------:|------|-----:|---------------|---|-----:|---|------|
+|lambada_openai|      1|none  |     0|acc            |↑  |0.6967|±  |0.0064|
+|              |       |none  |     0|perplexity     |↓  |3.8833|±  |0.0814|
+|wikitext      |      2|none  |     0|bits_per_byte  |↓  |0.6083|±  |   N/A|
+|              |       |none  |     0|byte_perplexity|↓  |1.5245|±  |   N/A|
+|              |       |none  |     0|word_perplexity|↓  |9.5325|±  |   N/A|
+
+Completed BS=2
+--------------------------------------------------------
+Running Batch Sweep: Model=meta-llama/Llama-3.2-3B, BS=4, Dtype=bfloat16
+bootstrapping for stddev: perplexity
+hf ({'pretrained': 'meta-llama/Llama-3.2-3B', 'dtype': 'bfloat16', 'parallelize': True}), gen_kwargs: ({'temperature': 0, 'do_sample': False}), limit: None, num_fewshot: None, batch_size: 4
+|    Tasks     |Version|Filter|n-shot|    Metric     |   |Value |   |Stderr|
+|--------------|------:|------|-----:|---------------|---|-----:|---|------|
+|lambada_openai|      1|none  |     0|acc            |↑  |0.6967|±  |0.0064|
+|              |       |none  |     0|perplexity     |↓  |3.8831|±  |0.0814|
+|wikitext      |      2|none  |     0|bits_per_byte  |↓  |0.6083|±  |   N/A|
+|              |       |none  |     0|byte_perplexity|↓  |1.5245|±  |   N/A|
+|              |       |none  |     0|word_perplexity|↓  |9.5325|±  |   N/A|
+
+Completed BS=4
+--------------------------------------------------------
+Running Batch Sweep: Model=meta-llama/Llama-3.2-3B, BS=8, Dtype=bfloat16
+bootstrapping for stddev: perplexity
+hf ({'pretrained': 'meta-llama/Llama-3.2-3B', 'dtype': 'bfloat16', 'parallelize': True}), gen_kwargs: ({'temperature': 0, 'do_sample': False}), limit: None, num_fewshot: None, batch_size: 8
+|    Tasks     |Version|Filter|n-shot|    Metric     |   |Value |   |Stderr|
+|--------------|------:|------|-----:|---------------|---|-----:|---|------|
+|lambada_openai|      1|none  |     0|acc            |↑  |0.6967|±  |0.0064|
+|              |       |none  |     0|perplexity     |↓  |3.8831|±  |0.0814|
+|wikitext      |      2|none  |     0|bits_per_byte  |↓  |0.6083|±  |   N/A|
+|              |       |none  |     0|byte_perplexity|↓  |1.5245|±  |   N/A|
+|              |       |none  |     0|word_perplexity|↓  |9.5325|±  |   N/A|
+
+Completed BS=8
+--------------------------------------------------------
+Running Batch Sweep: Model=meta-llama/Llama-3.2-3B, BS=16, Dtype=bfloat16
+bootstrapping for stddev: perplexity
+hf ({'pretrained': 'meta-llama/Llama-3.2-3B', 'dtype': 'bfloat16', 'parallelize': True}), gen_kwargs: ({'temperature': 0, 'do_sample': False}), limit: None, num_fewshot: None, batch_size: 16
+|    Tasks     |Version|Filter|n-shot|    Metric     |   |Value |   |Stderr|
+|--------------|------:|------|-----:|---------------|---|-----:|---|------|
+|lambada_openai|      1|none  |     0|acc            |↑  |0.6967|±  |0.0064|
+|              |       |none  |     0|perplexity     |↓  |3.8831|±  |0.0814|
+|wikitext      |      2|none  |     0|bits_per_byte  |↓  |0.6083|±  |   N/A|
+|              |       |none  |     0|byte_perplexity|↓  |1.5245|±  |   N/A|
+|              |       |none  |     0|word_perplexity|↓  |9.5325|±  |   N/A|
+
+Completed BS=16
+=== Job Completed ===

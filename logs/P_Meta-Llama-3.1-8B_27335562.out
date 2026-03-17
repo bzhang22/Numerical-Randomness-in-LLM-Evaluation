@@ -1,0 +1,44 @@
+=== Job Started ===
+Node: c0906a-s15.ufhpc
+MODEL: meta-llama/Meta-Llama-3.1-8B
+MODE: precision
+--------------------------------------------------------
+Running Precision Sweep: Model=meta-llama/Meta-Llama-3.1-8B, Dtype=float32
+bootstrapping for stddev: perplexity
+hf ({'pretrained': 'meta-llama/Meta-Llama-3.1-8B', 'dtype': 'float32', 'parallelize': True}), gen_kwargs: ({'temperature': 0, 'do_sample': False}), limit: None, num_fewshot: None, batch_size: 1
+|    Tasks     |Version|Filter|n-shot|    Metric     |   |Value |   |Stderr|
+|--------------|------:|------|-----:|---------------|---|-----:|---|------|
+|lambada_openai|      1|none  |     0|acc            |↑  |0.7526|±  |0.0060|
+|              |       |none  |     0|perplexity     |↓  |3.1450|±  |0.0581|
+|wikitext      |      2|none  |     0|bits_per_byte  |↓  |0.5451|±  |   N/A|
+|              |       |none  |     0|byte_perplexity|↓  |1.4591|±  |   N/A|
+|              |       |none  |     0|word_perplexity|↓  |7.5406|±  |   N/A|
+
+Completed Dtype=float32
+--------------------------------------------------------
+Running Precision Sweep: Model=meta-llama/Meta-Llama-3.1-8B, Dtype=float16
+bootstrapping for stddev: perplexity
+hf ({'pretrained': 'meta-llama/Meta-Llama-3.1-8B', 'dtype': 'float16', 'parallelize': True}), gen_kwargs: ({'temperature': 0, 'do_sample': False}), limit: None, num_fewshot: None, batch_size: 1
+|    Tasks     |Version|Filter|n-shot|    Metric     |   |Value |   |Stderr|
+|--------------|------:|------|-----:|---------------|---|-----:|---|------|
+|lambada_openai|      1|none  |     0|acc            |↑  |0.7510|±  |0.0060|
+|              |       |none  |     0|perplexity     |↓  |3.1474|±  |0.0582|
+|wikitext      |      2|none  |     0|bits_per_byte  |↓  |0.5451|±  |   N/A|
+|              |       |none  |     0|byte_perplexity|↓  |1.4591|±  |   N/A|
+|              |       |none  |     0|word_perplexity|↓  |7.5410|±  |   N/A|
+
+Completed Dtype=float16
+--------------------------------------------------------
+Running Precision Sweep: Model=meta-llama/Meta-Llama-3.1-8B, Dtype=bfloat16
+bootstrapping for stddev: perplexity
+hf ({'pretrained': 'meta-llama/Meta-Llama-3.1-8B', 'dtype': 'bfloat16', 'parallelize': True}), gen_kwargs: ({'temperature': 0, 'do_sample': False}), limit: None, num_fewshot: None, batch_size: 1
+|    Tasks     |Version|Filter|n-shot|    Metric     |   |Value |   |Stderr|
+|--------------|------:|------|-----:|---------------|---|-----:|---|------|
+|lambada_openai|      1|none  |     0|acc            |↑  |0.7456|±  |0.0061|
+|              |       |none  |     0|perplexity     |↓  |3.1449|±  |0.0581|
+|wikitext      |      2|none  |     0|bits_per_byte  |↓  |0.5452|±  |   N/A|
+|              |       |none  |     0|byte_perplexity|↓  |1.4592|±  |   N/A|
+|              |       |none  |     0|word_perplexity|↓  |7.5435|±  |   N/A|
+
+Completed Dtype=bfloat16
+=== Job Completed ===

@@ -148,15 +148,15 @@ def plot_p2_mismatch_rate(df: pd.DataFrame, output_dir: str):
 
     prec_df['pair'] = prec_df.apply(get_color_pair, axis=1)
     
-    # Comprehensive Grid: per dataset (col), per model (x), per precision (hue)
+    # Comprehensive Grid: per model (col), per dataset (x), per precision (hue)
     g = sns.catplot(
         data=prec_df, kind="bar",
-        x="model", y="sequence_mismatch_rate", hue="pair", col="benchmark",
-        col_wrap=2, height=4, aspect=1.8, errorbar=None
+        x="benchmark", y="sequence_mismatch_rate", hue="pair", col="model",
+        col_wrap=3, height=4, aspect=1.2, errorbar=None
     )
     
-    g.set_axis_labels("Model Architecture", "Sequence Mismatch Rate (%)")
-    g.set_titles("Benchmark Dataset: {col_name}")
+    g.set_axis_labels("Benchmark Dataset", "Sequence Mismatch Rate (%)")
+    g.set_titles("Model: {col_name}")
     
     for ax in g.axes.flatten():
         for label in ax.get_xticklabels():

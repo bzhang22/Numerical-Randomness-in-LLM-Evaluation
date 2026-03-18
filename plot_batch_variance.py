@@ -21,9 +21,6 @@ def parse_logs(filepaths):
                     hdr_match = re.search(r'--- Evaluating (.*?) on (.*?) with \[(.*?)\]', line)
                     if hdr_match:
                         current_model = hdr_match.group(1).split('/')[-1]
-                        if current_model == "Qwen2.5-3B":
-                            current_model = None
-                            continue
                         current_ds = hdr_match.group(2)
                         current_dtype = hdr_match.group(3)
                         
@@ -52,46 +49,53 @@ def plot_variance(df, output_path):
         print("No valid tracking data found to plot for batch distributions.")
         return
         
-    plt.figure(figsize=(14, 8))
+    df.to_csv("batch_size_table.csv", index=False)
+    print("Saved batch_size_table.csv")
+    
     sns.set_theme(style="whitegrid")
     
-    # We plot the mean flip rate across datasets for each Model-Precision combo
-    ax = sns.barplot(
+    # We plot the flip rate across datasets for each Model-Precision combo
+    g = sns.catplot(
         data=df, 
+        kind="bar",
         x="Model", 
         y="Flip Rate (%)", 
         hue="Precision",
+        col="Dataset",
+        col_wrap=2,
         errorbar=None,
-        palette=["#3498db", "#e74c3c", "#f1c40f"] 
+        palette=["#3498db", "#e74c3c", "#f1c40f"],
+        height=6, aspect=1.2
     )
     
-    plt.title("Tokens Flipped by Sequence Padding (Batch=1 vs Batch=8) Under Pure Eager Architecture", fontsize=15, fontweight='bold')
-    plt.xlabel("Model Architecture", fontsize=12)
-    plt.ylabel("Token Flip Rate (%)", fontsize=12)
-    plt.xticks(rotation=20, ha='right')
+    g.fig.suptitle("Tokens Flipped by Sequence Padding (Batch=1 vs Batch=8)", fontsize=16, fontweight='bold', y=1.02)
+    g.set_axis_labels("Model Architecture", "Token Flip Rate (%)")
+    g.set_xticklabels(rotation=20, ha='right')
     
     # Add numerical overlay
-    for p in ax.patches:
-        height = p.get_height()
-        if height > 0:
-            ax.annotate(f'{height:.2f}%', 
-                        (p.get_x() + p.get_width() / 2., height), 
-                        ha='center', va='center', 
-                        xytext=(0, 9), 
-                        textcoords='offset points',
-                        fontsize=10)
+    for ax in g.axes.flat:
+        for p in ax.patches:
+            height = p.get_height()
+            if height > 0:
+                ax.annotate(f'{height:.2f}%', 
+                            (p.get_x() + p.get_width() / 2., height), 
+                            ha='center', va='center', 
+                            xytext=(0, 9), 
+                            textcoords='offset points',
+                            fontsize=9)
             
     plt.tight_layout()
-    plt.savefig(output_path, dpi=300)
+    plt.savefig(output_path, dpi=300, bbox_inches="tight")
     print(f"Saved batch variance plot targeting padding instabilities to {output_path}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--logs", type=str, nargs='+', default=[
-        "/home/bohanzhang1/batch_variance_small.log",
-        "/home/bohanzhang1/batch_variance_large.log"
-    ])
-    parser.add_argument("--out", type=str, default="/home/bohanzhang1/Numerical-Randomness-in-LLM-Evaluation/batch_size_flips.png")
+    
+    import glob
+    default_logs = glob.glob("/home/bohanzhang1/batch_variance*.log")
+    
+    parser.add_argument("--logs", type=str, nargs='+', default=default_logs)
+    parser.add_argument("--out", type=str, default="batch_size_flips.png")
     args = parser.parse_args()
     
     df = parse_logs(args.logs)

@@ -1,0 +1,3 @@
+Model,Dataset,MAE
+Meta-Llama-3-8B,commonsense_qa,0.03034614893607795
+Mistral-7B-Instruct-v0.2,commonsense_qa,0.07834411513060331

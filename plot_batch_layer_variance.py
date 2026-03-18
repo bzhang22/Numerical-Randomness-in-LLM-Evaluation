@@ -34,23 +34,31 @@ def parse_jsonl(filepath):
     return pd.DataFrame(data)
 
 def plot_layer_trends(df, out_path):
-    plt.figure(figsize=(12, 6))
     sns.set_theme(style="whitegrid")
     
-    # Calculate mean MAE per layer per model
-    agg_df = df.groupby(["Model", "Layer"])["MAE"].mean().reset_index()
+    # Calculate mean MAE per layer per model per dataset
+    agg_df = df.groupby(["Model", "Dataset", "Layer"])["MAE"].mean().reset_index()
     
-    sns.lineplot(data=agg_df, x="Layer", y="MAE", hue="Model", marker="o", linewidth=2.5)
-    plt.title("Per-Layer Error Propagation (Batch=1 vs Batch=8)", fontsize=15, fontweight='bold')
-    plt.xlabel("Transformer Layer", fontsize=12)
-    plt.ylabel("Mean Absolute Error", fontsize=12)
+    g = sns.relplot(
+        data=agg_df, 
+        kind="line",
+        x="Layer", 
+        y="MAE", 
+        hue="Model", 
+        col="Dataset",
+        col_wrap=2,
+        marker="o", 
+        linewidth=2.5,
+        height=5, aspect=1.2
+    )
+    g.fig.suptitle("Per-Layer Error Propagation (Batch=1 vs Batch=8)", fontsize=16, fontweight='bold', y=1.02)
+    g.set_axis_labels("Transformer Layer", "Mean Absolute Error")
     
     plt.tight_layout()
-    plt.savefig(out_path, dpi=300)
+    plt.savefig(out_path, dpi=300, bbox_inches="tight")
     print(f"Saved layer trends plot to {out_path}")
 
 def plot_cdf_final_layer(df, out_path):
-    plt.figure(figsize=(12, 6))
     sns.set_theme(style="whitegrid")
     
     # Extract only the final layer for each model
@@ -63,20 +71,33 @@ def plot_cdf_final_layer(df, out_path):
     if not final_layer_data: return
     final_df = pd.concat(final_layer_data)
     
-    sns.ecdfplot(data=final_df, x="MAE", hue="Model", linewidth=2.5)
-    plt.title("CDF of Final Layer Token MAE Divergence", fontsize=15, fontweight='bold')
-    plt.xlabel("Final Layer Mean Absolute Error (MAE)", fontsize=12)
-    plt.ylabel("Cumulative Probability", fontsize=12)
+    # Save the table for final layer errors
+    summary_table = final_df.groupby(["Model", "Dataset"])["MAE"].mean().reset_index()
+    summary_table.to_csv("batch_layer_mae_table.csv", index=False)
+    print("Saved batch_layer_mae_table.csv")
+    
+    g = sns.displot(
+        data=final_df, 
+        kind="ecdf",
+        x="MAE", 
+        hue="Model", 
+        col="Dataset",
+        col_wrap=2,
+        linewidth=2.5,
+        height=5, aspect=1.2
+    )
+    g.fig.suptitle("CDF of Final Layer Token MAE Divergence", fontsize=16, fontweight='bold', y=1.02)
+    g.set_axis_labels("Final Layer Mean Absolute Error (MAE)", "Cumulative Probability")
     
     plt.tight_layout()
-    plt.savefig(out_path, dpi=300)
+    plt.savefig(out_path, dpi=300, bbox_inches="tight")
     print(f"Saved CDF plot to {out_path}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data", type=str, default="/home/bohanzhang1/Numerical-Randomness-in-LLM-Evaluation/batch_layer_variance_results.jsonl")
-    parser.add_argument("--out_trends", type=str, default="/home/bohanzhang1/Numerical-Randomness-in-LLM-Evaluation/batch_layer_mae_trends.png")
-    parser.add_argument("--out_cdf", type=str, default="/home/bohanzhang1/Numerical-Randomness-in-LLM-Evaluation/batch_final_layer_cdf.png")
+    parser.add_argument("--data", type=str, default="batch_layer_variance_results.jsonl")
+    parser.add_argument("--out_trends", type=str, default="batch_layer_mae_trends.png")
+    parser.add_argument("--out_cdf", type=str, default="batch_final_layer_cdf.png")
     args = parser.parse_args()
     
     df = parse_jsonl(args.data)

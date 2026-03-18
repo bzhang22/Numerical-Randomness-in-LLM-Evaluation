@@ -216,11 +216,96 @@ def plot_p6_benchmark_score_variation(df: pd.DataFrame, output_dir: str):
     plt.savefig(os.path.join(output_dir, 'precision_benchmark_score_variation.pdf'))
     plt.close()
 
+def gather_trace_data(trace_dir: str):
+    """Gathers MAE and margin data from all trace JSONs."""
+    mae_records = []
+    margin_records = []
+    if not os.path.exists(trace_dir):
+        return pd.DataFrame(), pd.DataFrame()
+        
+    for root, dirs, files in os.walk(trace_dir):
+        for file in files:
+            if not file.endswith('.json'): continue
+            path = os.path.join(root, file)
+            try:
+                with open(path, 'r') as f:
+                    data = json.load(f)
+                meta = data.get('metadata', {})
+                model = meta.get('model', 'Unknown')
+                benchmark = meta.get('benchmark', 'Unknown')
+                
+                # P4: Layerwise MAE
+                mae = data.get('layerwise_mae', {})
+                fp32_fp16 = mae.get('fp32_vs_fp16', [])
+                fp32_bf16 = mae.get('fp32_vs_bf16', [])
+                
+                for layer_idx, error in enumerate(fp32_fp16):
+                    mae_records.append({'model': model, 'benchmark': benchmark, 'layer': layer_idx, 'precision_pair': 'FP32 vs FP16', 'mae': error})
+                for layer_idx, error in enumerate(fp32_bf16):
+                    mae_records.append({'model': model, 'benchmark': benchmark, 'layer': layer_idx, 'precision_pair': 'FP32 vs BF16', 'mae': error})
+                    
+                # P5: Token flip vs margin
+                dyn = data.get('token_step_dynamics', {})
+                margins = dyn.get('fp32_top2_margin', [])
+                flip_bf16 = dyn.get('flipped_in_bf16', [])
+                flip_fp16 = dyn.get('flipped_in_fp16', [])
+                
+                for m, f_bf, f_fp in zip(margins, flip_bf16, flip_fp16):
+                    margin_records.append({'model': model, 'margin': m, 'precision_pair': 'FP32 vs BF16', 'flipped': f_bf})
+                    margin_records.append({'model': model, 'margin': m, 'precision_pair': 'FP32 vs FP16', 'flipped': f_fp})
+            except Exception as e:
+                print(f"Error parsing {path}: {e}")
+                continue
+    return pd.DataFrame(mae_records), pd.DataFrame(margin_records)
+
+def plot_p4_layerwise_mae(mae_df: pd.DataFrame, output_dir: str):
+    """Figure P4: Layer-wise Hidden-State MAE Error"""
+    if mae_df.empty: return
+    
+    models = mae_df['model'].unique()
+    for model in models:
+        df_model = mae_df[mae_df['model'] == model]
+        plt.figure(figsize=(10, 6))
+        sns.lineplot(data=df_model, x='layer', y='mae', hue='precision_pair', errorbar=('ci', 95), marker='o')
+        plt.title(f'{model} - Layer-wise Hidden-State Mean Absolute Error')
+        plt.xlabel('Transformer Layer Depth')
+        plt.ylabel('Mean Absolute Error (MAE)')
+        plt.tight_layout()
+        plt.savefig(os.path.join(output_dir, f'p4_layerwise_mae_{model.replace("/", "_")}.pdf'))
+        plt.close()
+
+def plot_p5_token_flip_probability_vs_margin(margin_df: pd.DataFrame, output_dir: str):
+    """Figure P5: Token Flip Probability vs Logit Margin"""
+    if margin_df.empty: return
+    
+    # Bin the margins for probability calculation
+    bins = np.linspace(0, margin_df['margin'].quantile(0.95) if not margin_df.empty else 10, 20)
+    margin_df['margin_bin'] = pd.cut(margin_df['margin'], bins=bins)
+    
+    prob_df = margin_df.groupby(['model', 'precision_pair', 'margin_bin'])['flipped'].mean().reset_index()
+    prob_df['margin_center'] = prob_df['margin_bin'].apply(lambda x: x.mid if pd.notnull(x) else np.nan).astype(float)
+    prob_df = prob_df.dropna(subset=['margin_center'])
+    
+    models = prob_df['model'].unique()
+    for model in models:
+        df_model = prob_df[prob_df['model'] == model]
+        plt.figure(figsize=(8, 6))
+        sns.lineplot(data=df_model, x='margin_center', y='flipped', hue='precision_pair', marker='s', linewidth=2)
+        plt.title(f'{model} - Token Flip Probability vs Logit Margin')
+        plt.xlabel('Logit Margin (Top 1 probability - Top 2 probability)')
+        plt.ylabel('Flip Probability under Low Precision')
+        plt.xlim(bins[0], bins[-1])
+        plt.tight_layout()
+        plt.savefig(os.path.join(output_dir, f'p5_token_flip_prob_{model.replace("/", "_")}.pdf'))
+        plt.close()
+
 def main():
     parser = argparse.ArgumentParser(description="Generate Phase 8 Paper-Ready Precision Figures")
     parser.add_argument("--input_csv", type=str, default="pairwise_compare.csv")
     parser.add_argument("--output_dir", type=str, default="paper_plots")
     parser.add_argument("--base_dir", type=str, default="results")
+    parser.add_argument("--trace_dir", type=str, default="trace")
+    
     
     args = parser.parse_args()
     os.makedirs(args.output_dir, exist_ok=True)
@@ -241,6 +326,11 @@ def main():
         print("Rendering P6 (Benchmark Raw Score Extraction)...")
         scores_df = extract_benchmark_scores(args.base_dir)
         plot_p6_benchmark_score_variation(scores_df, args.output_dir)
+        
+        print("Rendering P4 & P5 (Deep Tracing Hidden States and Logits)...")
+        mae_df, margin_df = gather_trace_data(args.trace_dir)
+        plot_p4_layerwise_mae(mae_df, args.output_dir)
+        plot_p5_token_flip_probability_vs_margin(margin_df, args.output_dir)
 
         print(f"SUCCESS: All Paper-Ready Figures strictly compiled in {args.output_dir}/")
         

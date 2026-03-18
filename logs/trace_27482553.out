@@ -1,0 +1,10 @@
+Current Time: Tue Mar 17 11:33:32 PM EDT 2026
+Host: c1001a-s5.ufhpc
+GPUs: 0
+Target Model: gemma-2-2b
+Initiating Deep Hidden-State Tracing for gemma-2-2b...
+Building Teacher Forcing Dataset...
+Assembled 40 sequence targets for deep layer stripping.
+
+--- Loading gemma-2-2b in float32 ---
+Tracing Completely Finished for gemma-2-2b at Tue Mar 17 11:33:43 PM EDT 2026 ✨

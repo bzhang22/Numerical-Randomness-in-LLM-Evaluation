@@ -1,0 +1,15 @@
+Current Time: Tue Mar 17 11:30:25 PM EDT 2026
+Host: c1001a-s5.ufhpc
+GPUs: 0
+Target Model: Meta-Llama-3.1-8B
+Initiating Deep Hidden-State Tracing for Meta-Llama-3.1-8B...
+Building Teacher Forcing Dataset...
+Assembled 40 sequence targets for deep layer stripping.
+
+--- Loading Meta-Llama-3.1-8B in float32 ---
+
+--- Loading Meta-Llama-3.1-8B in float16 ---
+
+--- Loading Meta-Llama-3.1-8B in bfloat16 ---
+[Meta-Llama-3.1-8B] Extracted traces written to trace
+Tracing Completely Finished for Meta-Llama-3.1-8B at Tue Mar 17 11:33:22 PM EDT 2026 ✨

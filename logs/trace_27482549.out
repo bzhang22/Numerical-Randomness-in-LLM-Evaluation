@@ -1,0 +1,15 @@
+Current Time: Tue Mar 17 11:27:22 PM EDT 2026
+Host: c1001a-s5.ufhpc
+GPUs: 0
+Target Model: Llama-3.2-1B
+Initiating Deep Hidden-State Tracing for Llama-3.2-1B...
+Building Teacher Forcing Dataset...
+Assembled 40 sequence targets for deep layer stripping.
+
+--- Loading Llama-3.2-1B in float32 ---
+
+--- Loading Llama-3.2-1B in float16 ---
+
+--- Loading Llama-3.2-1B in bfloat16 ---
+[Llama-3.2-1B] Extracted traces written to trace
+Tracing Completely Finished for Llama-3.2-1B at Tue Mar 17 11:27:55 PM EDT 2026 ✨

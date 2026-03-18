@@ -1,0 +1,15 @@
+Current Time: Tue Mar 17 11:30:25 PM EDT 2026
+Host: c1001a-s5.ufhpc
+GPUs: 0
+Target Model: Mistral-7B-v0.3
+Initiating Deep Hidden-State Tracing for Mistral-7B-v0.3...
+Building Teacher Forcing Dataset...
+Assembled 40 sequence targets for deep layer stripping.
+
+--- Loading Mistral-7B-v0.3 in float32 ---
+
+--- Loading Mistral-7B-v0.3 in float16 ---
+
+--- Loading Mistral-7B-v0.3 in bfloat16 ---
+[Mistral-7B-v0.3] Extracted traces written to trace
+Tracing Completely Finished for Mistral-7B-v0.3 at Tue Mar 17 11:32:31 PM EDT 2026 ✨

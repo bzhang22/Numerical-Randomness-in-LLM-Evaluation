@@ -1,0 +1,10 @@
+Current Time: Tue Mar 17 11:24:13 PM EDT 2026
+Host: c1001a-s5.ufhpc
+GPUs: 0,1
+Target Model: Yi-34B
+Initiating Deep Hidden-State Tracing for Yi-34B...
+Building Teacher Forcing Dataset...
+Assembled 40 sequence targets for deep layer stripping.
+
+--- Loading Yi-34B in float32 ---
+Tracing Completely Finished for Yi-34B at Tue Mar 17 11:24:25 PM EDT 2026 ✨

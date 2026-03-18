@@ -20,8 +20,8 @@ def gather_dataset_trace_data(trace_dir: str):
                 model = meta.get('model', 'Unknown')
                 benchmark = meta.get('benchmark', 'Unknown')
                 
-                # Exclude gemma
-                if 'gemma' in model.lower():
+                # ONLY plot divergence cases!
+                if not meta.get('is_divergent', False):
                     continue
                 
                 mae = data.get('layerwise_mae', {})
@@ -29,9 +29,11 @@ def gather_dataset_trace_data(trace_dir: str):
                 fp32_bf16 = mae.get('fp32_vs_bf16', [])
                 
                 for layer_idx, error in enumerate(fp32_fp16):
-                    mae_records.append({'model': model, 'benchmark': benchmark, 'layer': layer_idx, 'precision_pair': 'FP32 vs FP16', 'mae': error})
+                    if error > 0: # Log scale requires positive values
+                        mae_records.append({'model': model, 'benchmark': benchmark, 'layer': layer_idx, 'precision_pair': 'FP32 vs FP16', 'mae': error})
                 for layer_idx, error in enumerate(fp32_bf16):
-                    mae_records.append({'model': model, 'benchmark': benchmark, 'layer': layer_idx, 'precision_pair': 'FP32 vs BF16', 'mae': error})
+                    if error > 0:
+                        mae_records.append({'model': model, 'benchmark': benchmark, 'layer': layer_idx, 'precision_pair': 'FP32 vs BF16', 'mae': error})
                     
             except Exception as e:
                 print(f"Error parsing {path}: {e}")
@@ -39,10 +41,10 @@ def gather_dataset_trace_data(trace_dir: str):
     return pd.DataFrame(mae_records)
 
 def main():
-    output_dir = "paper_plots/dataset_mae_trends"
+    output_dir = "paper_plots/dataset_mae_trends_log"
     os.makedirs(output_dir, exist_ok=True)
     
-    print("Gathering cross-model dataset MAE traces...")
+    print("Gathering STRICTLY Divergent cross-model dataset MAE traces for Log Scale...")
     mae_df = gather_dataset_trace_data("trace")
     if mae_df.empty:
         print("No MAE data found.")
@@ -75,16 +77,20 @@ def main():
                 alpha=0.8
             )
             
-            plt.title(f'[{dataset.upper()}] Layer-wise Error Trend: {pair}')
+            # Apply Log Scale for Error!
+            plt.yscale("log")
+            
+            plt.title(f'[{dataset.upper()}] DIVERGENT Only Log-Scale Layer-wise Error Trend: {pair}')
             plt.xlabel('Transformer Layer Depth (Absolute)')
-            plt.ylabel('Mean Absolute Error (MAE) vs FP32 Baseline')
+            plt.ylabel('Log Mean Absolute Error (MAE) vs FP32 Baseline')
             
             # Place legend outside
-            plt.legend(title='Model Architecture (Excl. Gemma)', bbox_to_anchor=(1.05, 1), loc='upper left')
+            plt.legend(title='Model Architecture', bbox_to_anchor=(1.05, 1), loc='upper left')
+            plt.grid(True, which="both", ls="--", alpha=0.5)
             plt.tight_layout()
             
             safe_pair = pair.replace(" ", "_")
-            out_file = os.path.join(output_dir, f"{dataset}_{safe_pair}_trend.pdf")
+            out_file = os.path.join(output_dir, f"{dataset}_{safe_pair}_log_trend.pdf")
             plt.savefig(out_file, bbox_inches='tight')
             plt.close()
             print(f"Saved: {out_file}")

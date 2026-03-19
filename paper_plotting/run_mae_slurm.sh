@@ -1,0 +1,11 @@
+#!/bin/bash
+#SBATCH --job-name="plot_mae_all"
+#SBATCH --output="plot_mae_all.out"
+#SBATCH --error="plot_mae_all.err"
+#SBATCH --time=00:15:00
+#SBATCH --partition=hpg-b200
+#SBATCH --mem=8G
+#SBATCH --cpus-per-task=4
+
+cd /home/bohanzhang1/Numerical-Randomness-in-LLM-Evaluation
+/blue/liguanpeng/bohanzhang1/conda_envs/llm_randomness/bin/python generate_dataset_mae_plots.py

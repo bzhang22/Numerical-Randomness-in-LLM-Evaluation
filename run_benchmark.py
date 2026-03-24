@@ -119,11 +119,12 @@ class HFBackend(Backend):
             if end_loc == seq_len:
                 break
                 
+        import math
         total_nll = torch.stack(nlls).sum()
-        ppl = torch.exp(total_nll / end_loc)
+        ppl = math.exp(total_nll / end_loc)
         
         return {
-            "perplexity": ppl.item(),
+            "perplexity": ppl,
             "avg_loss": (total_nll / end_loc).item(),
             "total_tokens": end_loc
         }
@@ -458,12 +459,14 @@ class DatasetLoader:
             ds = load_dataset("gsm8k", "main", split=self.split)
             if limit: ds = ds.select(range(limit))
             
-            # For PPL, we just return texts
-            texts = []
-            for row in ds:
-                text = f"Question: {row['question']}\nAnswer: {row['answer']}"
-                texts.append(text)
-            return texts
+            for i, row in enumerate(ds):
+                prompt = f"Question: {row['question']}\nAnswer:"
+                items.append({
+                    "id": i,
+                    "prompt": prompt,
+                    "choices": [],
+                    "label": row['answer']
+                })
 
         elif self.dataset_name == "piqa":
             print(f"Loading piqa ({self.split}) from local files...")
@@ -567,7 +570,8 @@ def main():
     start_time = time.time()
     
     if args.task == "perplexity":
-        results = backend.compute_perplexity(items) # items is text list
+        text_list = [item["prompt"] + " " + item["label"] if isinstance(item, dict) else item for item in items]
+        results = backend.compute_perplexity(text_list)
         print(f"\n--- Perplexity Result ---")
         print(f"PPL: {results['perplexity']:.4f}")
         print(f"Loss: {results['avg_loss']:.4f}")

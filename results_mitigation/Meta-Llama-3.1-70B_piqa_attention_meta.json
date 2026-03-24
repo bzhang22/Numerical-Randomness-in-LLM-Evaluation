@@ -1,0 +1,1 @@
+{"model": "meta-llama/Meta-Llama-3.1-70B", "dataset": "piqa", "variant": "attention", "accuracy": 0.632, "peak_memory_gb": 154.45895719528198}

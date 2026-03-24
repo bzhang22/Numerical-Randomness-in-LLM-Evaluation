@@ -1,0 +1,1 @@
+{"model": "google/gemma-2-27b", "dataset": "piqa", "variant": "fp32_reference", "accuracy": 0.582, "peak_memory_gb": 102.69254207611084}

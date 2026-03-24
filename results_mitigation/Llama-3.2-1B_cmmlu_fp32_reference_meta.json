@@ -1,0 +1,1 @@
+{"model": "meta-llama/Llama-3.2-1B", "dataset": "cmmlu", "variant": "fp32_reference", "accuracy": 0.30177514792899407, "peak_memory_gb": 4.693558692932129}

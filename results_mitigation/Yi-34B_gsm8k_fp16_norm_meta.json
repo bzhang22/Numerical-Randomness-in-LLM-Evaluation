@@ -1,0 +1,1 @@
+{"model": "01-ai/Yi-34B", "dataset": "gsm8k", "variant": "norm", "accuracy": 0.0, "peak_memory_gb": 64.1200065612793}

@@ -1,0 +1,1 @@
+{"model": "01-ai/Yi-34B", "dataset": "piqa", "variant": "fp32_reference", "accuracy": 0.58, "peak_memory_gb": 128.55635690689087}

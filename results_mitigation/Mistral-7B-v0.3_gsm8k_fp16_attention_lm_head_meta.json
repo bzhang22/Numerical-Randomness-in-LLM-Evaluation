@@ -1,0 +1,1 @@
+{"model": "mistralai/Mistral-7B-v0.3", "dataset": "gsm8k", "variant": "attention_lm_head", "accuracy": 0.0, "peak_memory_gb": 16.314897060394287}

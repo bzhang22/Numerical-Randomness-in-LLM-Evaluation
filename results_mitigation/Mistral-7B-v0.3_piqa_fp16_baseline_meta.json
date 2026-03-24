@@ -1,0 +1,1 @@
+{"model": "mistralai/Mistral-7B-v0.3", "dataset": "piqa", "variant": "fp16_baseline", "accuracy": 0.47, "peak_memory_gb": 13.57606554031372}

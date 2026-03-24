@@ -1,0 +1,1 @@
+{"model": "meta-llama/Meta-Llama-3.1-70B", "dataset": "cmmlu", "variant": "attention_lm_head", "accuracy": 0.6568047337278107, "peak_memory_gb": 156.04930973052979}

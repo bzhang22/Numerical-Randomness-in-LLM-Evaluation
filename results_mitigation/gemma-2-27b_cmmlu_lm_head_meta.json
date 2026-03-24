@@ -1,0 +1,1 @@
+{"model": "google/gemma-2-27b", "dataset": "cmmlu", "variant": "lm_head", "accuracy": 0.5976331360946746, "peak_memory_gb": 55.41391086578369}

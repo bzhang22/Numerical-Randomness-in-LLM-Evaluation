@@ -1,0 +1,1 @@
+{"model": "mistralai/Mistral-7B-v0.3", "dataset": "cmmlu", "variant": "norm", "accuracy": 0.34911242603550297, "peak_memory_gb": 13.554495334625244}

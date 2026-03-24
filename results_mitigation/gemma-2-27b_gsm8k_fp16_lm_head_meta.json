@@ -1,0 +1,1 @@
+{"model": "google/gemma-2-27b", "dataset": "gsm8k", "variant": "lm_head", "accuracy": 0.0, "peak_memory_gb": 55.41391134262085}

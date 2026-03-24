@@ -1,0 +1,1 @@
+{"model": "01-ai/Yi-34B", "dataset": "cmmlu", "variant": "attention_lm_head", "accuracy": 0.72, "peak_memory_gb": 78.11982154846191}

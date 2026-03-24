@@ -1,0 +1,1 @@
+{"model": "01-ai/Yi-34B", "dataset": "piqa", "variant": "attention_lm_head", "accuracy": 0.578, "peak_memory_gb": 78.48691320419312}

@@ -1,0 +1,1 @@
+{"model": "meta-llama/Llama-3.2-1B", "dataset": "gsm8k", "variant": "norm", "accuracy": 0.0, "peak_memory_gb": 2.346604824066162}

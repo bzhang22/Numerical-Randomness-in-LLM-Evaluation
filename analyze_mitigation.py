@@ -7,7 +7,7 @@ from collections import defaultdict
 RESULTS_DIR = "/home/bohanzhang1/Numerical-Randomness-in-LLM-Evaluation/results_mitigation"
 
 DATASETS = ["piqa", "gsm8k", "cmmlu", "humaneval"]
-VARIANTS = ["bf16_baseline", "fp32_reference", "attention", "norm", "lm_head", "attention_lm_head"]
+VARIANTS = ["bf16_baseline", "fp16_baseline", "fp32_reference", "attention", "fp16_attention", "norm", "fp16_norm", "lm_head", "fp16_lm_head", "attention_lm_head", "fp16_attention_lm_head"]
 
 MODELS = [
     "Llama-3.2-1B",
@@ -68,16 +68,23 @@ def main():
                 continue
                 
             fp32_acc = sum(1 for v in fp32_results.values() if v["correct"]) / len(fp32_results)
-            bf16_acc = sum(1 for v in bf16_results.values() if v["correct"]) / len(bf16_results)
-            bf16_latency_avg = np.median([v["latency_sec"] for v in bf16_results.values()])
             
             for variant in VARIANTS:
-                if variant in ["fp32_reference"]: continue
+                if variant in ["fp32_reference", "bf16_baseline", "fp16_baseline"]: continue
                 
                 var_path = os.path.join(RESULTS_DIR, f"{model}_{dataset}_{variant}.jsonl")
                 var_results = load_jsonl(var_path)
                 
                 if not var_results: continue
+                
+                # Determine correct baseline
+                base_var_name = "fp16_baseline" if variant.startswith("fp16_") else "bf16_baseline"
+                base_path = os.path.join(RESULTS_DIR, f"{model}_{dataset}_{base_var_name}.jsonl")
+                base_results = load_jsonl(base_path)
+                if not base_results: continue
+                
+                base_acc = sum(1 for v in base_results.values() if v["correct"]) / len(base_results)
+                base_latency_avg = np.median([v["latency_sec"] for v in base_results.values()])
                 
                 var_acc = sum(1 for v in var_results.values() if v["correct"]) / len(var_results)
                 var_latency_avg = np.median([v["latency_sec"] for v in var_results.values()])
@@ -90,12 +97,12 @@ def main():
                 total_compared = 0
                 
                 for prompt_id in fp32_results:
-                    if prompt_id not in var_results or prompt_id not in bf16_results:
+                    if prompt_id not in var_results or prompt_id not in base_results:
                         continue
                         
                     fp32_toks = fp32_results[prompt_id]["generated_tokens"]
                     var_toks = var_results[prompt_id]["generated_tokens"]
-                    bf16_toks = bf16_results[prompt_id]["generated_tokens"]
+                    base_toks = base_results[prompt_id]["generated_tokens"]
                     
                     if fp32_toks == var_toks:
                         exact_matches += 1
@@ -107,7 +114,7 @@ def main():
                         first_divs.append(div_pos)
                         
                     # Check Correctness Flip
-                    if not bf16_results[prompt_id]["correct"] and var_results[prompt_id]["correct"] and fp32_results[prompt_id]["correct"]:
+                    if not base_results[prompt_id]["correct"] and var_results[prompt_id]["correct"] and fp32_results[prompt_id]["correct"]:
                         flips_cured += 1
                         
                     total_compared += 1
@@ -123,8 +130,8 @@ def main():
                         "first_divergence_median": np.median(first_divs) if first_divs else -1,
                         "benchmark_acc": var_acc,
                         "benchmark_gap_vs_fp32": var_acc - fp32_acc,
-                        "benchmark_gap_vs_bf16": var_acc - bf16_acc,
-                        "latency_overhead_percent": ((var_latency_avg / bf16_latency_avg) - 1.0) * 100 if bf16_latency_avg > 0 else 0
+                        "benchmark_gap_vs_baseline": var_acc - base_acc,
+                        "latency_overhead_percent": ((var_latency_avg / base_latency_avg) - 1.0) * 100 if base_latency_avg > 0 else 0
                     })
                     
     if summary_data:

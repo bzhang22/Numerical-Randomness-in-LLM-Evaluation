@@ -15,10 +15,15 @@ os.makedirs(PLOT_DIR, exist_ok=True)
 # Define color palette
 VARIANT_COLORS = {
     "bf16_baseline": "tab:red",
+    "fp16_baseline": "tab:red",
     "attention": "tab:orange",
+    "fp16_attention": "tab:orange",
     "norm": "tab:green",
+    "fp16_norm": "tab:green",
     "lm_head": "tab:blue",
+    "fp16_lm_head": "tab:blue",
     "attention_lm_head": "tab:purple",
+    "fp16_attention_lm_head": "tab:purple",
     "fp32_reference": "gray"
 }
 
@@ -74,11 +79,12 @@ def plot_m3():
     
     for tfile in trace_files:
         basename = os.path.basename(tfile).replace("_traces.json", "")
-        parts = basename.rsplit("_", 1)
-        if len(parts) == 2:
-            model_name, dataset = parts
+        # basename looks like: Llama-3.2-1B_cmmlu_bfloat16
+        parts = basename.rsplit("_", 2)
+        if len(parts) == 3:
+            model_name, dataset, base_dtype = parts
         else:
-            model_name, dataset = basename, "unknown"
+            model_name, dataset, base_dtype = basename, "unknown", "unknown"
             
         with open(tfile, 'r') as f:
             tdata = json.load(f)
@@ -87,7 +93,7 @@ def plot_m3():
         for prompt_id, pdata in tdata.items():
             if not pdata.get("is_divergent", False): continue
             for variant, vdata in pdata.get("variants", {}).items():
-                if variant not in ["bf16_baseline", "attention", "lm_head"]: continue
+                if variant not in ["bf16_baseline", "fp16_baseline", "attention", "fp16_attention", "lm_head", "fp16_lm_head"]: continue
                 if "layer_maes" not in vdata: continue
                 maes = vdata["layer_maes"]
                 for layer_idx, mae in enumerate(maes):
@@ -100,13 +106,13 @@ def plot_m3():
         if not all_trace_data: continue
         trace_df = pd.DataFrame(all_trace_data)
         
-        VARIANT_MARKERS = {"bf16_baseline": "*", "attention": "s", "lm_head": "o"}
-        VARIANT_DASHES = {"bf16_baseline": (4, 2), "attention": "", "lm_head": ""}
+        VARIANT_MARKERS = {"bf16_baseline": "*", "fp16_baseline": "*", "attention": "s", "fp16_attention": "s", "lm_head": "o", "fp16_lm_head": "o"}
+        VARIANT_DASHES = {"bf16_baseline": (4, 2), "fp16_baseline": (4, 2), "attention": "", "fp16_attention": "", "lm_head": "", "fp16_lm_head": ""}
         
         plt.figure(figsize=(10, 6))
         sns.lineplot(data=trace_df, x="Layer", y="MAE", hue="Variant", style="Variant", palette=VARIANT_COLORS, markers=VARIANT_MARKERS, dashes=VARIANT_DASHES, errorbar=None, markersize=9, linewidth=2.5)
         plt.yscale("log")
-        plt.title(f"Figure M3. Layer-wise Hidden-State MAE vs FP32\nModel: {model_name} | Dataset: {dataset} (Divergent Cases)")
+        plt.title(f"Figure M3. Layer-wise Hidden-State MAE vs FP32\nModel: {model_name} | Dataset: {dataset} | Base: {base_dtype} (Divergent Cases)")
         plt.ylabel("Mean Absolute Error (Log Scale)")
         plt.xlabel("Transformer Layer Index")
         
@@ -114,7 +120,7 @@ def plot_m3():
         plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
         
         plt.tight_layout()
-        out_path = os.path.join(PLOT_DIR, f"Figure_M3_Layer_MAE_{model_name}_{dataset}.pdf")
+        out_path = os.path.join(PLOT_DIR, f"Figure_M3_Layer_MAE_{model_name}_{dataset}_{base_dtype}.pdf")
         plt.savefig(out_path)
         plt.close()
 

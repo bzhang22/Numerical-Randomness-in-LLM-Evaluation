@@ -5,3 +5,10 @@ __pycache__/
 models/
 venv/
 data/
+*.jsonl
+*.json
+*.out
+*.err
+logs*/
+results*/
+*.csv

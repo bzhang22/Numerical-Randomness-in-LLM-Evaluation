@@ -33,7 +33,7 @@ def get_choice_probs(model, tokenizer, prompt, choices, device):
     probs = torch.softmax(choice_logits, dim=0).tolist()
     return dict(zip(valid_choices, probs))
 
-def apply_fp32_mitigation(model, variant, base_dtype):
+def apply_fp32_mitigation(model, variant, base_dtype, layer_split="all"):
     if variant in ["bf16_baseline", "fp16_baseline", "fp32_reference"]:
         return
 
@@ -64,6 +64,22 @@ def apply_fp32_mitigation(model, variant, base_dtype):
         return res
 
     patched_count = 0
+    num_layers = getattr(model.config, "num_hidden_layers", 32)
+    
+    # Determine bounds for layer splits
+    min_layer, max_layer = 0, num_layers
+    if layer_split == "first_half":
+        max_layer = num_layers // 2
+    elif layer_split == "last_half":
+        min_layer = num_layers // 2
+    elif layer_split == "first_quarter":
+        max_layer = num_layers // 4
+    elif layer_split == "last_quarter":
+        min_layer = num_layers - (num_layers // 4)
+    elif layer_split == "middle":
+        min_layer = num_layers // 4
+        max_layer = num_layers - (num_layers // 4)
+
     for name, module in model.named_modules():
         patch = False
         is_lm_head = False
@@ -79,8 +95,22 @@ def apply_fp32_mitigation(model, variant, base_dtype):
             patch = True
             is_lm_head = True
             
+        # Check if the module belongs to a specific transformer layer and falls outside the split
+        import re
+        match = re.search(r'\.([0-9]+)\.', name)
+        if patch and match and layer_split != "all":
+            layer_idx = int(match.group(1))
+            if layer_split in ["first_half", "last_half", "first_quarter", "last_quarter", "middle"]:
+                if not (min_layer <= layer_idx < max_layer):
+                    patch = False
+            else:
+                # Treat as comma-separated list of target indices (supports negative indexing)
+                target_indices = [int(x.strip()) if int(x.strip()) >= 0 else num_layers + int(x.strip()) for x in layer_split.split(",")]
+                if layer_idx not in target_indices:
+                    patch = False
+                
         if patch:
-            print(f"Patching module to FP32: {name}")
+            print(f"Patching module to FP32 [{layer_split}]: {name}")
             if is_lm_head and hasattr(module, 'weight'):
                 # Break weight-tying with input embeddings to prevent poisoning the root residual
                 module.weight = torch.nn.Parameter(module.weight.clone().float())
@@ -97,7 +127,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", required=True, type=str)
     parser.add_argument("--dataset", required=True, type=str)
-    parser.add_argument("--variant", required=True, choices=["bf16_baseline", "fp16_baseline", "fp32_reference", "attention", "norm", "lm_head", "attention_lm_head"])
+    parser.add_argument("--variant", required=True, choices=["bf16_baseline", "fp16_baseline", "fp32_reference", "attention", "norm", "lm_head", "attention_lm_head", "attention_norm", "attention_norm_lm_head"])
+    parser.add_argument("--layer_split", default="all", type=str, help="Can be a split name or comma separated layer indices like '1' or '1,-1'")
     parser.add_argument("--dtype", default="bfloat16", type=str)
     parser.add_argument("--limit", type=int, default=100)
     parser.add_argument("--output", required=True, type=str)
@@ -123,7 +154,7 @@ def main():
     model.eval()
 
     # Apply Patches if needed
-    apply_fp32_mitigation(model, args.variant, load_dtype)
+    apply_fp32_mitigation(model, args.variant, load_dtype, layer_split=args.layer_split)
 
     # Dataset loader
     split = "validation"
@@ -178,6 +209,7 @@ def main():
                 "model": args.model,
                 "dataset": args.dataset,
                 "variant": args.variant,
+                "layer_split": args.layer_split,
                 "label": item.get("label", ""),
                 "prediction": pred,
                 "correct": is_correct,
@@ -200,6 +232,7 @@ def main():
         "model": args.model,
         "dataset": args.dataset,
         "variant": args.variant,
+        "layer_split": args.layer_split,
         "accuracy": correct / len(items),
         "peak_memory_gb": peak_mem
     }
